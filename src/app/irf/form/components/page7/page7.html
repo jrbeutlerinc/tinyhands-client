@@ -6,82 +6,51 @@
         <div ng-repeat="i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]" class="col-md-4">
             <div ng-if="i <= irfCtrl.numPersonBoxes" class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <button ng-if="i != 1" ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes - 1" type="button" class="btn btn-danger btn-xs pull-left">
+                    <h3 ng-if="fullname == '' || fullname == nil" class="panel-title">
+                        <button ng-if="i != 1 && (fullname == '' || fullname == nil)" ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes - 1" type="button" class="btn btn-danger btn-xs pull-left">
                             <strong>X</strong>
                         </button>
                     Person Box {{ i }}</h3>
+                    <h3 ng-if="fullname != ''" class="panel-title">
+                        <button ng-if="i != 1 && fullname != '' && fullname != nil" ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes - 1" type="button" class="btn btn-danger btn-xs pull-left">
+                            <strong>X</strong>
+                        </button>
+                    {{ fullname }}</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-5 box-label">
-                            <p>Full name</p>
-                        </div>
-                        <div class="col-md-7 input-field">
-                            <input type="text" name="fullname" class="text-box"><br>
+                    <div class="panel panel-default photo">
+                        <div class="panel-body photo">
+                            <p class="photo-text">Click here to upload photo</p>
                         </div>
                     </div>
-                    <div class="row radio-top">
-                        <div class="radio">
-                          <label><input type="radio" name="optradio">Victim</label> &nbsp;
-                          <label><input type="radio" name="optradio">Trafficker</label>
-                        </div>
+                    <div class="input-field">
+                        <input ng-model="fullname" type="text" name="fullname" class="form-control text-box" placeholder="Full name">
                     </div>
-                    <div class="row radio-bottom">
-                        <div class="radio">
-                          <label><input type="radio" name="optradio">Male</label> &nbsp;
-                          <label><input type="radio" name="optradio">Female</label>
-                        </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Victim</label> &nbsp;
+                        <label><input type="radio" name="optradio">Trafficker</label>
                     </div>
-                    <div class="row">
-                        <div class="col-md-5 box-label">
-                            <p>Age</p>
-                        </div>
-                        <div class="col-md-7 input-field">
-                            <input type="text" name="age" class="text-box"><br>
-                        </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Male</label> &nbsp;
+                        <label><input type="radio" name="optradio">Female</label>
                     </div>
-                    <div class="row">
-                        <div class="col-md-5 box-label">
-                            <p>Address 1</p>
-                        </div>
-
-                        <div class="col-md-7 input-field">
-                            <input type="text" name="address-1" class="text-box"><br>
-                        </div>
+                    <div class="input-field">
+                        <input type="text" name="age" class="form-control" placeholder="Age"><br>
                     </div>
-                    <div class="row">
-                        <div class="col-md-5 box-label">
-                            <p>Address 2</p>
-                        </div>
-
-                        <div class="col-md-7 input-field">
-                            <input type="text" name="address-2" class="text-box"><br>
-                        </div>
+                    <div class="input-field">
+                        <input type="text" name="address-1" class="form-control" placeholder="Address 1"><br>
                     </div>
-                    <div class="row">
-                        <div class="col-md-5 box-label">
-                            <p>Phone Contact</p>
-                        </div>
-                        <div class="col-md-7 input-field">
-                            <input type="text" name="phone-contact" class="text-box"><br>
-                        </div>
+                    <div class="input-field">
+                        <input type="text" name="address-2" class="form-control" placeholder="Address 2"><br>
                     </div>
-                    <div class="row">
-                        <div class="col-md-5 box-label">
-                            <p>Relation to...</p>
-                        </div>
-                        <div class="col-md-7 input-field">
-                            <input type="text" name="relation-to" class="text-box"><br>
-                        </div>
+                    <div class="input-field">
+                        <input type="text" name="phone-contact" class="form-control" placeholder="Phone Contact"><br>
                     </div>
-                    <div class="row">
-                        <div class="col-md-5 box-label">
-                            <p>Photo Upload</p>
-                        </div>
-                        <div class="col-md-7 input-field">
-                            <input type="text" name="photo-upload" class="text-box"><br>
-                        </div>
+                    <div class="input-field">
+                        <input type="text" name="relation-to" class="form-control" placeholder="Relation to..."><br>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="photo-upload" class="form-control" placeholder="Photo Upload"><br>
                     </div>
                 </div>
             </div>
