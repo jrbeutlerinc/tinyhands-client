@@ -8,7 +8,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <button ng-if="i != 1" ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes - 1" type="button" class="btn btn-danger btn-xs pull-left">
-                            <strong>-</strong>
+                            <strong>X</strong>
                         </button>
                     Person Box {{ i }}</h3>
                 </div>
@@ -85,10 +85,16 @@
                     </div>
                 </div>
             </div>
+            <div ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes + 1" ng-if="i == irfCtrl.numPersonBoxes + 1 && irfCtrl.numPersonBoxes < 12" class="col-md-4 add-person-box">
+                <div class="panel panel-default">
+                    <div class="panel-body add-person-body">
+                        <h1 class="plus">+</h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row pull-right">
-        <button ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes + 1" ng-disabled="irfCtrl.numPersonBoxes == 12" type="button" class="btn btn-success btn-lg">Add Person Box</button>
         <button type="button" class="btn btn-primary btn-lg">Save</button>
     </div>
 </div>
