@@ -29,12 +29,14 @@
                 <div class="panel-body">
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-2" value="0" ng-model="section7Ctrl.alarms[0]" ng-change="section7Ctrl.calculateAlarms()">No</label>
+                            <label><input type="radio" name="sect7-2" ng-click="section7Ctrl.calculateAlarms(0, 0)">No</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-2" value="1" ng-model="section7Ctrl.alarms[0]" ng-change="section7Ctrl.calculateAlarms()">Yes</label>
+                            <label><input type="radio" name="sect7-2" ng-click="section7Ctrl.calculateAlarms(0, 1)">Yes
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> 1
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -47,12 +49,14 @@
                 <div class="panel-body">
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-3" value="0">No</label>
+                            <label><input type="radio" name="sect7-3" ng-click="section7Ctrl.calculateAlarms(1, 0)">No</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-3" value="3">Yes</label>
+                            <label><input type="radio" name="sect7-3" ng-click="section7Ctrl.calculateAlarms(1, 3)">Yes
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> 3
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -64,12 +68,14 @@
                 <div class="panel-body">
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-4" value="0">Yes</label>
+                            <label><input type="radio" name="sect7-4" ng-click="section7Ctrl.calculateAlarms(2, 0)">Yes</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-4" value="4">No</label>
+                            <label><input type="radio" name="sect7-4" ng-click="section7Ctrl.calculateAlarms(2, 4)">No
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> 4
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -81,12 +87,14 @@
                 <div class="panel-body">
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-5" value="0">Yes</label>
+                            <label><input type="radio" name="sect7-5" ng-click="section7Ctrl.calculateAlarms(3, 0)">Yes</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-5" value="4">No</label>
+                            <label><input type="radio" name="sect7-5" ng-click="section7Ctrl.calculateAlarms(3, 4)">No
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> 4
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -104,17 +112,21 @@
                         <div class="panel-body">
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-1" value="0">Never</label>
+                                    <label><input type="radio" name="sect7-6-1" ng-click="section7Ctrl.calculateAlarms(4, 0)">Never</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-1" value="4">Rarely / Minor</label>
+                                    <label><input type="radio" name="sect7-6-1" ng-click="section7Ctrl.calculateAlarms(4, 4)">Rarely / Minor
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span> 4
+                                    </label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-1" value="10">Frequent / Severe</label>
+                                    <label><input type="radio" name="sect7-6-1" ng-click="section7Ctrl.calculateAlarms(4, 10)">Frequent / Severe
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span> 10
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -126,17 +138,19 @@
                         <div class="panel-body">
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-2" value="0">Never</label>
+                                    <label><input type="radio" name="sect7-6-2" ng-click="section7Ctrl.calculateAlarms(5, 0)">Never</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-2" value="0">Rarely / Minor</label>
+                                    <label><input type="radio" name="sect7-6-2" ng-click="section7Ctrl.calculateAlarms(5, 0)">Rarely / Minor</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-2" value="6">Frequent / Severe</label>
+                                    <label><input type="radio" name="sect7-6-2" ng-click="section7Ctrl.calculateAlarms(5, 6)">Frequent / Severe
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span> 6
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -148,17 +162,19 @@
                         <div class="panel-body">
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-3" value="0">Never</label>
+                                    <label><input type="radio" name="sect7-6-3" ng-click="section7Ctrl.calculateAlarms(6, 0)">Never</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-3" value="0">Rarely / Minor</label>
+                                    <label><input type="radio" name="sect7-6-3" ng-click="section7Ctrl.calculateAlarms(6, 0)">Rarely / Minor</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-3" value="2">Frequent / Severe</label>
+                                    <label><input type="radio" name="sect7-6-3" ng-click="section7Ctrl.calculateAlarms(6, 2)">Frequent / Severe
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span> 2
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -172,17 +188,19 @@
                 <div class="panel-body">
                     <div class="col-md-4">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-7" value="0">Never</label>
+                            <label><input type="radio" name="sect7-7" ng-click="section7Ctrl.calculateAlarms(7, 0)">Never</label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-7" value="0">Occasionally</label>
+                            <label><input type="radio" name="sect7-7" ng-click="section7Ctrl.calculateAlarms(7, 0)">Occasionally</label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-7" value="1">All the time</label>
+                            <label><input type="radio" name="sect7-7" ng-click="section7Ctrl.calculateAlarms(7, 1)">All the time
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> 1
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -194,17 +212,21 @@
                 <div class="panel-body">
                     <div class="col-md-4">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-8" value="0">Never</label>
+                            <label><input type="radio" name="sect7-8" ng-click="section7Ctrl.calculateAlarms(8, 0)">Never</label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-8" value="2">Occasionally</label>
+                            <label><input type="radio" name="sect7-8" ng-click="section7Ctrl.calculateAlarms(8, 2)">Occasionally
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> 2
+                            </label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-8" value="6">All the time</label>
+                            <label><input type="radio" name="sect7-8" ng-click="section7Ctrl.calculateAlarms(8, 6)">All the time
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> 6
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -215,14 +237,16 @@
                 </div>
                 <div class="panel-body">
                     <div class="radio">
-                        <label><input type="radio" name="sect7-9" value="7">Unable to meet basic needs</label>
+                        <label><input type="radio" name="sect7-9" ng-click="section7Ctrl.calculateAlarms(9, 7)">Unable to meet basic needs
+                            <span class="glyphicon glyphicon-exclamation-sign"></span> 7
+                        </label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="sect7-9" value="0">Comfortably meet basic needs, and can afford to buy
+                        <label><input type="radio" name="sect7-9" ng-click="section7Ctrl.calculateAlarms(9, 0)">Comfortably meet basic needs, and can afford to buy
                             some non-essential goods/services</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="sect7-9" value="0">Wealthy</label>
+                        <label><input type="radio" name="sect7-9" ng-click="section7Ctrl.calculateAlarms(9, 0)">Wealthy</label>
                     </div>
                 </div>
             </div>
@@ -233,26 +257,41 @@
                 <div class="panel-body">
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-10" value="0">No</label>
+                            <label><input type="radio" name="sect7-10" ng-click="section7Ctrl.calculateAlarms(10, 0)">No</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-10" value="7">Yes</label>
+                            <label><input type="radio" name="sect7-10" ng-click="section7Ctrl.calculateAlarms(10, 7)">Yes
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> 7
+                            </label>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-success" ng-show="section7Ctrl.shouldSendHome()">
                 <div class="panel-heading">
                     <h3 class="panel-title">Total Home Situational Alarms</h3>
                 </div>
                 <div class="panel-body">
                     <div class="col-md-6 alarms">
-                        <p>Calculated Alarms: {{ section7Ctrl.totalAlarms }}</p>
+                        <p>Calculated Alarms: {{ section7Ctrl.calculatedAlarms }}</p>
                     </div>
                     <div class="col-md-6 alarms">
-                        <p>Reported Alarms: 0</p>
+                        <p>Reported Alarms: <input type="number" class="form-control reported-alarms" ng-model="section7Ctrl.reportedAlarms"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-danger" ng-show="!section7Ctrl.shouldSendHome()">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Total Home Situational Alarms</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6 alarms">
+                        <p>Calculated Alarms: {{ section7Ctrl.calculatedAlarms }}</p>
+                    </div>
+                    <div class="col-md-6 alarms">
+                        <p>Reported Alarms: <input type="number" class="form-control reported-alarms" ng-model="section7Ctrl.reportedAlarms"></p>
                     </div>
                 </div>
             </div>
