@@ -1,3 +1,261 @@
-<div>
-    <p>Section 7</p>
+<div class="container" id="section7">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">PBs</h3>
+        </div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.1</strong> Did your guardian know you were travelling to India?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-1">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-1">Yes</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.2</strong> Did your family/guardian pressure you in any way to
+                        accept the broker's offer?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-2" value="0" ng-model="section7Ctrl.alarms[0]" ng-change="section7Ctrl.calculateAlarms()">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-2" value="1" ng-model="section7Ctrl.alarms[0]" ng-change="section7Ctrl.calculateAlarms()">Yes</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.3</strong> If they attempted to send you abroad, do you think
+                        they will try to send you overseas again?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-3" value="0">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-3" value="3">Yes</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.4</strong> Do you feel safe at home with your guardian?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-4" value="0">Yes</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-4" value="4">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.5</strong> Do you want to go home?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-5" value="0">Yes</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-5" value="4">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.6</strong> Is victim subject to any of the following by someone
+                        in her home?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Sexual Abuse</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-1" value="0">Never</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-1" value="4">Rarely / Minor</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-1" value="10">Frequent / Severe</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Physical Abuse</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-2" value="0">Never</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-2" value="0">Rarely / Minor</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-2" value="6">Frequent / Severe</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Emotional Abuse</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-3" value="0">Never</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-3" value="0">Rarely / Minor</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label><input type="radio" name="sect7-6-3" value="2">Frequent / Severe</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.7</strong> Does guardian drink alcohol?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-7" value="0">Never</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-7" value="0">Occasionally</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-7" value="1">All the time</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.8</strong> Does guardian use drugs?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-8" value="0">Never</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-8" value="2">Occasionally</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-8" value="6">All the time</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.9</strong> Economic Situation of Family</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="radio">
+                        <label><input type="radio" name="sect7-9" value="7">Unable to meet basic needs</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="sect7-9" value="0">Comfortably meet basic needs, and can afford to buy
+                            some non-essential goods/services</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="sect7-9" value="0">Wealthy</label>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>7.10</strong> Did she express any suicidal thoughts at any point?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-10" value="0">No</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-10" value="7">Yes</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Total Home Situational Alarms</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6 alarms">
+                        <p>Calculated Alarms: {{ section7Ctrl.totalAlarms }}</p>
+                    </div>
+                    <div class="col-md-6 alarms">
+                        <p>Reported Alarms: 0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
