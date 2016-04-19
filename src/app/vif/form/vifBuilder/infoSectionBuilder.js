@@ -11,7 +11,7 @@ export default class InfoSectionBuilder {
             this.photoPermission = false;
         } else {
             this.vifNumber = vif.vif_number;
-            this.data = vif.date;
+            this.date = vif.date;
             this.numberOfVictims = vif.number_of_victims;
             this.numberOfTraffickers = vif.number_of_traffickers;
             this.location = vif.location;

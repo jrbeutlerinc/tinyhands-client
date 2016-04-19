@@ -1,5 +1,5 @@
-import IndiaBuilder from './destination/indiaBuilder';
-import GulfBuilder from './destination/gulfBuilder';
+import IndiaBuilder from './destinations/indiaBuilder';
+import GulfBuilder from './destinations/gulfBuilder';
 
 export default class DestinationBuilder {
     constructor(vif = null) {
