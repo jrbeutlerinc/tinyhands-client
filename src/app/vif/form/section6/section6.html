@@ -10,15 +10,8 @@
                         going abroad are often deceived and end up in very exploitative situations?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-1">Had heard, but never knew how bad it was until I was
-                        intercepted by TH</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-1">Knew how bad it was, but didn't think that was happening to her</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-1">Had never heard about it</label>
+                    <div class="radio" ng-repeat="option in section6Ctrl.sect1Options">
+                        <label><input type="radio" name="sect6-1">{{ option }}</label>
                     </div>
                 </div>
             </div>
@@ -28,14 +21,8 @@
                         hadn't been intercepted by Tiny Hands?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-2">Yes, thankful to TH for saving her</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-2">No, blames Tiny Hands for stopping her</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-2">Doesn't know</label>
+                    <div class="radio" ng-repeat="option in section6Ctrl.sect2Options">
+                        <label><input type="radio" name="sect6-2">{{ option }}</label>
                     </div>
                 </div>
             </div>
@@ -44,17 +31,8 @@
                     <h3 class="panel-title"><strong>6.3</strong> Had you heard about the gospel of Jesus before coming to TH?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-3">No, I have never heard</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-3">Has heard the name only</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-3">Had heard the gospel but never believed</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-3">Was already a believer</label>
+                    <div class="radio" ng-repeat="option in section6Ctrl.sect3Options">
+                        <label><input type="radio" name="sect6-3">{{ option }}</label>
                     </div>
                 </div>
             </div>
@@ -63,14 +41,8 @@
                     <h3 class="panel-title"><strong>6.4</strong> If she wasn't already a believer, what does she believe now?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-4">Doesn't believe in Jesus</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-4">Believes in Jesus, but doesn't plan to go to church</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect6-4">Believes in Jesus and plans to go to church</label>
+                    <div class="radio" ng-repeat="option in section6Ctrl.sect4Options">
+                        <label><input type="radio" name="sect6-4">{{ option }}</label>
                     </div>
                 </div>
             </div>
