@@ -21,7 +21,7 @@ export default class InfoSectionBuilder {
         }
     }
     
-    build(vif) {
+    build(vif = {}) {
         vif.vif_number = this.vifNumber;
         vif.date = this.date;
         vif.number_of_victims = this.numberOfVictims;

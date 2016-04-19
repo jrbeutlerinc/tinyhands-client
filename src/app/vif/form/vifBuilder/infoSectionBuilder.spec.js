@@ -90,4 +90,49 @@ describe('InfoSectionBuilder', () => {
            expect(builder.photoPermission).toEqual(vif.permission_to_use_photo); 
        });
     });
+    
+    describe('build', () => {
+        
+       beforeEach(() => {          
+           builder = new InfoSectionBuilder(vif);
+       });
+        
+        it('should set built vif vif_number to equal builder.vifNumber', () => {
+           builder.vifNumber = "ABC123";
+           let builtVif = builder.build();
+           
+           expect(builtVif.vif_number).toEqual(builder.vifNumber); 
+       });
+       
+       it('should set built vif date to equal builder.date', () => {
+           builder.date = "11-11-2011";
+           let builtVif = builder.build();
+           
+           expect(builtVif.date).toEqual(builder.date);
+       });
+       
+       it('should set numberOfVictims to equal vif.number_of_victims', () => {
+           
+       });
+       
+       it('should set numberOfTraffickers to equal vif.number_of_traffickers', () => {
+            
+       });
+       
+       it('should set location to equal vif.location', () => {
+           
+       });
+       
+       it('should set interviewer to equal vif.interviewer', () => {
+          
+       });
+       
+       it('should set statementReadBeforeInterview to equal vif.statement_read_before_beginning', () => {
+
+       });
+       
+       it('should set photoPermission to equal vif.permission_to_use_photo', () => {
+
+       });
+    })
 });
