@@ -9,14 +9,9 @@
                     <h3 class="panel-title"><strong>4.1</strong> 1st time crossing border</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in ['Yes', 'No']">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-1">Yes</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-1">No</label>
+                            <label><input type="radio" name="sect4-1">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -25,29 +20,10 @@
                 <div class="panel-heading">
                     <h3 class="panel-title"><strong>4.2</strong> Primary means of travel?</h3>
                 </div>
-                <div class="panel-body">
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-2">Tourist Bus</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-2">Motorbike</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-2">Private Car</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-2">Local Bus</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-2">Microbus</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-2">Plane</label>
+                <div class="panel-body panel-radio-only">
+                    <div class="col-md-4" ng-repeat="option in section4Ctrl.travelList">
+                        <div class="radio options">
+                            <label><input type="radio" name="sect4-2">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -57,14 +33,9 @@
                     <h3 class="panel-title"><strong>4.3</strong> Did you stay somewhere between your village and the border?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-3">No</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-3">Yes</label>
+                            <label><input type="radio" name="sect4-3">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -87,14 +58,9 @@
                     <h3 class="panel-title"><strong>4.5</strong> Was any attempt made to hide your presence there?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-1">
+                    <div class="col-md-1" ng-repeat="option in ['No', 'Yes']">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-5">No</label>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-5">Yes</label>
+                            <label><input type="radio" name="sect4-5">{{ option }}</label>
                         </div>
                     </div>
                     <div class="col-md-10">
@@ -107,14 +73,9 @@
                     <h3 class="panel-title"><strong>4.6</strong> Were you free to go out?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-1">
+                    <div class="col-md-1" ng-repeat="option in ['Yes', 'No']">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-6">Yes</label>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-6">No</label>
+                            <label><input type="radio" name="sect4-6">{{ option }}</label>
                         </div>
                     </div>
                     <div class="col-md-10">
@@ -176,14 +137,9 @@
                     <h3 class="panel-title"><strong>4.10</strong> Is your passport or a work permit with a broker?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-10">No</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-10">Yes</label>
+                            <label><input type="radio" name="sect4-10">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -193,31 +149,12 @@
                     <h3 class="panel-title"><strong>4.11</strong> Did these take place on the way?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-11">Sexual Harassment</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-11">Sexual Abuse</label>
+                    <div class="col-md-4" ng-repeat="option in section4Ctrl.sect11List">
+                        <div class="radio options">
+                            <label><input type="radio" name="sect4-11">{{ option }}</label>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-11">Physical Abuse</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-11">Threats</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-11">Denied Proper Food</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-11">Forced to take Drugs</label>
-                        </div>
-                    </div>
-                    <input type="text" class="form-control explain" placeholder="By whom?">
+                    <input type="text" class="form-control whom" placeholder="By whom?">
                     <input type="text" class="form-control explain" placeholder="Explain.">
                 </div>
             </div>
@@ -256,14 +193,9 @@
                     <h3 class="panel-title"><strong>4.14</strong> Was the companion with you when intercepted?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in ['Yes', 'No']">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-14">Yes</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-14">No</label>
+                            <label><input type="radio" name="sect4-14">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -273,17 +205,12 @@
                     <h3 class="panel-title"><strong>4.15</strong> If No, were you planning to meet him/her again in India?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-3">
+                    <div class="col-md-1" ng-repeat="option in ['No', 'Yes']">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-15">No</label>
+                            <label><input type="radio" name="sect4-15">{{ option }}</label>
                         </div>
                     </div>
-                    <div class="col-md-1">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-15">Yes</label>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <input type="text" class="form-control explain" placeholder="If yes, where?">
                     </div>
                 </div>
@@ -292,25 +219,10 @@
                 <div class="panel-heading">
                     <h3 class="panel-title"><strong>4.16</strong> Did money change hands between broker and the companion?</h3>
                 </div>
-                <div class="panel-body">
-                    <div class="col-md-6">
-                        <div class="radio sect4-16">
-                            <label><input type="radio" name="sect4-16">No</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio sect4-16">
-                            <label><input type="radio" name="sect4-16">Don't know</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-16">Broker gave money to the companion</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-16">Companion gave money to the border</label>
+                <div class="panel-body panel-radio-only">
+                    <div class="col-md-6" ng-repeat="option in section4Ctrl.change_hands">
+                        <div class="radio options">
+                            <label><input type="radio" name="sect4-16">{{ option }}</label>
                         </div>
                     </div>
                 </div>
