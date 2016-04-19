@@ -29,6 +29,8 @@ export default class InfoSectionBuilder {
         vif.location = this.location;
         vif.interviewer = this.interviewer;
         vif.statement_read_before_beginning = this.statementReadBeforeInterview;
-        vif.permission_to_use_photo = this.photoPermission; 
+        vif.permission_to_use_photo = this.photoPermission;
+        
+        return vif;
     }
 }

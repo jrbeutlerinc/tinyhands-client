@@ -94,10 +94,10 @@ describe('InfoSectionBuilder', () => {
     describe('build', () => {
         
        beforeEach(() => {          
-           builder = new InfoSectionBuilder(vif);
+           builder = new InfoSectionBuilder();
        });
         
-        it('should set built vif vif_number to equal builder.vifNumber', () => {
+       it('should set built vif vif_number to equal builder.vifNumber', () => {
            builder.vifNumber = "ABC123";
            let builtVif = builder.build();
            
@@ -111,28 +111,46 @@ describe('InfoSectionBuilder', () => {
            expect(builtVif.date).toEqual(builder.date);
        });
        
-       it('should set numberOfVictims to equal vif.number_of_victims', () => {
+       it('should set built vif number_of_victims to equal builder.numberOfVictims', () => {
+           builder.numberOfVictims = 2;
+           let builtVif = builder.build();
            
+           expect(builtVif.number_of_victims).toEqual(builder.numberOfVictims);
        });
        
-       it('should set numberOfTraffickers to equal vif.number_of_traffickers', () => {
-            
-       });
-       
-       it('should set location to equal vif.location', () => {
+       it('should set built vif number_of_traffickers to equal builder.numberOfTraffickers', () => {
+           builder.numberOfTraffickers = 3;
+           let builtVif = builder.build();
            
+           expect(builtVif.number_of_traffickers).toEqual(builder.numberOfTraffickers);
        });
        
-       it('should set interviewer to equal vif.interviewer', () => {
-          
+       it('should set built vif location to equal builder.location', () => {
+           builder.location = "Nepal";
+           let builtVif = builder.build();
+           
+           expect(builtVif.location).toEqual(builder.location);
        });
        
-       it('should set statementReadBeforeInterview to equal vif.statement_read_before_beginning', () => {
-
+       it('should set built vif interviewer to equal builder.interviewer', () => {
+           builder.interviewer = "Bob";
+           let builtVif = builder.build();
+           
+           expect(builtVif.interviewer).toEqual(builder.interviewer);
        });
        
-       it('should set photoPermission to equal vif.permission_to_use_photo', () => {
-
+       it('should set built vif statement_read_before_beginning to equal builder.statementReadBeforeInterview', () => {
+           builder.statementReadBeforeInterview = true;
+           let builtVif = builder.build();
+           
+           expect(builtVif.statement_read_before_beginning).toEqual(builder.statementReadBeforeInterview); 
+       });
+       
+       it('should set built vif permission_to_use_photo to equal builer.photoPermission', () => {
+           builder.photoPermission = true;
+           let builtVif = builder.build();
+           
+           expect(builtVif.permission_to_use_photo).toEqual(builder.photoPermission);
        });
     })
 });
