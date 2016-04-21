@@ -2,7 +2,7 @@ export default class CasteBuilder {
     constructor(vif = null) {
         if(vif == null) {
             this.clearAll();
-            this.otherText = '';
+            this._otherText = '';
         } else {
             this.setValues(vif);
         }
@@ -167,7 +167,7 @@ export default class CasteBuilder {
         return this._otherText;
     }
     
-    set otherValue(value) {
+    set otherText(value) {
         this._otherText = value;
     }
 }

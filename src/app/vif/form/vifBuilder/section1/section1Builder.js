@@ -78,7 +78,7 @@ export default class Section1Builder {
     }
     
     get isMale() {
-        return this._gender === 'male'
+        return this._gender === 'male';
     }
     
     set isMale(value) {
@@ -88,7 +88,7 @@ export default class Section1Builder {
     }
     
     get isFemale() {
-        return this._gender === 'female'
+        return this._gender === 'female';
     }
     
     set isFemale(value) {
