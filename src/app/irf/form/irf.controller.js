@@ -13,6 +13,7 @@ export default class IrfController {
 
     this.addSections();
     this.getIrf();
+    this.getInterceptee();
   }
 
   addSections() {
@@ -25,6 +26,12 @@ export default class IrfController {
   getIrf() {
     this.service.getIrf(this.irfId).then((response) => {
       this.form = response.data;
+    });
+  }
+
+  getInterceptee() {
+    this.service.getInterceptee(this.irfId).then((response) => {
+      this.interceptee = response.data;
     });
   }
 

@@ -10,4 +10,8 @@ export default class IrfService extends BaseService{
   getIrf(id) {
     return this.get(`api/irf/${id}/`);
   }
+
+  getInterceptee(id) {
+    return this.get(`api/interceptee/${id}/`);
+  }
 }
