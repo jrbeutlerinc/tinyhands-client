@@ -1,5 +1,7 @@
 export default class MigrationPlansBuilder {
     constructor(vif = null) {
+        this.gulfLocations = ["Lebanon", "Dubai", "Saudi Arabia", "Kuwait", "Malaysia", "Oman", "Qatar", "Did Not Know"];
+        this.indiaLocations = ["Delhi", "Mumbai", "Surat", "Rajastan", "Kolkata", "Pune", "Jaipur", "Bihar", "Did Not Know"];
         if(vif == null) {
             this.clearAll();
             this._otherText = '';
