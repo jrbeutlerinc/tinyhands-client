@@ -11,7 +11,7 @@
                 <div class="panel-body">
                     <div class="col-md-3" ng-repeat="option in section2Ctrl.sect1Options">
                         <div class="radio options">
-                            <label><input type="radio" name="sect2-1">{{ option }}</label>
+                            <label><input type="radio" name="option" ng-model="section2Ctrl.vif.option[option.value]" ng-value="true" >{{ option.name }}</label>
                         </div>
                     </div>
                     <div class="col-md-12 radio">
@@ -31,7 +31,7 @@
                 <div class="panel-body">
                     <div class="col-md-4" ng-repeat="option in section2Ctrl.sect2Options">
                         <div class="radio options">
-                            <label><input type="radio" name="sect2-2">{{ option }}</label>
+                            <label><input type="radio" name="option" ng-model="section2Ctrl.vif.option[option.value]" ng-value="true" >{{ option.name }}</label>
                         </div>
                     </div>
                     <div class="col-md-12 radio">
@@ -53,9 +53,9 @@
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <div class="col-md-4" ng-repeat="location in section2Ctrl.vif.section2.migrationPlans.indiaLocations">
+                                <div class="col-md-4" ng-repeat="location in section2Ctrl.indiaLocations">
                                     <div class="radio options">
-                                        <label><input type="radio" name="sect2-3">{{ location }}</label>
+                                        <label><input type="radio" name="loaction" ng-model="section2Ctrl.vif.location[location.value]" ng-value="true" >{{ location.name }}</label>
                                     </div>
                                 </div>
                                 <div class="col-md-12 radio">
@@ -73,9 +73,9 @@
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <div class="col-md-4" ng-repeat="location in section2Ctrl.vif.section2.migrationPlans.gulfLocations">
+                                <div class="col-md-4" ng-repeat="location in section2Ctrl.gulfLocations">
                                     <div class="radio options">
-                                        <label><input type="radio" name="sect2-3">{{ location }}</label>
+                                        <label><input type="radio" name="location" ng-model="section2Ctrl.vif.location[location.value]" ng-value="true">{{ location.name }}</label>
                                     </div>
                                 </div>
                                 <div class="col-md-12 radio">
