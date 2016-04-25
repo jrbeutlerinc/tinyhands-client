@@ -21,14 +21,15 @@ export default class IsLiterateBuilder {
         }
     }
 
-    build(vif) {
+    build(vif = {}) {
         let value = null;
         if(this._isLiterate === true) {
             value = true;
-        } else if(this._isNotLiterate === false) {
+        } else if(this._isNotLiterate === true) {
             value = false;
         }
         vif.victim_is_literate = value;
+        return vif;
     }
     
     get isLiterate() {

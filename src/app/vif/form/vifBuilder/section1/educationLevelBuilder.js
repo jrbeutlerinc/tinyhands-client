@@ -31,7 +31,7 @@ export default class EducationLevelBuilder {
         this._masters = vif.victim_education_level_masters;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.victim_education_level_none = this._none;
         vif.victim_education_level_informal = this._informal;
         vif.victim_education_level_primary = this._primary;
@@ -41,6 +41,7 @@ export default class EducationLevelBuilder {
         vif.victim_education_level_11_12 = this._grade11to12;
         vif.victim_education_level_bachelors = this._bachelors;
         vif.victim_education_level_masters = this._masters;
+        return vif;
     }
     
     get none() {
