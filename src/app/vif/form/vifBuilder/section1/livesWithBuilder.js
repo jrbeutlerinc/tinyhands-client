@@ -29,7 +29,7 @@ export default class LivesWithBuilder {
         this._otherText = vif.victim_lives_with_other_value;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.victim_lives_with_own_parents = this._parents;
         vif.victim_lives_with_husband = this._husband;
         vif.victim_lives_with_husbands_family = this._husbandsFamily;
@@ -38,6 +38,7 @@ export default class LivesWithBuilder {
         vif.victim_lives_with_other_relative = this._otherRelative;
         vif.victim_lives_with_other = this._other;
         vif.victim_lives_with_other_value = this._otherText;
+        return vif;
     }
     
     get parents() {
