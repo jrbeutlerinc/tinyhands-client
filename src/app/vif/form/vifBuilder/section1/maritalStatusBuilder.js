@@ -1,6 +1,6 @@
 export default class MaritalStatusBuilder{
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.clearAll();
         } else {
             this.setValues(vif);

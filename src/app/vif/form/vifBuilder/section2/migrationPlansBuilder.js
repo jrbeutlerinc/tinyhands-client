@@ -1,6 +1,6 @@
 export default class MigrationPlansBuilder {
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.clearAll();
             this._otherText = '';
             this._jobOtherText = '';
