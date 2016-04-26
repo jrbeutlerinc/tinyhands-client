@@ -1,3 +1,33 @@
-<div>
-    <p>VIF Info</p>
+<div class="container" id="vif-metadata">
+    <div class="container-fluid text-center">
+        <img class="" src="http://edwards.cse.taylor.edu/static/images/logo.png">
+        <h2>Victim Interview Form (VIF)</h2>
+        <h4>Version 3.0 Tiny Hands Nepal</h4>
+    </div>
+
+    <form>
+        <div class="form-group text-left">
+            <label>VIF Number</label>
+            <input type="text" ng-model="infoCtrl.vif.vifNumber" class="form-control" placeholder="VIF Number">
+            
+            <label>Date/Time</label>
+            <input ng-model="infoCtrl.vif.date" class="form-control">
+            
+            <label>Location</label>
+            <input type="text" ng-model="infoCtrl.vif.location" class="form-control" placeholder="Location">
+            
+            <label>Interviewer</label>
+            <input type="text" ng-model="infoCtrl.vif.interviewer" class="form-control" placeholder="Interviewer">
+            
+            <label># of Victims</label>
+            <input type="text" ng-model="infoCtrl.vif.numberOfVictims" class="form-control" placeholder="# of Victims">
+            
+            <label># of Traffickers</label>
+            <input type="text" ng-model="infoCtrl.vif.numberOfTraffickers" class="form-control" placeholder="# of Traffickers">
+
+            <label><input type="checkbox" ng-model="infoCtrl.vif.statementReadBeforeInterview"> Was statement read to the participant before beginning the interview?</label>
+            <br>
+            <label><input type="checkbox" ng-model="infoCtrl.vif.photoPermission"> Permission to use photograph?</label>
+        </div>
+    </form>
 </div>
