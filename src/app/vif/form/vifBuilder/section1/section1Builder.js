@@ -20,7 +20,7 @@ export default class Section1Builder {
         this.parentMaritalStatus = parentMaritalStatusBuilder || new ParentMaritalStatusBuilder(vif);
         this.educationLevel = educationLevelBuilder || new EducationLevelBuilder(vif);
         this.literacy = literacyBuilder || new IsLiterateBuilder(vif);
-        if(vif == null) {
+        if(vif === null) {
             this.setDefaultValues();
         }else {
             this.setValues(vif);

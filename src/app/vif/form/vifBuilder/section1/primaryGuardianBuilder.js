@@ -1,6 +1,6 @@
 export default class PrimaryGuardianBuilder {
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.clearAll();
             this.address1 = null; //FK
             this.address2 = null; //FK

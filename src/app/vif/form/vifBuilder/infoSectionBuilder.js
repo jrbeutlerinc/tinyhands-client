@@ -1,6 +1,6 @@
 export default class InfoSectionBuilder {
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.vifNumber = '';
             this.date = '';
             this.numberOfVictims = 0;
