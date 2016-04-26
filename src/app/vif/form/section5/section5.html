@@ -9,7 +9,7 @@
                     <h3 class="panel-title"><strong>5.1</strong> Did the broker / companion arrange someone to meet you after crossing the border?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-3" ng-repeat="option in section5Ctrl.sect1Options">
+                    <div class="col-md-3" ng-repeat="option in section5Ctrl.sect1Options" ng-model="section1Ctrl.vif.arrangeSomeone[option.value]" ng-value="true">
                         <div class="radio">
                             <label><input type="radio" name="sect5-1">{{ option }}</label>
                         </div>
@@ -21,9 +21,9 @@
                     <h3 class="panel-title"><strong>5.2</strong> Do you know any details about the place you were headed to in India?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                    <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                         <div class="radio">
-                            <label><input type="radio" name="sect5-2">{{ option }}</label>
+                            <label><input type="radio" name="sect5-2" ng-model="section1Ctrl.vif.knowDetails" ng-value="option.value">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                                 in bringing girls to India</h2>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                            <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
                                     <label><input type="radio" name="sect5-3-1">{{ option }}</label>
                                 </div>
@@ -52,7 +52,7 @@
                             <h2 class="panel-title">A contract of a "Husband Trafficker"</h2>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                            <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
                                     <label><input type="radio" name="sect5-3-2">{{ option }}</label>
                                 </div>
@@ -64,7 +64,7 @@
                             <h2 class="panel-title">Someone the recruiter or companion met along the way who works with them</h2>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                            <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
                                     <label><input type="radio" name="sect5-3-2">{{ option }}</label>
                                 </div>
@@ -77,7 +77,7 @@
                                 or before you came to the border</h2>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                            <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
                                     <label><input type="radio" name="sect5-3-3">{{ option }}</label>
                                 </div>
@@ -90,7 +90,7 @@
                                 way or before you came to the border</h2>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                            <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
                                     <label><input type="radio" name="sect5-3-4">{{ option }}</label>
                                 </div>
@@ -104,7 +104,7 @@
                     <h3 class="panel-title"><strong>5.4</strong> Have you ever worked in the sex industry?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                    <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                         <div class="radio">
                             <label><input type="radio" name="sect5-4">{{ option }}</label>
                         </div>
@@ -116,7 +116,7 @@
                     <h3 class="panel-title"><strong>5.5</strong> Was the place you worked involved in sending girls overseas?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                    <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                         <div class="radio">
                             <label><input type="radio" name="sect5-5">{{ option }}</label>
                         </div>
