@@ -1,6 +1,6 @@
 export default class ExpenseBuilder {
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.clearAll();
             this._amountText = '';
         } else {

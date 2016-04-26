@@ -1,6 +1,6 @@
 export default class BrokerRelationBuilder {
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.clearAll();
             this._otherText = '';
         } else {

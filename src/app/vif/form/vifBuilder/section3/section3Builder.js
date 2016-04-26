@@ -1,3 +1,7 @@
+import BrokerRelationBuilder from './brokerRelationBuilder';
+import ExpenseBuilder from './expenseBuilder';
+import MeetBrokerBuilder from './meetBrokerBuilder';
+
 export default class Section3Builder {
     constructor(vif = null, brokerRelationBuilder = null, expenseBuilder = null, meetBrokerBuilder = null) {
         this.brokerRelation = brokerRelationBuilder || new BrokerRelationBuilder(vif);
