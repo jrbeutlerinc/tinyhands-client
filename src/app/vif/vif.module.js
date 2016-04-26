@@ -1,4 +1,7 @@
-import VIFRoutes from './vif.route'
+import TinyHandsShared from '../shared/shared.module';
+
+import VIFRoutes from './vif.route';
+
 
 import VifController from './form/vif.controller';
 import VifInfoController from './form/info/info.controller';
@@ -14,27 +17,28 @@ import VifPeopleController from './form/people/people.controller';
 import VifLocationsController from './form/locations/locations.controller';
 import VifListController from './list/vifList.controller';
 
-import VifBuilder from './form/vifBuilder.service';
+import VifBuilder from './form/vifBuilder/vifBuilder.service';
 import VifListService from './list/vifList.service';
 import VifService from './form/vif.service';
 
 export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared'])
-  .config(VIFRoutes)
-  
-  .service('VifBuilder', VifBuilder)
-  .service('VifListService', VifListService)
-  .service('VifService', VifService)
-  
-  .controller('VifController', VifController)
-  .controller('VifInfoController', VifInfoController)
-  .controller('VifSection1Controller', VifSection1Controller)
-  .controller('VifSection2Controller', VifSection2Controller)
-  .controller('VifSection3Controller', VifSection3Controller) 
-  .controller('VifSection4Controller', VifSection4Controller) 
-  .controller('VifSection5Controller', VifSection5Controller) 
-  .controller('VifSection6Controller', VifSection6Controller) 
-  .controller('VifSection7Controller', VifSection7Controller) 
-  .controller('VifSection8Controller', VifSection8Controller) 
-  .controller('VifPeopleController', VifPeopleController) 
-  .controller('VifLocationsController', VifLocationsController)   
-  .controller('VifListController', VifListController)
+
+    .config(VIFRoutes)
+
+    .controller('VifController', VifController)
+    .controller('VifInfoController', VifInfoController)
+    .controller('VifSection1Controller', VifSection1Controller)
+    .controller('VifSection2Controller', VifSection2Controller)
+    .controller('VifSection3Controller', VifSection3Controller)
+    .controller('VifSection4Controller', VifSection4Controller)
+    .controller('VifSection5Controller', VifSection5Controller)
+    .controller('VifSection6Controller', VifSection6Controller)
+    .controller('VifSection7Controller', VifSection7Controller)
+    .controller('VifSection8Controller', VifSection8Controller)
+    .controller('VifPeopleController', VifPeopleController)
+    .controller('VifLocationsController', VifLocationsController)
+    .controller('VifListController', VifListController)
+
+    .service('VifBuilder', VifBuilder)
+    .service('VifListService', VifListService)
+    .service('VifService', VifService);
