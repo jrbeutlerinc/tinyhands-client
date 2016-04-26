@@ -81,7 +81,7 @@ export default class Section4Builder {
 
     set firstTime(value) {
         if(value) {
-            this._firstTime = true;
+            this._firstTime = value;
         }
     }
 
@@ -91,7 +91,7 @@ export default class Section4Builder {
 
     set betweenVillageAndBorder(value) {
         if(value) {
-            this._betweenVillageAndBorder = true;
+            this._betweenVillageAndBorder = value;
         }
     }
 
@@ -101,7 +101,7 @@ export default class Section4Builder {
 
     set passportPermitWithBroker(value) {
         if(value) {
-            this._passportPermitWithBroker = true;
+            this._passportPermitWithBroker = value;
         }
     }
 
@@ -111,7 +111,7 @@ export default class Section4Builder {
 
     set companionWithVictim(value) {
         if(value) {
-            this._companionWithVictim = true;
+            this._companionWithVictim = value;
         }
     }
 }

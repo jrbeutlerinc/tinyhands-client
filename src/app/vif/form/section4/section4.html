@@ -9,9 +9,9 @@
                     <h3 class="panel-title"><strong>4.1</strong> 1st time crossing border</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6" ng-repeat="option in ['Yes', 'No']">
+                    <div class="col-md-6" ng-repeat="option in section4Ctrl.yesNoList">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-1">{{ option }}</label>
+                            <label><input type="radio" name="sect4-1" ng-model="section4Ctrl.vif.firstTime[yesNoList.value]" ng-value="true">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="panel-body panel-radio-only">
                     <div class="col-md-4" ng-repeat="option in section4Ctrl.travelList">
                         <div class="radio options">
-                            <label><input type="radio" name="sect4-2">{{ option }}</label>
+                            <label><input type="radio" name="sect4-2" ng-model="section4Ctrl.vif.travel[travelList.value]" ng-value="true">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -33,9 +33,9 @@
                     <h3 class="panel-title"><strong>4.3</strong> Did you stay somewhere between your village and the border?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                    <div class="col-md-6" ng-repeat="option in section1Ctrl.noYesList">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-3">{{ option }}</label>
+                            <label><input type="radio" name="sect4-3" ng-model="section4Ctrl.vif.betweenVillageAndBorder[noYesList.value]" ng-value="true">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -46,10 +46,10 @@
                 </div>
                 <div class="panel-body">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Days">
+                        <input type="text" class="form-control" placeholder="Days" ng-model="section4Ctrl.vif.stayDays">
                     </div>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Start Date">
+                        <input type="text" class="form-control" placeholder="Start Date" ng-model="section4Ctrl.vif.stayStartDate">
                     </div>
                 </div>
             </div>
@@ -58,13 +58,13 @@
                     <h3 class="panel-title"><strong>4.5</strong> Was any attempt made to hide your presence there?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-1" ng-repeat="option in ['No', 'Yes']">
+                    <div class="col-md-1" ng-repeat="option in section4Ctrl.vif.noYesList">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-5">{{ option }}</label>
+                            <label><input type="radio" name="sect4-5" ng-model="section4Ctrl.vif.hidePresence[noYesList.value]" ng-value="true">{{ option }}</label>
                         </div>
                     </div>
                     <div class="col-md-10">
-                        <input type="text" class="form-control explain" placeholder="If yes, explain.">
+                        <input type="text" class="form-control explain" placeholder="If yes, explain." ng-model="section4Ctrl.vif.hidePresence.explainText">
                     </div>
                 </div>
             </div>
@@ -73,13 +73,13 @@
                     <h3 class="panel-title"><strong>4.6</strong> Were you free to go out?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-1" ng-repeat="option in ['Yes', 'No']">
+                    <div class="col-md-1" ng-repeat="option in section4Ctrl.vif.yesNoList">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-6">{{ option }}</label>
+                            <label><input type="radio" name="sect4-6" ng-model="section4Ctrl.vif.freeToGoOut[yesNoList.value]" ng-value="true">{{ option }}</label>
                         </div>
                     </div>
                     <div class="col-md-10">
-                        <input type="text" class="form-control explain" placeholder="If no, explain.">
+                        <input type="text" class="form-control explain" placeholder="If no, explain." ng-model="section4Ctrl.vif.freeToGoOut.explainText">
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                             Besides those you were intercepted with, how many others were with you who were in a similar situation?
                         </div>
                         <div class="col-md-2">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" ng-model="section4Ctrl.vif.howManyOthers">
                         </div>
                     </div>
                     <div class="row sect4-7-line">
@@ -101,7 +101,7 @@
                             What was the age of the youngest?
                         </div>
                         <div class="col-md-2">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" ng-model="section4Ctrl.vif.ageOfYoungest">
                         </div>
                     </div>
                 </div>
@@ -113,21 +113,21 @@
                 <div class="panel-body">
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-9">No passport made</label>
+                            <label><input type="radio" name="sect4-9" ng-model="section4Ctrl.vif.passport.noPassport">No passport made</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" name="sect4-9">Passport included a false name</label>
+                            <label><input type="radio" name="sect4-9" ng-model="section4Ctrl.vif.passport.falseName">Passport included a false name</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" name="sect4-9">Passport included other false info</label>
+                            <label><input type="radio" name="sect4-9" ng-model="section4Ctrl.vif.passport.falseInfo">Passport included other false info</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" name="sect4-9">Passport was false</label>
+                            <label><input type="radio" name="sect4-9" ng-model="section4Ctrl.vif.passport.fake">Passport was false</label>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect4-9">Real passport made</label>
+                            <label><input type="radio" name="sect4-9" ng-model="section4Ctrl.vif.passport.realPassport">Real passport made</label>
                         </div>
                     </div>
                 </div>
