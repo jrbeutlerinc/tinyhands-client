@@ -7,7 +7,7 @@ export default class IrfController {
         this.$stateParams = $stateParams;
         this.utils = UtilService;
 
-        this.errorList = [];        
+        this.errorList = [];
         this.errors = {};
         this.form = {};
         this.irfId = $stateParams.id;
@@ -30,7 +30,7 @@ export default class IrfController {
     }
 
     createIrf() {
-        this.service.createIrf().then((response) => {
+        this.service.createIrf(this.form).then((response) => {
 
         }, (error) => {
             this.errors = error;
@@ -42,7 +42,7 @@ export default class IrfController {
         if (this.isCreating) {
             this.createIrf();
         } else {
-            
+            this.updateIrf();
         }
     }
 
@@ -75,5 +75,14 @@ export default class IrfController {
         if (this.selectedSectionIndex > 0) {
             this.selectedSectionIndex -= 1;
         }
+    }
+
+    updateIrf() {
+        this.service.updateIrf(this.form).then((response) => {
+
+        }, (error) => {
+            this.errors = error;
+            this.errorList = this.utils.handleErrors(error);
+      })
     }
 }

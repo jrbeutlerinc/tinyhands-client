@@ -11,4 +11,8 @@ export default class IrfService {
     getIrf(id) {
         return this.service.get(`api/irf/${id}/`);
     }
+
+    updateIrf(data) {
+        return this.service.put(`api/irf/${id}/`, data)
+    }
 }
