@@ -2,11 +2,6 @@ import TinyHandsShared from '../shared/shared.module';
 
 import VIFRoutes from './vif.route';
 
-import VifBuilder from './form/vifBuilder/vifBuilder.service';
-
-import VifService from './form/vif.service';
-import VifListService from './list/vifList.service';
-
 import VifController from './form/vif.controller';
 import VifInfoController from './form/info/info.controller';
 import VifSection1Controller from './form/section1/section1.controller';
