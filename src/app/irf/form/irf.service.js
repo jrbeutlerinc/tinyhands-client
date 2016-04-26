@@ -12,7 +12,7 @@ export default class IrfService {
         return this.service.get(`api/irf/${id}/`);
     }
 
-    updateIrf(data) {
+    updateIrf(id, data) {
         return this.service.put(`api/irf/${id}/`, data)
     }
 }
