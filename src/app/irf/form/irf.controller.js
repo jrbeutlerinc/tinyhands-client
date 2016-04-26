@@ -78,11 +78,11 @@ export default class IrfController {
     }
 
     updateIrf() {
-        this.service.updateIrf(this.irfId, this.form).then((response) => {
+      this.service.updateIrf(this.irfId, this.form).then((response) => {
 
         }, (error) => {
-            this.errors = error;
-            this.errorList = this.utils.handleErrors(error);
-      })
+          this.errors = error;
+          this.errorList = this.utils.handleErrors(error);
+        });
     }
 }
