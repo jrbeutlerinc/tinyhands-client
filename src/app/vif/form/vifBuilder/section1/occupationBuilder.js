@@ -24,7 +24,7 @@ export default class OccupationBuilder {
         this._other = false;
     }
     
-    build(vif) {
+    build(vif = {}) {
         vif.victim_occupation_unemployed = this._unemployed;
         vif.victim_occupation_animal_husbandry = this._animalHusbandry;
         vif.victim_occupation_farmer = this._farmer;
@@ -36,8 +36,10 @@ export default class OccupationBuilder {
         vif.victim_occupation_migrant_worker = this._migrantWorker;
         vif.victim_occupation_factory = this._factory;
         vif.victim_occupation_tailoring = this._tailoring;
+        vif.victim_occupation_housewife  = this._housewife;
         vif.victim_occupation_other = this._other;
-        vif.victim_occupation_other_value = this._otherText;        
+        vif.victim_occupation_other_value = this._otherText;
+        return vif;        
     }
     
     setValues(vif) {
@@ -52,6 +54,7 @@ export default class OccupationBuilder {
         this._migrantWorker = vif.victim_occupation_migrant_worker;
         this._factory = vif.victim_occupation_factory;
         this._tailoring = vif.victim_occupation_tailoring;
+        this._housewife = vif.victim_occupation_housewife;
         this._other = vif.victim_occupation_other;
         this._otherText = vif.victim_occupation_other_value;
     }
