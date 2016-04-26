@@ -5,8 +5,8 @@ import MeetBrokerBuilder from './meetBrokerBuilder';
 export default class Section3Builder {
     constructor(vif = null, brokerRelationBuilder = null, expenseBuilder = null, meetBrokerBuilder = null) {
         this.brokerRelation = brokerRelationBuilder || new BrokerRelationBuilder(vif);
-        this.expenseBuilder = expenseBuilder || new ExpenseBuilder(vif);
-        this.meetBrokerBuilder = meetBrokerBuilder || new MeetBrokerBuilder(vif);
+        this.expense = expenseBuilder || new ExpenseBuilder(vif);
+        this.meetBroker = meetBrokerBuilder || new MeetBrokerBuilder(vif);
         if(vif == null) {
             this.setDefaultValues();
         } else {
@@ -36,8 +36,8 @@ export default class Section3Builder {
 
     build(vif) {
         this.brokerRelation.build(vif);
-        this.expenseBuilder.build(vif);
-        this.meetBrokerBuilder.build(vif);
+        this.expense.build(vif);
+        this.meetBroker.build(vif);
         this.buildFields(vif);
     }
 

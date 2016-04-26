@@ -53,7 +53,14 @@ export default class Section4Builder {
     }
 
     build(vif) {
-
+        this.events.build(vif);
+        this.freeToGoOut.build(vif);
+        this.hidePresence.build(vif);
+        this.meetAgainInIndia.build(vif);
+        this.moneyChangeHands.build(vif);
+        this.passport.build(vif);
+        this.travel.build(vif);
+        this.travelWithCompanion.build(vif);
     }
 
     buildFields(vif) {
