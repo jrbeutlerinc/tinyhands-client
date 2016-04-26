@@ -4,7 +4,7 @@ import budgetModule from './budget/budget.module';
 import borderStationModule from './border-station/borderStation.module';
 import addressesModule from './addresses/addresses.module';
 import dashboardModule from './dashboard/dashboard.module';
-import loginModule from './login/login.module'
+import loginModule from './login/login.module';
 import VIFModule from './vif/vif.module';
 import IRFModule from './irf/irf.module';
 
@@ -22,4 +22,4 @@ angular.module('tinyhandsFrontend', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSan
   .config(config)
   .config(routerConfig)
   .run(runBlock)
-  .directive('navbar', NavbarDirective);
+  .directive('navbar', () => new NavbarDirective());
