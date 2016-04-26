@@ -23,7 +23,7 @@
                 <div class="panel-body panel-radio-only">
                     <div class="col-md-4" ng-repeat="option in section4Ctrl.travelList">
                         <div class="radio options">
-                            <label><input type="radio" name="sect4-2">{{ option }}</label>
+                            <label><input type="radio" name="option" ng-model="section4Ctrl.vif.option[option.value]" ng-value="true">{{ option.name }}</label>
                         </div>
                     </div>
                 </div>
@@ -111,25 +111,10 @@
                     <h3 class="panel-title"><strong>4.9</strong> Was a passport made for you?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-9">No passport made</label>
+                    <div class="col-md-6" ng-repeat="option in section4Ctrl.passportList">
+                        <div class="radio options">
+                            <label><input type="radio" name="option" ng-model="section4Ctrl.vif.option[option.value]" ng-value="True"> {{ option.name }} </label>
                         </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-9">Passport included a false name</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-9">Passport included other false info</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-9">Passport was false</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect4-9">Real passport made</label>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -151,11 +136,9 @@
                 <div class="panel-body">
                     <div class="col-md-4" ng-repeat="option in section4Ctrl.sect11List">
                         <div class="radio options">
-                            <label><input type="radio" name="sect4-11">{{ option }}</label>
+                            <label><input type="radio" name="option" ng-model="section4Ctrl.vif.option[option.value]" ng-value="True">{{ option.name }}</label>
                         </div>
                     </div>
-                    <input type="text" class="form-control whom" placeholder="By whom?">
-                    <input type="text" class="form-control explain" placeholder="Explain.">
                 </div>
             </div>
             <div class="panel panel-default">
@@ -222,7 +205,7 @@
                 <div class="panel-body panel-radio-only">
                     <div class="col-md-6" ng-repeat="option in section4Ctrl.change_hands">
                         <div class="radio options">
-                            <label><input type="radio" name="sect4-16">{{ option }}</label>
+                            <label><input type="radio" name="option" ng-model="section4Ctrl.vif.option[option.value]" ng-value="True">{{ option.name }}</label>
                         </div>
                     </div>
                 </div>
