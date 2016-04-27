@@ -1,23 +1,18 @@
 <div class="container">
-    <button type="button" class="btn btn-primary" ng-click="locationsCtrl.addTab()">ADD</button>
-    <button type="button" class="btn btn-danger" ng-click="locationsCtrl.deleteTab()">DELETE</button>
-    <uib-tabset active="active">
-        <uib-tab index="0" heading="Static title">
-            <div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">Panel Heading</div>
-                    <div class="panel-body">A Basic Panel</div>
-                </div>
-            </div>
-        </uib-tab>
-        <uib-tab index="$index + 1" ng-repeat="tab in locationsCtrl.tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
-            {{tab.content}}
-        </uib-tab>
-        <uib-tab index="3" select="alertMe()">
-            <uib-tab-heading>
-                <i class="glyphicon glyphicon-bell"></i> Alert!
-            </uib-tab-heading>
-            I've got an HTML heading, and a select callback. Pretty cool!
-        </uib-tab>
-    </uib-tabset>
+    <div>
+			<ul class="nav nav-tabs">
+				<li ng-repeat="tab in locationsCtrl.tabs" ng-click="locationsCtrl.selectTab($index)" ng-class="{'active':locationsCtrl.selectedTab == $index}">
+					<a data-target="#tab" aria-controls="home" data-toggle="tab">Location Box {{tab.id}} <span ng-if="tab.deletable" ng-click="locationsCtrl.deleteTab($index)" class="glyphicon glyphicon-remove"></span></a>
+				</li>
+				<li ng-click="locationsCtrl.addTab()">
+					<a aria-controls="home" data-toggle="tab">( + )</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab">
+					<h1>Tab {{locationsCtrl.tabs[locationsCtrl.selectedTab].id}}</h1>
+					<h3>Content:- {{locationsCtrl.tabs[locationsCtrl.selectedTab].content}}</h3>
+				</div>
+			</div>
+    </div>
 </div>
