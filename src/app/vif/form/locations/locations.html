@@ -1,18 +1,18 @@
 <div class="container">
-    <div>
-			<ul class="nav nav-tabs">
-				<li ng-repeat="tab in locationsCtrl.tabs" ng-click="locationsCtrl.selectTab($index)" ng-class="{'active':locationsCtrl.selectedTab == $index}">
-					<a data-target="#tab" aria-controls="home" data-toggle="tab">Location Box {{tab.id}} <span ng-if="tab.deletable" ng-click="locationsCtrl.deleteTab($index)" class="glyphicon glyphicon-remove"></span></a>
-				</li>
-				<li ng-click="locationsCtrl.addTab()">
-					<a aria-controls="home" data-toggle="tab">( + )</a>
-				</li>
-			</ul>
-			<div class="tab-content">
-				<div class="tab-pane active" id="tab">
-					<h1>Tab {{locationsCtrl.tabs[locationsCtrl.selectedTab].id}}</h1>
-					<h3>Content:- {{locationsCtrl.tabs[locationsCtrl.selectedTab].content}}</h3>
-				</div>
-			</div>
+    <ul class="nav nav-tabs">
+        <li ng-repeat="tab in locationsCtrl.tabs" ng-click="locationsCtrl.selectTab($index)" ng-class="{'active':locationsCtrl.selectedTab == $index}">
+            <a>Location Box {{tab.id}}
+                <span ng-if="tab.deletable" ng-click="locationsCtrl.deleteTab($index)" class="glyphicon glyphicon-remove"></span>
+            </a>
+        </li>
+        <li ng-click="locationsCtrl.addTab()">
+            <a>( + )</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active">
+            <h1>Tab {{locationsCtrl.tabs[locationsCtrl.selectedTab].id}}</h1>
+            <h3>{{locationsCtrl.tabs[locationsCtrl.selectedTab].content}}</h3>
+        </div>
     </div>
 </div>

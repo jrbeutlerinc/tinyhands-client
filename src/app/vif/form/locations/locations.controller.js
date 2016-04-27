@@ -19,8 +19,14 @@ export default class VifLocationsController {
       }
       /** Function to delete a tab **/
       this.deleteTab = function(index) {
-          if (index != 0)
+          if (index != 0) {
               this.tabs.splice(index, 1); //remove the object from the array based on index
+              if (this.selectedTab == index || this.selectedTab > index) {
+                  this.selectedTab = this.selectedTab - 1;
+                  if (this.selectedTab < 0)
+                      this.selectedTab = 0;
+              }
+          }
       }
       /** Function to select a tab **/
       this.selectTab = function(index) {
