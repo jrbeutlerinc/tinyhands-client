@@ -1,7 +1,7 @@
 export default class OccupationBuilder {
     constructor(vif = null) {
-        if(vif == null) {
-            this.clearAll()
+        if(vif === null) {
+            this.clearAll();
             this._otherText = '';
         } else {
             this.setValues(vif);
@@ -24,7 +24,7 @@ export default class OccupationBuilder {
         this._other = false;
     }
     
-    build(vif) {
+    build(vif = {}) {
         vif.victim_occupation_unemployed = this._unemployed;
         vif.victim_occupation_animal_husbandry = this._animalHusbandry;
         vif.victim_occupation_farmer = this._farmer;
@@ -36,8 +36,10 @@ export default class OccupationBuilder {
         vif.victim_occupation_migrant_worker = this._migrantWorker;
         vif.victim_occupation_factory = this._factory;
         vif.victim_occupation_tailoring = this._tailoring;
+        vif.victim_occupation_housewife  = this._housewife;
         vif.victim_occupation_other = this._other;
-        vif.victim_occupation_other_value = this._otherText;        
+        vif.victim_occupation_other_value = this._otherText;
+        return vif;        
     }
     
     setValues(vif) {
@@ -52,6 +54,7 @@ export default class OccupationBuilder {
         this._migrantWorker = vif.victim_occupation_migrant_worker;
         this._factory = vif.victim_occupation_factory;
         this._tailoring = vif.victim_occupation_tailoring;
+        this._housewife = vif.victim_occupation_housewife;
         this._other = vif.victim_occupation_other;
         this._otherText = vif.victim_occupation_other_value;
     }
@@ -61,7 +64,7 @@ export default class OccupationBuilder {
     }
     
     set unemployed(value) {
-        this.clearAll()
+        this.clearAll();
         this._unemployed = value;
     }
     
@@ -70,7 +73,7 @@ export default class OccupationBuilder {
     }
     
     set animalHusbandry (value) {
-        this.clearAll()
+        this.clearAll();
         this._animalHusbandry = value;
     }
     
@@ -79,7 +82,7 @@ export default class OccupationBuilder {
     }
     
     set farmer(value) {
-        this.clearAll()
+        this.clearAll();
         this._farmer = value;
     }
     
@@ -88,7 +91,7 @@ export default class OccupationBuilder {
     }
     
     set domesticWork(value) {
-        this.clearAll()
+        this.clearAll();
         this._domesticWork = value;
     }
     
@@ -97,7 +100,7 @@ export default class OccupationBuilder {
     }
     
     set wageLaborer(value) {
-        this.clearAll()
+        this.clearAll();
         this._wageLaborer = value;
     }
     
@@ -106,7 +109,7 @@ export default class OccupationBuilder {
     }
     
     set shopkeeper(value) {
-        this.clearAll()
+        this.clearAll();
         this._shopkeeper = value;
     }
     
@@ -115,7 +118,7 @@ export default class OccupationBuilder {
     }
     
     set businessOwner(value) {
-        this.clearAll()
+        this.clearAll();
         this._businessOwner = value;
     }
     
@@ -124,7 +127,7 @@ export default class OccupationBuilder {
     }
     
     set hotel(value) {
-        this.clearAll()
+        this.clearAll();
         this._hotel = value;
     }
     
@@ -133,7 +136,7 @@ export default class OccupationBuilder {
     }
     
     set migrantWorker(value) {
-        this.clearAll()
+        this.clearAll();
         this._migrantWorker = value;
     }
     
@@ -142,7 +145,7 @@ export default class OccupationBuilder {
     }
     
     set factory(value) {
-        this.clearAll()
+        this.clearAll();
         this._factory = value;
     }
     
@@ -151,7 +154,7 @@ export default class OccupationBuilder {
     }
     
     set tailoring(value) {
-        this.clearAll()
+        this.clearAll();
         this._tailoring = value;
     }
     
@@ -160,7 +163,7 @@ export default class OccupationBuilder {
     }
     
     set housewife(value) {
-        this.clearAll()
+        this.clearAll();
         this._housewife = value;
     }
     
@@ -169,7 +172,7 @@ export default class OccupationBuilder {
     }
     
     set other(value) {
-        this.clearAll()
+        this.clearAll();
         this._other = value;
     }
     

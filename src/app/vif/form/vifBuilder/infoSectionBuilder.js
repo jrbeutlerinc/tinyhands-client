@@ -1,6 +1,6 @@
 export default class InfoSectionBuilder {
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.vifNumber = '';
             this.date = '';
             this.numberOfVictims = 0;
@@ -11,7 +11,7 @@ export default class InfoSectionBuilder {
             this.photoPermission = false;
         } else {
             this.vifNumber = vif.vif_number;
-            this.data = vif.date;
+            this.date = vif.date;
             this.numberOfVictims = vif.number_of_victims;
             this.numberOfTraffickers = vif.number_of_traffickers;
             this.location = vif.location;
@@ -21,7 +21,7 @@ export default class InfoSectionBuilder {
         }
     }
     
-    build(vif) {
+    build(vif = {}) {
         vif.vif_number = this.vifNumber;
         vif.date = this.date;
         vif.number_of_victims = this.numberOfVictims;
@@ -29,6 +29,8 @@ export default class InfoSectionBuilder {
         vif.location = this.location;
         vif.interviewer = this.interviewer;
         vif.statement_read_before_beginning = this.statementReadBeforeInterview;
-        vif.permission_to_use_photo = this.photoPermission; 
+        vif.permission_to_use_photo = this.photoPermission;
+        
+        return vif;
     }
 }

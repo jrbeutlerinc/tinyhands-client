@@ -1,6 +1,6 @@
 export default class VifSection2Controller {
   constructor(VifBuilder) {
-    'ngInject'
+    'ngInject';
     this.vif = VifBuilder;
     this.gulfLocations = [
         {name: "Lebanon", value: 'lebanon'},

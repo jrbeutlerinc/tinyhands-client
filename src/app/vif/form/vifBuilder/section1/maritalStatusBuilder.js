@@ -1,6 +1,6 @@
 export default class MaritalStatusBuilder{
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.clearAll();
         } else {
             this.setValues(vif);
@@ -25,13 +25,14 @@ export default class MaritalStatusBuilder{
         this._abandonedByHusband = vif.victim_marital_status_abandoned_by_husband;
     }
     
-    build(vif) {
+    build(vif = {}) {
         vif.victim_marital_status_single = this._single;
         vif.victim_marital_status_married = this._married;
         vif.victim_marital_status_widow = this._widow;
         vif.victim_marital_status_divorced = this._divorced;
         vif.victim_marital_status_husband_has_other_wives = this._husbandHasOtherWives;
         vif.victim_marital_status_abandoned_by_husband = this._abandonedByHusband;
+        return vif;
     }
     
     get single() {

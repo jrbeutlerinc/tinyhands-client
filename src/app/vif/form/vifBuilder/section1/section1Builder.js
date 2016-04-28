@@ -9,16 +9,18 @@ import IsLiterateBuilder from './isLiterateBuilder';
 
 export default class Section1Builder {
     
-    constructor(vif = null) {
-        this.caste = new CasteBuilder(vif);
-        this.occupation = new OccuptionBuilder(vif);
-        this.maritalStatus = new MaritalStatusBuilder(vif);
-        this.livesWith = new LivesWithBuilder(vif);
-        this.primaryGuardian = new PrimaryGuardianBuilder(vif);
-        this.parentMaritalStatus = new ParentMaritalStatusBuilder(vif);
-        this.educationLevel = new EducationLevelBuilder(vif);
-        this.literacy = new IsLiterateBuilder(vif);
-        if(vif == null) {
+    constructor(vif = null, casteBuilder = null, occupationBuilder = null, maritalStatusBuilder = null, livesWithBuilder = null, primaryGuardianBuilder = null,
+        parentMaritalStatusBuilder = null, educationLevelBuilder = null, literacyBuilder = null) {
+            
+        this.caste = casteBuilder || new CasteBuilder(vif);
+        this.occupation = occupationBuilder || new OccuptionBuilder(vif);
+        this.maritalStatus = maritalStatusBuilder || new MaritalStatusBuilder(vif);
+        this.livesWith = livesWithBuilder || new LivesWithBuilder(vif);
+        this.primaryGuardian = primaryGuardianBuilder || new PrimaryGuardianBuilder(vif);
+        this.parentMaritalStatus = parentMaritalStatusBuilder || new ParentMaritalStatusBuilder(vif);
+        this.educationLevel = educationLevelBuilder || new EducationLevelBuilder(vif);
+        this.literacy = literacyBuilder || new IsLiterateBuilder(vif);
+        if(vif === null) {
             this.setDefaultValues();
         }else {
             this.setValues(vif);
@@ -76,7 +78,7 @@ export default class Section1Builder {
     }
     
     get isMale() {
-        return this._gender === 'male'
+        return this._gender === 'male';
     }
     
     set isMale(value) {
@@ -86,7 +88,7 @@ export default class Section1Builder {
     }
     
     get isFemale() {
-        return this._gender === 'female'
+        return this._gender === 'female';
     }
     
     set isFemale(value) {

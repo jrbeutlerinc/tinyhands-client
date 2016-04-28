@@ -1,6 +1,6 @@
 export default class CasteBuilder {
     constructor(vif = null) {
-        if(vif == null) {
+        if(vif === null) {
             this.clearAll();
             this._otherText = '';
         } else {
@@ -39,7 +39,7 @@ export default class CasteBuilder {
         this._otherText = vif.victim_caste_other_value;
     }
     
-    build(vif) {
+    build(vif = {}) {
         vif.victim_caste_magar = this._magar;
         vif.victim_caste_brahmin = this._brahmin;
         vif.victim_caste_tamang = this._tamang;
@@ -53,6 +53,7 @@ export default class CasteBuilder {
         vif.victim_caste_dalit = this._dalitUnderPriviledged;
         vif.victim_caste_other = this._other;
         vif.victim_caste_other_value = this._otherText;
+        return vif;
     }
     
     get magar() {
@@ -167,7 +168,7 @@ export default class CasteBuilder {
         return this._otherText;
     }
     
-    set otherValue(value) {
+    set otherText(value) {
         this._otherText = value;
     }
 }
