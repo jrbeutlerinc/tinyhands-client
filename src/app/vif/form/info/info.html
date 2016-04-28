@@ -1,17 +1,16 @@
 <div class="container" id="vif-metadata">
     <div class="container-fluid text-center">
-        <img class="" src="http://edwards.cse.taylor.edu/static/images/logo.png">
+        <img src="http://edwards.cse.taylor.edu/static/images/logo.png">
         <h2>Victim Interview Form (VIF)</h2>
         <h4>Version 3.0 Tiny Hands Nepal</h4>
     </div>
-
     <form>
         <div class="form-group text-left">
             <label>VIF Number</label>
             <input type="text" ng-model="infoCtrl.vif.vifNumber" class="form-control" placeholder="VIF Number">
             
             <label>Date/Time</label>
-            <input ng-model="infoCtrl.vif.date" class="form-control">
+            <input type="date" ng-model="infoCtrl.vif.date" class="form-control">
             
             <label>Location</label>
             <input type="text" ng-model="infoCtrl.vif.location" class="form-control" placeholder="Location">
