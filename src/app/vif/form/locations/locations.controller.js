@@ -3,8 +3,8 @@ export default class VifLocationsController {
       'ngInject';
       this.counter = 1;
       this.selectedTab = 0;
-      this.vif = VifBuilder;
       this.tabs = [{ id:1, content:'This is a default tab on load', deletable: false }];
+      this.vif = VifBuilder;
 
       /** Function to add a new tab **/
       this.addTab = function() {
