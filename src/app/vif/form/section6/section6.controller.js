@@ -1,6 +1,6 @@
 export default class VifSection6Controller {
   constructor(VifBuilder) {
-    'ngInject'
+    'ngInject';
     this.vif = VifBuilder;
     this.sect1Options = ["Had heard, but never new how bad it was until I was intercepted by TH", "Knew how bad it was, but didn't think that was happening to her",
       "Had never heard about it"];
