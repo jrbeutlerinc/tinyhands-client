@@ -1,6 +1,6 @@
 export default class VifSection7Controller {
   constructor(VifBuilder) {
-    'ngInject'
+    'ngInject';
     this.vif = VifBuilder;
     this.alarms = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     this.reportedAlarms = 0;
