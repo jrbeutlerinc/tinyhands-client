@@ -19,24 +19,24 @@ export default class TravelBuilder {
     }
 
     setValues(vif) {
-        this._touristBus = vif.travel_tourist_bus;
-        this._motorbike = vif.travel_motorbike;
-        this._privateCar = vif.travel_private_car;
-        this._localBus = vif.travel_local_bus;
-        this._microbus = vif.travel_microbus;
-        this._plane = vif.travel_plane;
-        this._other = vif.travel_other;
+        this._touristBus = vif.victim_primary_means_of_travel_tourist_bus;
+        this._motorbike = vif.victim_primary_means_of_travel_motorbike;
+        this._privateCar = vif.victim_primary_means_of_travel_private_car;
+        this._localBus = vif.victim_primary_means_of_travel_local_bus;
+        this._microbus = vif.victim_primary_means_of_travel_microbus;
+        this._plane = vif.victim_primary_means_of_travel_plane;
+        this._other = vif.victim_primary_means_of_travel_other;
     }
 
     build(vif) {
-        vif.travel_tourist_bus = this._touristBus;
-        vif.travel_motorbike = this._motorbike;
-        vif.travel_private_car = this._privateCar;
-        vif.travel_local_bus = this._localBus;
-        vif.travel_microbus = this._microbus;
-        vif.travel_plane = this._plane;
-        vif.travel_other = this._other;
-        vif.travel_other_value = this._otherText;
+        vif.victim_primary_means_of_travel_tourist_bus = this._touristBus;
+        vif.victim_primary_means_of_travel_motorbike = this._motorbike;
+        vif.victim_primary_means_of_travel_private_car = this._privateCar;
+        vif.victim_primary_means_of_travel_local_bus = this._localBus;
+        vif.victim_primary_means_of_travel_microbus = this._microbus;
+        vif.victim_primary_means_of_travel_plane = this._plane;
+        vif.victim_primary_means_of_travel_other = this._other;
+        vif.victim_primary_means_of_travel_other_value = this._otherText;
     }
 
     get touristBus() {

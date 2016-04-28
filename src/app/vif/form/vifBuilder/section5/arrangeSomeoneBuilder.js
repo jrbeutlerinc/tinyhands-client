@@ -15,17 +15,17 @@ export default class ArrangeSomeoneBuilder {
     }
 
     setValues(vif) {
-        this._yes = vif.arrange_someone_yes;
-        this._no = vif.arrange_someone_no;
-        this._meetingBroker = vif.arrange_someone_meeting_broker;
-        this._meetingCompanion = vif.arrange_someone_meeting_companion;
+        this._yes = vif.meeting_at_border_yes;
+        this._no = vif.meeting_at_border_no;
+        this._meetingBroker = vif.meeting_at_border_meeting_broker;
+        this._meetingCompanion = vif.meeting_at_border_meeting_companion;
     }
 
     build(vif) {
-        vif.arrange_someone_yes = this._yes;
-        vif.arrange_someone_no = this._no;
-        vif.arrange_someone_meeting_broker = this._meetingBroker;
-        vif.arrange_someone_meeting_companion = this._meetingCompanion;
+        vif.meeting_at_border_yes = this._yes;
+        vif.meeting_at_border_no = this._no;
+        vif.meeting_at_border_meeting_broker = this._meetingBroker;
+        vif.meeting_at_border_meeting_companion = this._meetingCompanion;
     }
 
     get yes() {

@@ -14,15 +14,15 @@ export default class TravelWithCompanionBuilder {
     }
 
     setValues(vif) {
-        this._yes = vif.travel_with_companion_yes;
-        this._no = vif.travel_with_companion_no;
-        this._brokerTookMeToBorder = vif.travel_with_companion_broker_took_me_to_border;
+        this._yes = vif.traveled_with_broker_companion_yes;
+        this._no = vif.traveled_with_broker_companion_no;
+        this._brokerTookMeToBorder = vif.traveled_with_broker_companion_broker_took_me_to_border;
     }
 
     build(vif) {
-        vif.travel_with_companion_yes = this._yes;
-        vif.travel_with_companion_no = this._no;
-        vif.travel_with_companion_broker_took_me_to_border = this._brokerTookMeToBorder;
+        vif.traveled_with_broker_companion_yes = this._yes;
+        vif.traveled_with_broker_companion_no = this._no;
+        vif.traveled_with_broker_companion_broker_took_me_to_border = this._brokerTookMeToBorder;
     }
 
     get yes() {

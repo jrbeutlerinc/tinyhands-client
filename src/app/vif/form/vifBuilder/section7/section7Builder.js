@@ -33,12 +33,12 @@ export default class Section7Builder {
     }
 
     setValues(vif) {
-        this._question1 = vif.victim_question_1;
-        this._question2 = vif.victim_question_2;
-        this._question3 = vif.victim_question_3;
-        this._question4 = vif.victim_question_4;
-        this._question5 = vif.victim_question_5;
-        this._question10 = vif.victim_question_10;
+        this._question1 = vif.guardian_knew_was_travelling_to_india;
+        this._question2 = vif.family_pressured_victim;
+        this._question3 = vif.family_will_try_sending_again;
+        this._question4 = vif.victim_feels_safe_at_home;
+        this._question5 = vif.victim_wants_to_go_home;
+        this._question10 = vif.victim_had_suicidal_thoughts;
     }
 
     build(vif) {
@@ -51,12 +51,12 @@ export default class Section7Builder {
     }
 
     buildFields(vif) {
-        vif.victim_question_1 = this._question1;
-        vif.victim_question_2 = this._question2;
-        vif.victim_question_3 = this._question3;
-        vif.victim_question_4 = this._question4;
-        vif.victim_question_5 = this._question5;
-        vif.victim_question_10 = this._question10;
+        vif.guardian_knew_was_travelling_to_india = this._question1;
+        vif.family_pressured_victim = this._question2;
+        vif.family_will_try_sending_again = this._question3;
+        vif.victim_feels_safe_at_home = this._question4;
+        vif.victim_wants_to_go_home = this._question5;
+        vif.victim_had_suicidal_thoughts = this._question10;
     }
 
     get question1() {
@@ -65,7 +65,7 @@ export default class Section7Builder {
 
     set question1(value) {
         if(value) {
-            this._question1 = true;
+            this._question1 = value;
         }
     }
 
@@ -75,7 +75,7 @@ export default class Section7Builder {
 
     set question2(value) {
         if(value) {
-            this._question2 = true;
+            this._question2 = value;
         }
     }
 
@@ -85,7 +85,7 @@ export default class Section7Builder {
 
     set question3(value) {
         if(value) {
-            this._question3 = true;
+            this._question3 = value;
         }
     }
 
@@ -95,7 +95,7 @@ export default class Section7Builder {
 
     set question4(value) {
         if(value) {
-            this._question4 = true;
+            this._question4 = value;
         }
     }
 
@@ -105,7 +105,7 @@ export default class Section7Builder {
 
     set question5(value) {
         if(value) {
-            this._question5 = true;
+            this._question5 = value;
         }
     }
 
@@ -115,7 +115,7 @@ export default class Section7Builder {
 
     set question10(value) {
         if(value) {
-            this._question10 = true;
+            this._question10 = value;
         }
     }
 }

@@ -14,14 +14,18 @@ export default class HidePresenceBuilder {
     }
 
     setValues(vif) {
-        this._yes = vif.hide_presence_yes;
-        this._no = vif.hide_presence_no;
+        if (vif.was_hidden) {
+            this._yes = true;
+            this._no = false;
+        } else {
+            this._yes = false;
+            this._no = true;
+        }
     }
 
     build(vif) {
-        vif.hide_presence_yes = this._yes;
-        vif.hide_presence_no = this._no;
-        vif.hide_presence_explain_value = this._explainText;
+        vif.was_hidden = this._yes;
+        vif.was_hidden_explanation = this._explainText;
     }
 
     get yes() {

@@ -19,23 +19,23 @@ export default class EventsBuilder {
     }
 
     setValues(vif) {
-        this._sexualHarassment = vif.events_sexual_harassment;
-        this._sexualAbuse = vif.events_sexual_abuse;
-        this._physicalAbuse = vif.events_physical_abuse;
-        this._threats = vif.events_threats;
-        this._deniedProperFood = vif.events_denied_proper_food;
-        this._forcedToTakeDrugs = vif.events_forced_to_take_drugs;
+        this._sexualHarassment = vif.abuse_happened_sexual_harassment;
+        this._sexualAbuse = vif.abuse_happened_sexual_abuse;
+        this._physicalAbuse = vif.abuse_happened_physical_abuse;
+        this._threats = vif.abuse_happened_sexual_threats;
+        this._deniedProperFood = vif.abuse_happened_denied_proper_food;
+        this._forcedToTakeDrugs = vif.abuse_happened_forced_to_take_drugs;
     }
 
     build(vif) {
-        vif.events_sexual_harassment = this._sexualHarassment;
-        vif.events_sexual_abuse = this._sexualAbuse;
-        vif.events_physical_abuse = this._physicalAbuse;
-        vif.events_threats = this._threats;
-        vif.events_denied_proper_food = this._deniedProperFood;
-        vif.events_forced_to_take_drugs = this._forcedToTakeDrugs;
-        vif.events_by_whom_value = this._byWhomText;
-        vif.events_explain_value = this._explainText;
+        vif.abuse_happened_sexual_harassment = this._sexualHarassment;
+        vif.abuse_happened_sexual_abuse = this._sexualAbuse;
+        vif.abuse_happened_physical_abuse = this._physicalAbuse;
+        vif.abuse_happened_sexual_threats = this._threats;
+        vif.abuse_happened_denied_proper_food = this._deniedProperFood;
+        vif.abuse_happened_forced_to_take_drugs = this._forcedToTakeDrugs;
+        vif.abuse_happened_by_whom = this._byWhomText;
+        vif.abuse_happened_explanation = this._explainText;
     }
 
     get sexualHarassment() {

@@ -14,14 +14,17 @@ export default class MeetAgainInIndiaBuilder {
     }
 
     setValues(vif) {
-        this._yes = vif.hide_presence_yes;
-        this._no = vif.hide_presence_no;
+        if (vif.planning_to_meet_companion_later) {
+            this._yes = true;
+            this._no = false;
+        } else {
+            this._yes = false;
+            this._no = true;
+        }
     }
 
     build(vif) {
-        vif.meet_again_in_india_yes = this._yes;
-        vif.meet_again_in_india_no = this._no;
-        vif.meet_again_in_india_where_value = this._whereText;
+        vif.planning_to_meet_companion_later = this._yes;
     }
 
     get yes() {

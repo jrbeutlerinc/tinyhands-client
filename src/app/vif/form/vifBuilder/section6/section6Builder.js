@@ -26,7 +26,7 @@ export default class Section6Builder {
     }
 
     setValues(vif) {
-        this.howCanWeServeBetter = vif.victim_how_can_we_serve_better;
+        this.howCanWeServeBetter = vif.how_can_we_serve_you_better;
     }
 
     build(vif) {
@@ -38,7 +38,7 @@ export default class Section6Builder {
     }
 
     buildFields(vif) {
-        vif.victim_how_can_we_serve_better = this.howCanWeServeBetter;
+        vif.how_can_we_serve_you_better = this.howCanWeServeBetter;
     }
 
     get howCanWeServeBetter() {
@@ -47,7 +47,7 @@ export default class Section6Builder {
 
     set howCanWeServeBetter(value) {
         if(value) {
-            this.howCanWeServeBetter = true;
+            this.howCanWeServeBetter = value;
         }
     }
 }

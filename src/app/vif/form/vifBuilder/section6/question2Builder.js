@@ -14,15 +14,15 @@ export default class Question2Builder {
     }
 
     setValues(vif) {
-        this._yes = vif.question_2_yes;
-        this._no = vif.question_2_no;
-        this._doesntKnow = vif.question_2_doesnt_know;
+        this._yes = vif.attitude_towards_tiny_hands_thankful;
+        this._no = vif.attitude_towards_tiny_hands_blames;
+        this._doesntKnow = vif.attitude_towards_tiny_hands_doesnt_know;
     }
 
     build(vif) {
-        vif.question_2_yes = this._yes;
-        vif.question_2_no = this._no;
-        vif.question_2_doesnt_know = this._doesntKnow;
+        vif.attitude_towards_tiny_hands_thankful = this._yes;
+        vif.attitude_towards_tiny_hands_blames = this._no;
+        vif.attitude_towards_tiny_hands_doesnt_know = this._doesntKnow;
     }
 
     get yes() {

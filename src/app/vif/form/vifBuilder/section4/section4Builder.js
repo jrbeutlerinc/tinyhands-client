@@ -41,15 +41,14 @@ export default class Section4Builder {
     }
 
     setValues(vif) {
-        this._firstTime = vif.victim_first_time;
-        this._betweenVillageAndBorder = vif.victim_between_village_and_border;
-        this.stayDays = vif.victim_stay_days;
-        this.stayStartDate = vif.victim_stay_start_date;
-        this.howManyOthers = vif.victim_how_many_others;
-        this.ageOfYoungest = vif.victim_age_of_youngest;
-        this._passportPermitWithBroker = vif.victim_passport_permit_with_broker;
-        this.brokerMeetCompanionLocation = vif.victim_broker_meet_companion_location;
-        this._companionWithVictim = vif.victim_companion_with_victim;
+        this._firstTime = vif.victim_first_time_crossing_border;
+        this._betweenVillageAndBorder = vif.victim_stayed_somewhere_between;
+        this.stayDays = vif.victim_how_long_stayed_between_days;
+        this.stayStartDate = vif.victim_how_long_stayed_between_start_date;
+        this.howManyOthers = vif.how_many_others_in_situation;
+        this.ageOfYoungest = vif.others_in_situation_age_of_youngest;
+        this._passportPermitWithBroker = vif.victim_passport_with_broker;
+        this._companionWithVictim = vif.companion_with_when_intercepted;
     }
 
     build(vif) {
@@ -64,15 +63,14 @@ export default class Section4Builder {
     }
 
     buildFields(vif) {
-        vif.victim_first_time = this._firstTime;
-        vif.victim_between_village_and_border = this._betweenVillageAndBorder;
-        vif.victim_stay_days = this.stayDays;
-        vif.victim_stay_start_date = this.stayStartDate;
-        vif.victim_how_many_others = this.howManyOthers;
-        vif.victim_age_of_youngest = this.ageOfYoungest;
-        vif.victim_passport_permit_with_broker = this._passportPermitWithBroker;
-        vif.victim_broker_meet_companion_location = this.brokerMeetCompanionLocation;
-        vif.victim_companion_with_victim = this._companionWithVictim;
+        vif.victim_first_time_crossing_border = this._firstTime;
+        vif.victim_stayed_somewhere_between = this._betweenVillageAndBorder;
+        vif.victim_how_long_stayed_between_days = this.stayDays;
+        vif.victim_how_long_stayed_between_start_date = this.stayStartDate;
+        vif.how_many_others_in_situation = this.howManyOthers;
+        vif.others_in_situation_age_of_youngest = this.ageOfYoungest;
+        vif.victim_passport_with_broker = this._passportPermitWithBroker;
+        vif.companion_with_when_intercepted = this._companionWithVictim;
     }
 
     get firstTime() {
@@ -81,7 +79,7 @@ export default class Section4Builder {
 
     set firstTime(value) {
         if(value) {
-            this._firstTime = true;
+            this._firstTime = value;
         }
     }
 
@@ -91,7 +89,7 @@ export default class Section4Builder {
 
     set betweenVillageAndBorder(value) {
         if(value) {
-            this._betweenVillageAndBorder = true;
+            this._betweenVillageAndBorder = value;
         }
     }
 
@@ -101,7 +99,7 @@ export default class Section4Builder {
 
     set passportPermitWithBroker(value) {
         if(value) {
-            this._passportPermitWithBroker = true;
+            this._passportPermitWithBroker = value;
         }
     }
 
@@ -111,7 +109,7 @@ export default class Section4Builder {
 
     set companionWithVictim(value) {
         if(value) {
-            this._companionWithVictim = true;
+            this._companionWithVictim = value;
         }
     }
 }

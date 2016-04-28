@@ -23,14 +23,14 @@ export default class Section5Builder {
     }
 
     setValues(vif) {
-        this._knowDetails = vif.victim_know_details;
-        this._otherPersonOrPlaceQ1 = vif.victim_other_person_or_place_Q1;
-        this._otherPersonOrPlaceQ2 = vif.victim_other_person_or_place_Q2;
-        this._otherPersonOrPlaceQ3 = vif.victim_other_person_or_place_Q3;
-        this._otherPersonOrPlaceQ4 = vif.victim_other_person_or_place_Q4;
-        this._otherPersonOrPlaceQ5 = vif.victim_other_person_or_place_Q5;
-        this._sexIndustry = vif.victim_sex_industry;
-        this._workSendingGirlsOverseas = vif.victim_work_sending_girls_overseas;
+        this._knowDetails = vif.victim_know_details_about_destination;
+        this._otherPersonOrPlaceQ1 = vif.other_involved_person_in_india;
+        this._otherPersonOrPlaceQ2 = vif.other_involved_husband_trafficker;
+        this._otherPersonOrPlaceQ3 = vif.other_involved_someone_met_along_the_way;
+        this._otherPersonOrPlaceQ4 = vif.other_involved_someone_involved_in_trafficking;
+        this._otherPersonOrPlaceQ5 = vif.other_involved_place_involved_in_trafficking;
+        this._sexIndustry = vif.victim_has_worked_in_sex_industry;
+        this._workSendingGirlsOverseas = vif.victim_place_worked_involved_sending_girls_overseas;
     }
 
     build(vif) {
@@ -38,14 +38,14 @@ export default class Section5Builder {
     }
 
     buildFields(vif) {
-        vif.victim_know_details = this._knowDetails;
-        vif.victim_other_person_or_place_Q1 = this._otherPersonOrPlaceQ1;
-        vif.victim_other_person_or_place_Q2 = this._otherPersonOrPlaceQ2;
-        vif.victim_other_person_or_place_Q3 = this._otherPersonOrPlaceQ3;
-        vif.victim_other_person_or_place_Q4 = this._otherPersonOrPlaceQ4;
-        vif.victim_other_person_or_place_Q5 = this._otherPersonOrPlaceQ5;
-        vif.victim_sex_industry = this._sexIndustry;
-        vif.victim_work_sending_girls_overseas = this._workSendingGirlsOverseas;
+        vif.victim_know_details_about_destination = this._knowDetails;
+        vif.other_involved_person_in_india = this._otherPersonOrPlaceQ1;
+        vif.other_involved_husband_trafficker = this._otherPersonOrPlaceQ2;
+        vif.other_involved_someone_met_along_the_way = this._otherPersonOrPlaceQ3;
+        vif.other_involved_someone_involved_in_trafficking = this._otherPersonOrPlaceQ4;
+        vif.other_involved_place_involved_in_trafficking = this._otherPersonOrPlaceQ5;
+        vif.victim_has_worked_in_sex_industry = this._sexIndustry;
+        vif.victim_place_worked_involved_sending_girls_overseas = this._workSendingGirlsOverseas;
     }
 
     get knowDetails() {
@@ -54,7 +54,7 @@ export default class Section5Builder {
 
     set knowDetails(value) {
         if(value) {
-            this._knowDetails = true;
+            this._knowDetails = value;
         }
     }
 
@@ -64,7 +64,7 @@ export default class Section5Builder {
 
     set otherPersonOrPlaceQ1(value) {
         if(value) {
-            this._otherPersonOrPlaceQ1 = true;
+            this._otherPersonOrPlaceQ1 = value;
         }
     }
 
@@ -74,7 +74,7 @@ export default class Section5Builder {
 
     set otherPersonOrPlaceQ2(value) {
         if(value) {
-            this._otherPersonOrPlaceQ2 = true;
+            this._otherPersonOrPlaceQ2 = value;
         }
     }
 
@@ -84,7 +84,7 @@ export default class Section5Builder {
 
     set otherPersonOrPlaceQ3(value) {
         if(value) {
-            this._otherPersonOrPlaceQ3 = true;
+            this._otherPersonOrPlaceQ3 = value;
         }
     }
 
@@ -94,7 +94,7 @@ export default class Section5Builder {
 
     set otherPersonOrPlaceQ4(value) {
         if(value) {
-            this._otherPersonOrPlaceQ4 = true;
+            this._otherPersonOrPlaceQ4 = value;
         }
     }
 
@@ -104,7 +104,7 @@ export default class Section5Builder {
 
     set otherPersonOrPlaceQ5(value) {
         if(value) {
-            this._otherPersonOrPlaceQ5 = true;
+            this._otherPersonOrPlaceQ5 = value;
         }
     }
 
@@ -114,7 +114,7 @@ export default class Section5Builder {
 
     set sexIndustry(value) {
         if(value) {
-            this._sexIndustry = true;
+            this._sexIndustry = value;
         }
     }
 
@@ -124,7 +124,7 @@ export default class Section5Builder {
 
     set workSendingGirlsOverseas(value) {
         if(value) {
-            this._workSendingGirlsOverseas = true;
+            this._workSendingGirlsOverseas = value;
         }
     }
 }

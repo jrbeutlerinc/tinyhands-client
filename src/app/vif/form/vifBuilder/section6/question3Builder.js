@@ -15,17 +15,17 @@ export default class Question3Builder {
     }
 
     setValues(vif) {
-        this._neverHeard = vif.question_3_never_heard;
-        this._nameOnly = vif.question_3_name_only;
-        this._neverBelieved = vif.question_3_never_believed;
-        this._alreadyBeliever = vif.question_3_already_believer;
+        this._neverHeard = vif.victim_heard_gospel_no;
+        this._nameOnly = vif.victim_heard_gospel_heard_name_only;
+        this._neverBelieved = vif.victim_heard_gospel_heard_but_never_believed;
+        this._alreadyBeliever = vif.victim_heard_gospel_already_believer;
     }
 
     build(vif) {
-        vif.question_3_never_heard = this._neverHeard;
-        vif.question_3_name_only = this._nameOnly;
-        vif.question_3_never_believed = this._neverBelieved;
-        vif.question_3_already_believer = this._alreadyBeliever;
+        vif.victim_heard_gospel_no = this._neverHeard;
+        vif.victim_heard_gospel_heard_name_only = this._nameOnly;
+        vif.victim_heard_gospel_heard_but_never_believed = this._neverBelieved;
+        vif.victim_heard_gospel_already_believer = this._alreadyBeliever;
     }
 
     get neverHeard() {
