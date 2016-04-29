@@ -15,17 +15,17 @@ export default class EconomicBuilder {
     }
 
     setValues(vif) {
-        this._unable = vif.economic_unable;
-        this._onlyBasicNeeds = vif.economic_only_basic_needs;
-        this._someNonEssential = vif.economic_some_non_essential;
-        this._wealthy = vif.economic_wealthy;
+        this._unable = vif.family_economic_situation_no_basic_needs;
+        this._onlyBasicNeeds = vif.family_economic_situation_difficult_basic_needs;
+        this._someNonEssential = vif.family_economic_situation_comfortable_basic_needs;
+        this._wealthy = vif.family_economic_situation_wealthy;
     }
 
     build(vif) {
-        vif.economic_unable = this._unable;
-        vif.economic_only_basic_needs = this._onlyBasicNeeds;
-        vif.economic_some_non_essential = this._someNonEssential;
-        vif.economic_wealthy = this._wealthy;
+        vif.family_economic_situation_no_basic_needs = this._unable;
+        vif.family_economic_situation_difficult_basic_needs = this._onlyBasicNeeds;
+        vif.family_economic_situation_comfortable_basic_needs = this._someNonEssential;
+        vif.family_economic_situation_wealthy = this._wealthy;
     }
 
     get unable() {

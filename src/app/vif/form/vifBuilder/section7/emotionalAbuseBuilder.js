@@ -14,15 +14,15 @@ export default class EmotionalAbuseBuilder {
     }
 
     setValues(vif) {
-        this._never = vif.emotional_abuse_never;
-        this._rarely = vif.emotional_abuse_rarely;
-        this._frequent = vif.emotional_abuse_frequent;
+        this._never = vif.home_had_emotional_abuse_never;
+        this._rarely = vif.home_had_emotional_abuse_occasionally;
+        this._frequent = vif.home_had_emotional_abuse_all_the_time;
     }
 
     build(vif) {
-        vif.emotional_abuse_never = this._never;
-        vif.emotional_abuse_rarely = this._rarely;
-        vif.emotional_abuse_frequent = this._frequent;
+        vif.home_had_emotional_abuse_never = this._never;
+        vif.home_had_emotional_abuse_occasionally = this._rarely;
+        vif.home_had_emotional_abuse_all_the_time = this._frequent;
     }
 
     get never() {

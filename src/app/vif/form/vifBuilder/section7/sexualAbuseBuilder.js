@@ -14,15 +14,15 @@ export default class SexualAbuseBuilder {
     }
 
     setValues(vif) {
-        this._never = vif.sexual_abuse_never;
-        this._rarely = vif.sexual_abuse_rarely;
-        this._frequent = vif.sexual_abuse_frequent;
+        this._never = vif.home_had_sexual_abuse_never;
+        this._rarely = vif.home_had_sexual_abuse_rarely;
+        this._frequent = vif.home_had_sexual_abuse_frequently;
     }
 
     build(vif) {
-        vif.sexual_abuse_never = this._never;
-        vif.sexual_abuse_rarely = this._rarely;
-        vif.sexual_abuse_frequent = this._frequent;
+        vif.home_had_sexual_abuse_never = this._never;
+        vif.home_had_sexual_abuse_rarely = this._rarely;
+        vif.home_had_sexual_abuse_frequently = this._frequent;
     }
 
     get never() {

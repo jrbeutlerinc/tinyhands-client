@@ -14,15 +14,15 @@ export default class DrugsBuilder {
     }
 
     setValues(vif) {
-        this._never = vif.drugs_never;
-        this._occasionally = vif.drugs_occasionally;
-        this._allTheTime = vif.drugs_all_the_time;
+        this._never = vif.victim_guardian_uses_drugs_never;
+        this._occasionally = vif.victim_guardian_uses_drugs_occasionally;
+        this._allTheTime = vif.victim_guardian_uses_drugs_all_the_time;
     }
 
     build(vif) {
-        vif.drugs_never = this._never;
-        vif.drugs_occasionally = this._occasionally;
-        vif.drugs_all_the_time = this._allTheTime;
+        vif.victim_guardian_uses_drugs_never = this._never;
+        vif.victim_guardian_uses_drugs_occasionally = this._occasionally;
+        vif.victim_guardian_uses_drugs_all_the_time = this._allTheTime;
     }
 
     get never() {

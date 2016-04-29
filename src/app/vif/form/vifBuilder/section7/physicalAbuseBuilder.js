@@ -14,15 +14,15 @@ export default class PhysicalAbuseBuilder {
     }
 
     setValues(vif) {
-        this._never = vif.physical_abuse_never;
-        this._rarely = vif.physical_abuse_rarely;
-        this._frequent = vif.physical_abuse_frequent;
+        this._never = vif.home_had_physical_abuse_never;
+        this._rarely = vif.home_had_physical_abuse_rarely;
+        this._frequent = vif.home_had_physical_abuse_frequently;
     }
 
     build(vif) {
-        vif.physical_abuse_never = this._never;
-        vif.physical_abuse_rarely = this._rarely;
-        vif.physical_abuse_frequent = this._frequent;
+        vif.home_had_physical_abuse_never = this._never;
+        vif.home_had_physical_abuse_rarely = this._rarely;
+        vif.home_had_physical_abuse_frequently = this._frequent;
     }
 
     get never() {

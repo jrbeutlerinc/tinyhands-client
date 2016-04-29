@@ -16,17 +16,17 @@ export default class LegalActionBuilder {
     }
 
     setValues(vif) {
-        this._no = vif.legal_action_no;
-        this._fir = vif.legal_action_fir;
-        this._dofe = vif.legal_action_dofe;
+        this._no = vif.legal_action_against_traffickers_no;
+        this._fir = vif.legal_action_against_traffickers_fir_filed;
+        this._dofe = vif.legal_action_against_traffickers_dofe_complaint;
     }
 
     build(vif) {
-        vif.legal_action_no = this._no;
-        vif.legal_action_fir = this._fir;
-        vif.legal_action_dofe = this._dofe;
-        vif.legal_action_fir_value = this._firText;
-        vif.legal_action_dofe_value = this._dofeText;
+        vif.legal_action_against_traffickers_no = this._no;
+        vif.legal_action_against_traffickers_fir_filed = this._fir;
+        vif.legal_action_against_traffickers_dofe_complaint = this._dofe;
+        vif.legal_action_fir_against_value = this._firText;
+        vif.legal_action_dofe_against_value = this._dofeText;
     }
 
     get no() {

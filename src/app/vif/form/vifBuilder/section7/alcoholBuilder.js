@@ -14,15 +14,15 @@ export default class AlcoholBuilder {
     }
 
     setValues(vif) {
-        this._never = vif.alcohol_never;
-        this._occasionally = vif.alcohol_occasionally;
-        this._allTheTime = vif.alcohol_all_the_time;
+        this._never = vif.victim_guardian_drinks_alcohol_never;
+        this._occasionally = vif.victim_guardian_drinks_alcohol_occasionally;
+        this._allTheTime = vif.victim_guardian_drinks_alcohol_all_the_time;
     }
 
     build(vif) {
-        vif.alcohol_never = this._never;
-        vif.alcohol_occasionally = this._occasionally;
-        vif.alcohol_all_the_time = this._allTheTime;
+        vif.victim_guardian_drinks_alcohol_never = this._never;
+        vif.victim_guardian_drinks_alcohol_occasionally = this._occasionally;
+        vif.victim_guardian_drinks_alcohol_all_the_time = this._allTheTime;
     }
 
     get never() {

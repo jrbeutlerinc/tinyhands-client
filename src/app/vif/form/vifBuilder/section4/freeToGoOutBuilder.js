@@ -14,14 +14,18 @@ export default class FreeToGoOutBuilder {
     }
 
     setValues(vif) {
-        this._yes = vif.free_to_go_out_yes;
-        this._no = vif.free_to_go_out_no;
+        if (vif.victim_was_free_to_go_out) {
+            this._yes = true;
+            this._no = false;
+        } else {
+            this._yes = false;
+            this._no = true;
+        }
     }
 
     build(vif) {
-        vif.free_to_go_out_yes = this._yes;
-        vif.free_to_go_out_no = this._no;
-        vif.free_to_go_out_explain_value = this._explainText;
+        vif.victim_was_free_to_go_out = this._yes;
+        vif.victim_was_free_to_go_out_explanation = this._explainText;
     }
 
     get yes() {

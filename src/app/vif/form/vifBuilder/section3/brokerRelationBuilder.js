@@ -27,40 +27,40 @@ export default class BrokerRelationBuilder {
     }
 
     setValues(vif) {
-        this._dad = vif.broker_relation_dad;
-        this._mom = vif.broker_relation_mom;
-        this._uncle = vif.broker_relation_uncle;
-        this._aunt = vif.broker_relation_aunt;
-        this._bro = vif.broker_relation_bro;
-        this._sister = vif.broker_relation_sister;
-        this._otherRelative = vif.broker_relation_otherRelative;
-        this._friend = vif.broker_relation_friend;
-        this._agent = vif.broker_relation_agent;
-        this._husband = vif.broker_relation_husband;
-        this._boyfriend = vif.broker_relation_boyfriend;
-        this._neighbor = vif.broker_relation_neighbor;
-        this._recentlyMet = vif.broker_relation_recentlyMet;
-        this._contractor = vif.broker_relation_contractor;
-        this._other = vif.broker_relation_other;
+        this._dad = vif.brokers_relation_to_victim_own_dad;
+        this._mom = vif.brokers_relation_to_victim_own_mom;
+        this._uncle = vif.brokers_relation_to_victim_own_uncle;
+        this._aunt = vif.brokers_relation_to_victim_own_aunt;
+        this._bro = vif.brokers_relation_to_victim_own_bro;
+        this._sister = vif.brokers_relation_to_victim_own_sister;
+        this._otherRelative = vif.brokers_relation_to_victim_own_other_relative;
+        this._friend = vif.brokers_relation_to_victim_friend;
+        this._agent = vif.brokers_relation_to_victim_agent;
+        this._husband = vif.brokers_relation_to_victim_husband;
+        this._boyfriend = vif.brokers_relation_to_victim_boyfriend;
+        this._neighbor = vif.brokers_relation_to_victim_neighbor;
+        this._recentlyMet = vif.brokers_relation_to_victim_recently_met;
+        this._contractor = vif.brokers_relation_to_victim_contractor;
+        this._other = vif.brokers_relation_to_victim_other;
     }
 
     build(vif) {
-        vif.broker_relation_dad = this._dad;
-        vif.broker_relation_mom = this._mom;
-        vif.broker_relation_uncle = this._uncle;
-        vif.broker_relation_aunt = this._aunt;
-        vif.broker_relation_bro = this._bro;
-        vif.broker_relation_sister = this._sister;
-        vif.broker_relation_otherRelative = this._otherRelative;
-        vif.broker_relation_friend = this._friend;
-        vif.broker_relation_agent = this._agent;
-        vif.broker_relation_husband = this._husband;
-        vif.broker_relation_boyfriend = this._boyfriend;
-        vif.broker_relation_neighbor = this._neighbor;
-        vif.broker_relation_recentlyMet = this._recentlyMet;
-        vif.broker_relation_contractor = this._contractor;
-        vif.broker_relation_other = this._other;
-        vif.broker_relation_other_value = this._otherText;
+        vif.brokers_relation_to_victim_own_dad = this._dad;
+        vif.brokers_relation_to_victim_own_mom = this._mom;
+        vif.brokers_relation_to_victim_own_uncle = this._uncle;
+        vif.brokers_relation_to_victim_own_aunt = this._aunt;
+        vif.brokers_relation_to_victim_own_bro = this._bro;
+        vif.brokers_relation_to_victim_own_sister = this._sister;
+        vif.brokers_relation_to_victim_own_other_relative = this._otherRelative;
+        vif.brokers_relation_to_victim_friend = this._friend;
+        vif.brokers_relation_to_victim_agent = this._agent;
+        vif.brokers_relation_to_victim_husband = this._husband;
+        vif.brokers_relation_to_victim_boyfriend = this._boyfriend;
+        vif.brokers_relation_to_victim_neighbor = this._neighbor;
+        vif.brokers_relation_to_victim_recently_met = this._recentlyMet;
+        vif.brokers_relation_to_victim_contractor = this._contractor;
+        vif.brokers_relation_to_victim_other = this._other;
+        vif.brokers_relation_to_victim_other_value = this._otherText;
     }
 
     get dad() {

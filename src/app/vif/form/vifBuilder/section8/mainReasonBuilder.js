@@ -21,36 +21,42 @@ export default class MainReasonBuilder {
         this._familyAfraidForSafety = false;
         this._policeBribed = false;
         this._victimFamilyBribed = false;
+        this._interferencePowerfulPeople = false;
+        this._other = false;
     }
 
     setValues(vif) {
-        this._noTraffickingSuspected = vif.main_reason_no_trafficking_suspected;
-        this._notEnoughInfo = vif.main_reason_not_enough_info;
-        this._victimsOwnPeople = vif.main_reason_victims_own_people;
-        this._goingHerself = vif.main_reason_going_herself;
-        this._ranAway = vif.main_reason_ran_away;
-        this._victimAfraidForReputation = vif.main_reason_victim_afraid_for_reputation;
-        this._victimAfraidForSafety = vif.main_reason_victim_afraid_for_safety;
-        this._familyAfraidForReputation = vif.main_reason_family_afraid_for_reputation;
-        this._familyAfraidForSafety = vif.main_reason_family_afraid_for_safety;
-        this._policeBribed = vif.main_reason_police_bribed;
-        this._victimFamilyBribed = vif.main_reason_victim_family_bribed;
+        this._noTraffickingSuspected = vif.reason_no_legal_no_trafficking_suspected;
+        this._notEnoughInfo = vif.reason_no_legal_police_not_enough_info;
+        this._victimsOwnPeople = vif.reason_no_legal_trafficker_is_own_people;
+        this._goingHerself = vif.reason_no_legal_she_was_going_herself;
+        this._ranAway = vif.reason_no_legal_trafficker_ran_away;
+        this._victimAfraidForReputation = vif.reason_no_legal_victim_afraid_of_reputation;
+        this._victimAfraidForSafety = vif.reason_no_legal_victim_afraid_for_safety;
+        this._familyAfraidForReputation = vif.reason_no_legal_family_afraid_of_reputation;
+        this._familyAfraidForSafety = vif.reason_no_legal_family_afraid_for_safety;
+        this._policeBribed = vif.reason_no_legal_police_bribed;
+        this._victimFamilyBribed = vif.reason_no_legal_victim_family_bribed;
+        this._interferencePowerfulPeople = vif.reason_no_legal_interference_by_powerful_people;
+        this._other = vif.reason_no_legal_other;
     }
 
     build(vif) {
-        vif.main_reason_no_trafficking_suspected = this._noTraffickingSuspected;
-        vif.main_reason_not_enough_info = this._notEnoughInfo;
-        vif.main_reason_victims_own_people = this._victimsOwnPeople;
-        vif.main_reason_going_herself = this._goingHerself;
-        vif.main_reason_ran_away = this._ranAway;
-        vif.main_reason_victim_afraid_for_reputation = this._victimAfraidForReputation;
-        vif.main_reason_victim_afraid_for_safety = this._victimAfraidForSafety;
-        vif.main_reason_family_afraid_for_reputation = this._familyAfraidForReputation;
-        vif.main_reason_family_afraid_for_safety = this._familyAfraidForSafety;
-        vif.main_reason_police_bribed = this._policeBribed;
-        vif.main_reason_victim_family_bribed = this._victimFamilyBribed;
-        vif.main_reason_who_value = this._whoText;
-        vif.main_reason_other_value = this._otherText;
+        vif.reason_no_legal_no_trafficking_suspected = this._noTraffickingSuspected;
+        vif.reason_no_legal_police_not_enough_info = this._notEnoughInfo;
+        vif.reason_no_legal_trafficker_is_own_people = this._victimsOwnPeople;
+        vif.reason_no_legal_she_was_going_herself = this._goingHerself;
+        vif.reason_no_legal_trafficker_ran_away = this._ranAway;
+        vif.reason_no_legal_victim_afraid_of_reputation = this._victimAfraidForReputation;
+        vif.reason_no_legal_victim_afraid_for_safety = this._victimAfraidForSafety;
+        vif.reason_no_legal_family_afraid_of_reputation = this._familyAfraidForReputation;
+        vif.reason_no_legal_family_afraid_for_safety = this._familyAfraidForSafety;
+        vif.reason_no_legal_police_bribed = this._policeBribed;
+        vif.reason_no_legal_victim_family_bribed = this._victimFamilyBribed;
+        vif.reason_no_legal_interference_by_powerful_people = this._interferencePowerfulPeople;
+        vif.reason_no_legal_other = this._other;
+        vif.reason_no_legal_interference_value = this._whoText;
+        vif.reason_no_legal_other_value = this._otherText;
     }
 
     get noTraffickingSuspected() {
@@ -150,5 +156,23 @@ export default class MainReasonBuilder {
     set victimFamilyBribed(value) {
         this.clearAll();
         this._victimFamilyBribed = value;
+    }
+
+    get interferencePowerfulPeople() {
+        return this._interferencePowerfulPeople;
+    }
+
+    set interferencePowerfulPeople(value) {
+        this.clearAll();
+        this._interferencePowerfulPeople = value;
+    }
+
+    get other() {
+        return this._other;
+    }
+
+    set other(value) {
+        this.clearAll();
+        this._other = value;
     }
 }

@@ -15,17 +15,17 @@ export default class Question5Builder {
     }
 
     setValues(vif) {
-        this._borderStaff = vif.question_5_border_staff;
-        this._shelterStaff = vif.question_5_shelter_staff;
-        this._traffickingAwareness = vif.question_5_trafficking_awareness;
-        this._shelterAccommodations = vif.question_5_shelter_accommodations;
+        this._borderStaff = vif.tiny_hands_rating_border_staff;
+        this._shelterStaff = vif.tiny_hands_rating_shelter_staff;
+        this._traffickingAwareness = vif.tiny_hands_rating_trafficking_awareness;
+        this._shelterAccommodations = vif.tiny_hands_rating_shelter_accommodations;
     }
 
     build(vif) {
-        vif.question_5_border_staff = this._borderStaff;
-        vif.question_5_shelter_staff = this._shelterStaff;
-        vif.question_5_trafficking_awareness = this._traffickingAwareness;
-        vif.question_5_shelter_accommodations = this._shelterAccommodations;
+        vif.tiny_hands_rating_border_staff = this._borderStaff;
+        vif.tiny_hands_rating_shelter_staff = this._shelterStaff;
+        vif.tiny_hands_rating_trafficking_awareness = this._traffickingAwareness;
+        vif.tiny_hands_rating_shelter_accommodations = this._shelterAccommodations;
     }
 
     get borderStaff() {

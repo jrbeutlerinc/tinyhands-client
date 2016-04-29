@@ -16,19 +16,19 @@ export default class PassportBuilder {
     }
 
     setValues(vif) {
-        this._noPassport = vif.passport_no_passport;
-        this._realPassport = vif.passport_real_passport;
-        this._falseName = vif.passport_false_name;
-        this._falseInfo = vif.passport_false_info;
-        this._fake = vif.passport_fake;
+        this._noPassport = vif.passport_made_no_passport_made;
+        this._realPassport = vif.passport_made_real_passport_made;
+        this._falseName = vif.passport_made_passport_included_false_name;
+        this._falseInfo = vif.passport_made_passport_included_other_false_info;
+        this._fake = vif.passport_made_passport_was_fake;
     }
 
     build(vif) {
-        vif.passport_no_passport = this._noPassport;
-        vif.passport_real_passport = this._realPassport;
-        vif.passport_false_name = this._falseName;
-        vif.passport_false_info = this._falseInfo;
-        vif.passport_fake = this._fake;
+        vif.passport_made_no_passport_made = this._noPassport;
+        vif.passport_made_real_passport_made = this._realPassport;
+        vif.passport_made_passport_included_false_name = this._falseName;
+        vif.passport_made_passport_included_other_false_info = this._falseInfo;
+        vif.passport_made_passport_was_fake = this._fake;
     }
 
     get noPassport() {

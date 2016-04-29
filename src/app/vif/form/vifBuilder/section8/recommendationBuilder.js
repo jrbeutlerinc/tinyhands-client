@@ -15,17 +15,17 @@ export default class RecommendationBuilder {
     }
 
     setValues(vif) {
-        this._stayWithGuardians = vif.recommendation_stay_with_guardians;
-        this._stayWithOtherRelatives = vif.recommendation_stay_with_other_relatives;
-        this._anotherPlace = vif.recommendation_another_place;
-        this._contactAftercare = vif.recommendation_contact_aftercare;
+        this._stayWithGuardians = vif.interviewer_recommendation_send_home;
+        this._stayWithOtherRelatives = vif.interviewer_recommendation_send_to_other_relatives;
+        this._anotherPlace = vif.interviewer_recommendation_find_other_place;
+        this._contactAftercare = vif.interviewer_recommendation_contact_aftercare;
     }
 
     build(vif) {
-        vif.recommendation_stay_with_guardians = this._stayWithGuardians;
-        vif.recommendation_stay_with_other_relatives = this._stayWithOtherRelatives;
-        vif.recommendation_another_place = this._anotherPlace;
-        vif.recommendation_contact_aftercare = this._contactAftercare;
+        vif.interviewer_recommendation_send_home = this._stayWithGuardians;
+        vif.interviewer_recommendation_send_to_other_relatives = this._stayWithOtherRelatives;
+        vif.interviewer_recommendation_find_other_place = this._anotherPlace;
+        vif.interviewer_recommendation_contact_aftercare = this._contactAftercare;
     }
 
     get stayWithGuardians() {

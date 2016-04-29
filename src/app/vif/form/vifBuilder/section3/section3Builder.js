@@ -25,13 +25,13 @@ export default class Section3Builder {
     }
 
     setValues(vif) {
-        this._manpower = vif.victim_manpower;
-        this._persuasion = vif.victim_persuasion;
-        this.marriedYears = vif.victim_married_years;
-        this.marriedMonths = vif.victim_married_months;
-        this.mobileExplain = vif.victim_mobile_explain;
-        this.knownYears = vif.victim_known_years;
-        this.knownMonths = vif.victim_known_months;
+        this._manpower = vif.manpower_involved;
+        this._persuasion = vif.victim_recruited_in_village;
+        this.marriedYears = vif.victim_married_to_broker_years;
+        this.marriedMonths = vif.victim_married_to_broker_months;
+        this.mobileExplain = vif.victim_how_met_broker_mobile_explanation;
+        this.knownYears = vif.victim_how_long_known_broker_years;
+        this.knownMonths = vif.victim_how_long_known_broker_months;
     }
 
     build(vif) {
@@ -42,13 +42,13 @@ export default class Section3Builder {
     }
 
     buildFields(vif) {
-        vif.victim_manpower = this._manpower;
-        vif.victim_persuasion = this._persuasion;
-        vif.victim_married_years = this.marriedYears;
-        vif.victim_married_months = this.marriedMonths;
-        vif.victim_mobile_explain = this.mobileExplain;
-        vif.victim_known_years = this.knownYears;
-        vif.victim_known_months = this.knownMonths;
+        vif.manpower_involved = this._manpower;
+        vif.victim_recruited_in_village = this._persuasion;
+        vif.victim_married_to_broker_years = this.marriedYears;
+        vif.victim_married_to_broker_months = this.marriedMonths;
+        vif.victim_how_met_broker_mobile_explanation = this.mobileExplain;
+        vif.victim_how_long_known_broker_years = this.knownYears;
+        vif.victim_how_long_known_broker_months = this.knownMonths;
     }
 
     get manpower() {
@@ -57,7 +57,7 @@ export default class Section3Builder {
 
     set manpower(value) {
         if(value) {
-            this._manpower = true;
+            this._manpower = value;
         }
     }
 
@@ -67,7 +67,7 @@ export default class Section3Builder {
 
     set persuasion(value) {
         if(value) {
-            this._persuasion = true;
+            this._persuasion = value;
         }
     }
 }

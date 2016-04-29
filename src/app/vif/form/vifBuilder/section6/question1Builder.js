@@ -14,15 +14,15 @@ export default class Question1Builder {
     }
 
     setValues(vif) {
-        this._hadHeard = vif.question_1_had_heard;
-        this._knewHowBad = vif.question_1_knew_how_bad;
-        this._neverHeard = vif.question_1_never_heard;
+        this._hadHeard = vif.awareness_before_interception_had_heard_not_how_bad;
+        this._knewHowBad = vif.awareness_before_interception_knew_how_bad_not_happening_to_her;
+        this._neverHeard = vif.awareness_before_interception_never_heard;
     }
 
     build(vif) {
-        vif.question_1_had_heard = this._hadHeard;
-        vif.question_1_knew_how_bad = this._knewHowBad;
-        vif.question_1_never_heard = this._neverHeard;
+        vif.awareness_before_interception_had_heard_not_how_bad = this._hadHeard;
+        vif.awareness_before_interception_knew_how_bad_not_happening_to_her = this._knewHowBad;
+        vif.awareness_before_interception_never_heard = this._neverHeard;
     }
 
     get hadHeard() {

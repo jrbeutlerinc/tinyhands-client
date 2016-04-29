@@ -15,17 +15,17 @@ export default class MoneyChangeHandsBuilder {
     }
 
     setValues(vif) {
-        this._no = vif.money_change_hands_no;
-        this._doNotKnow = vif.money_change_hands_do_not_know;
-        this._gaveMoneyToCompanion = vif.money_change_hands_gave_money_to_companion;
-        this._gaveMoneyToBroker = vif.money_change_hands_gave_money_to_broker;
+        this._no = vif.money_changed_hands_broker_companion_no;
+        this._doNotKnow = vif.money_changed_hands_broker_companion_dont_know;
+        this._gaveMoneyToCompanion = vif.money_changed_hands_broker_companion_broker_gave_money;
+        this._gaveMoneyToBroker = vif.money_changed_hands_broker_companion_companion_gave_money;
     }
 
     build(vif) {
-        vif.money_change_hands_no = this._no;
-        vif.money_change_hands_do_not_know = this._doNotKnow;
-        vif.money_change_hands_gave_money_to_companion = this._gaveMoneyToCompanion;
-        vif.money_change_hands_gave_money_to_broker = this._gaveMoneyToBroker;
+        vif.money_changed_hands_broker_companion_no = this._no;
+        vif.money_changed_hands_broker_companion_dont_know = this._doNotKnow;
+        vif.money_changed_hands_broker_companion_broker_gave_money = this._gaveMoneyToCompanion;
+        vif.money_changed_hands_broker_companion_companion_gave_money = this._gaveMoneyToBroker;
     }
 
     get no() {

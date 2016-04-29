@@ -14,15 +14,15 @@ export default class Question4Builder {
     }
 
     setValues(vif) {
-        this._doesntBelieve = vif.question_4_doesnt_believe;
-        this._believesButNoChurch = vif.question_4_believes_but_no_church;
-        this._believesAndChurch = vif.question_4_believes_and_church;
+        this._doesntBelieve = vif.victim_beliefs_now_doesnt_believe;
+        this._believesButNoChurch = vif.victim_beliefs_now_believes_no_church;
+        this._believesAndChurch = vif.victim_beliefs_now_believes_and_church;
     }
 
     build(vif) {
-        vif.question_4_doesnt_believe = this._doesntBelieve;
-        vif.question_4_believes_but_no_church = this._believesButNoChurch;
-        vif.question_4_believes_and_church = this._believesAndChurch;
+        vif.victim_beliefs_now_doesnt_believe = this._doesntBelieve;
+        vif.victim_beliefs_now_believes_no_church = this._believesButNoChurch;
+        vif.victim_beliefs_now_believes_and_church = this._believesAndChurch;
     }
 
     get doesntBelieve() {

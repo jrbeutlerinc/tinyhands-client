@@ -24,34 +24,36 @@ export default class MeetBrokerBuilder {
     }
 
     setValues(vif) {
-        this._community = vif.meet_broker_community;
-        this._work = vif.meet_broker_work;
-        this._school = vif.meet_broker_school;
-        this._advertisement = vif.meet_broker_advertisement;
-        this._appraoched = vif.meet_broker_appraoched;
-        this._friends = vif.meet_broker_friends;
-        this._family = vif.meet_broker_family;
-        this._wedding = vif.meet_broker_wedding;
-        this._vehicle = vif.meet_broker_vehicle;
-        this._hospital = vif.meet_broker_hospital;
-        this._myself = vif.meet_broker_myself;
-        this._mobile = vif.meet_broker_mobile;
+        this._community = vif.victim_how_met_broker_from_community;
+        this._work = vif.victim_how_met_broker_at_work;
+        this._school = vif.victim_how_met_broker_at_school;
+        this._advertisement = vif.victim_how_met_broker_job_advertisement;
+        this._appraoched = vif.victim_how_met_broker_he_approached_me;
+        this._friends = vif.victim_how_met_broker_through_friends;
+        this._family = vif.victim_how_met_broker_through_family;
+        this._wedding = vif.victim_how_met_broker_at_wedding;
+        this._vehicle = vif.victim_how_met_broker_in_a_vehicle;
+        this._hospital = vif.victim_how_met_broker_in_a_hospital;
+        this._myself = vif.victim_how_met_broker_went_myself;
+        this._mobile = vif.victim_how_met_broker_called_my_mobile;
+        this._other = vif.victim_how_met_broker_other;
     }
 
     build(vif) {
-        vif.meet_broker_community = this._community;
-        vif.meet_broker_work = this._work;
-        vif.meet_broker_school = this._school;
-        vif.meet_broker_advertisement = this._advertisement;
-        vif.meet_broker_appraoched = this._appraoched;
-        vif.meet_broker_friends = this._friends;
-        vif.meet_broker_family = this._family;
-        vif.meet_broker_wedding = this._wedding;
-        vif.meet_broker_vehicle = this._vehicle;
-        vif.meet_broker_hospital = this._hospital;
-        vif.meet_broker_myself = this._myself;
-        vif.meet_broker_mobile = this._mobile;
-        vif.meet_broker_other_value = this._otherText;
+        vif.victim_how_met_broker_from_community = this._community;
+        vif.victim_how_met_broker_at_work = this._work;
+        vif.victim_how_met_broker_at_school = this._school;
+        vif.victim_how_met_broker_job_advertisement = this._advertisement;
+        vif.victim_how_met_broker_he_approached_me = this._appraoched;
+        vif.victim_how_met_broker_through_friends = this._friends;
+        vif.victim_how_met_broker_through_family = this._family;
+        vif.victim_how_met_broker_at_wedding = this._wedding;
+        vif.victim_how_met_broker_in_a_vehicle = this._vehicle;
+        vif.victim_how_met_broker_in_a_hospital = this._hospital;
+        vif.victim_how_met_broker_went_myself = this._myself;
+        vif.victim_how_met_broker_called_my_mobile = this._mobile;
+        vif.victim_how_met_broker_other = this._other;
+        vif.victim_how_met_broker_other_value = this._otherText;
     }
 
     get community() {
