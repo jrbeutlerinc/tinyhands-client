@@ -9,9 +9,9 @@
                     <h3 class="panel-title"><strong>5.1</strong> Did the broker / companion arrange someone to meet you after crossing the border?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-3" ng-repeat="option in section5Ctrl.sect1Options" ng-model="section1Ctrl.vif.arrangeSomeone[option.value]" ng-value="true">
+                    <div class="col-md-3" ng-repeat="option in section5Ctrl.sect1Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect5-1">{{ option }}</label>
+                            <label><input type="radio" name="sect5-1" ng-model="section5Ctrl.vif.arrangeSomeone[option.value]" ng-value="true">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="panel-body">
                     <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                         <div class="radio">
-                            <label><input type="radio" name="sect5-2" ng-model="section1Ctrl.vif.knowDetails" ng-value="option.value">{{ option }}</label>
+                            <label><input type="radio" name="sect5-2" ng-model="section5Ctrl.vif.knowDetails" ng-value="option.value">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <div class="panel-body">
                             <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect5-3-1">{{ option }}</label>
+                                    <label><input type="radio" name="sect5-3-1" ng-model="section5Ctrl.vif.otherPersonOrPlaceQ1" ng-value="option.value">{{ option }}</label>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                         <div class="panel-body">
                             <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect5-3-2">{{ option }}</label>
+                                    <label><input type="radio" name="sect5-3-2" ng-model="section5Ctrl.vif.otherPersonOrPlaceQ2" ng-value="option.value">{{ option }}</label>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="panel-body">
                             <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect5-3-2">{{ option }}</label>
+                                    <label><input type="radio" name="sect5-3-2" ng-model="section5Ctrl.vif.otherPersonOrPlaceQ3" ng-value="option.value">{{ option }}</label>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                         <div class="panel-body">
                             <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect5-3-3">{{ option }}</label>
+                                    <label><input type="radio" name="sect5-3-3" ng-model="section5Ctrl.vif.otherPersonOrPlaceQ4" ng-value="option.value">{{ option }}</label>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                         <div class="panel-body">
                             <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect5-3-4">{{ option }}</label>
+                                    <label><input type="radio" name="sect5-3-4" ng-model="section5Ctrl.vif.otherPersonOrPlaceQ5" ng-value="option.value">{{ option }}</label>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                 <div class="panel-body">
                     <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                         <div class="radio">
-                            <label><input type="radio" name="sect5-4">{{ option }}</label>
+                            <label><input type="radio" name="sect5-4" ng-model="section5Ctrl.vif.sexIndustry" ng-value="option.value">{{ option }}</label>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="panel-body">
                     <div class="col-md-6" ng-repeat="option in section5Ctrl.noYesList">
                         <div class="radio">
-                            <label><input type="radio" name="sect5-5">{{ option }}</label>
+                            <label><input type="radio" name="sect5-5" ng-model="section5Ctrl.vif.workSendingGirlsOverseas" ng-value="option.value">{{ option }}</label>
                         </div>
                     </div>
                 </div>
