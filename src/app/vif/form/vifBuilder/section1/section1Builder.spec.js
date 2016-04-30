@@ -119,7 +119,8 @@ describe('Section1Builder', () => {
             primaryGuardianBuilder,
             parentMaritalStatusBuilder,
             educationLevelBuilder,
-            literacyBuilder;
+            literacyBuilder,
+            builtVif;
         
         beforeAll(() => {
             vif = {
@@ -151,6 +152,140 @@ describe('Section1Builder', () => {
             builder.build();
             
             expect(casteBuilder.build).toHaveBeenCalled();
+        });
+        
+        it('should call build on occupationBuilder', () => {
+            builder.build();
+            
+            expect(occupationBuilder.build).toHaveBeenCalled();
+        });
+        
+        it('should call build on maritalStatusBuilder', () => {
+            builder.build();
+            
+            expect(maritalStatusBuilder.build).toHaveBeenCalled();
+        });
+        
+        it('should call build on livesWithBuilder', () => {
+            builder.build();
+            
+            expect(livesWithBuilder.build).toHaveBeenCalled();
+        });
+        
+        it('should call build on primaryGuardianBuilder', () => {
+            builder.build();
+            
+            expect(primaryGuardianBuilder.build).toHaveBeenCalled();
+        });
+        
+        it('should call build on parentMaritalStatusBuilder', () => {
+            builder.build();
+            
+            expect(parentMaritalStatusBuilder.build).toHaveBeenCalled();
+        });
+        
+        it('should call build on educationLevelBuilder', () => {
+            builder.build();
+            
+            expect(educationLevelBuilder.build).toHaveBeenCalled();
+        });
+        
+        it('should call build on literacyBuilder', () => {
+            builder.build();
+            
+            expect(literacyBuilder.build).toHaveBeenCalled();
+        });
+        
+        it('should set victim_name on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_name).toEqual(vif.victim_name);
+        });
+        
+        it('should set victim_gender on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_gender).toEqual(vif.victim_gender);
+        });
+        
+        it('should set victim_address1 on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_address1).toEqual(vif.victim_address1);
+        });
+        
+        it('should set victim_address2 on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_address2).toEqual(vif.victim_address2);
+        });
+        
+        it('should set victim_address_ward on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_address_ward).toEqual(vif.victim_address_ward);
+        });
+        
+        it('should set victim_phone on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_phone).toEqual(vif.victim_phone);
+        });
+        
+        it('should set victim_age on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_age).toEqual(vif.victim_age);
+        });
+        
+        it('should set victim_height on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_height).toEqual(vif.victim_height);
+        });
+        
+        it('should set victim_weight on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_weight).toEqual(vif.victim_weight);
+        });
+        
+        it('should set victim_num_in_family on vif', () => {
+            builtVif = builder.build();
+            
+            expect(builtVif.victim_num_in_family).toEqual(vif.victim_num_in_family);
+        });
+    });
+    
+    describe('when isMale set to true', () => {
+        
+        beforeEach(() => {
+            builder = new Section1Builder();
+            builder.isMale = true; 
+        });
+        
+        it('isMale should return true', () => {
+            expect(builder.isMale).toEqual(true);
+        });
+        
+        it('isFemale should return false', () => {
+            expect(builder.isFemale).toEqual(false);
+        });
+    });
+    
+    describe('when isFemale set to true', () => {
+        
+        beforeEach(() => {
+            builder = new Section1Builder();
+            builder.isFemale = true; 
+        });
+        
+        it('isMale should return false', () => {
+            expect(builder.isMale).toEqual(false);
+        });
+        
+        it('isFemale should return true', () => {
+            expect(builder.isFemale).toEqual(true);
         });
     });
     
