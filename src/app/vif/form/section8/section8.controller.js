@@ -1,6 +1,6 @@
 export default class VifSection8Controller {
   constructor(VifBuilder) {
-    'ngInject'
+    'ngInject';
     this.vif = VifBuilder;
     this.sect2Options = ["No trafficking suspected", "Police say not enough information", "Trafficker is victim's own people",
       "She was going herself", "Trafficker ran away", "Victim afraid of reputation", "Victim afraid for her safety",
