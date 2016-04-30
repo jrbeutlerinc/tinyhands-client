@@ -175,4 +175,20 @@ export default class MainReasonBuilder {
         this.clearAll();
         this._other = value;
     }
+
+    get whoText() {
+        return this._whoText;
+    }
+
+    set whoText(value) {
+        this._whoText = value;
+    }
+
+    get otherText() {
+        return this._otherText;
+    }
+
+    set otherText(value) {
+        this._otherText = value;
+    }
 }

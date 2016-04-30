@@ -48,9 +48,7 @@ export default class Section8Builder {
     }
 
     set moreInvolved(value) {
-        if(value) {
-            this._moreInvolved = value;
-        }
+        this._moreInvolved = value;
     }
 
     get hasSignature() {
@@ -58,9 +56,7 @@ export default class Section8Builder {
     }
 
     set hasSignature(value) {
-        if(value) {
-            this._hasSignature = value;
-        }
+        this._hasSignature = value;
     }
 
     get caseNotes() {
@@ -68,9 +64,7 @@ export default class Section8Builder {
     }
 
     set caseNotes(value) {
-        if(value) {
-            this._caseNotes = value;
-        }
+        this._caseNotes = value;
     }
 
     get scannedForm() {
@@ -78,8 +72,6 @@ export default class Section8Builder {
     }
 
     set scannedForm(value) {
-        if(value) {
-            this._scannedForm = value;
-        }
+        this._scannedForm = value;
     }
 }

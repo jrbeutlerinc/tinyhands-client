@@ -11,19 +11,19 @@
                 <div class="panel-body">
                     <div class="col-md-1">
                         <div class="radio no-text-field">
-                            <label><input type="radio" name="sect8-1">No</label>
+                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.no" ng-value="true">No</label>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="radio">
-                            <label><input type="radio" name="sect8-1">FIR filed against </label>
-                            <input type="text" class="form-control fir-text-field">
+                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.fir" ng-value="true">FIR filed against </label>
+                            <input type="text" class="form-control fir-text-field" ng-model="section8Ctrl.vif.legalAction.firText">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect8-1">DoFE complaint against </label>
-                            <input type="text" class="form-control dofe-text-field">
+                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.dofe" ng-value="true">DoFE complaint against </label>
+                            <input type="text" class="form-control dofe-text-field" ng-model="section8Ctrl.vif.legalAction.dofeText">
                         </div>
                     </div>
                 </div>
@@ -36,28 +36,29 @@
                     <div class="row">
                         <div class="col-md-3" ng-repeat="option in section8Ctrl.sect2Options">
                             <div class="radio options">
-                                <label><input type="radio" name="sect8-2">{{ option }}</label>
+                                <label><input type="radio" name="sect8-2" ng-change="section8Ctrl.getVif()" ng-model="section8Ctrl.vif.mainReason[option.value]" ng-value="true">{{ option.name }}</label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
                             <div class="radio powerful-people-label">
-                                <label><input type="radio" name="sect8-2">Interference by powerful people </label>
+                                <label><input type="radio" name="sect8-2" ng-model="section8Ctrl.vif.mainReason.interferencePowerfulPeople" ng-value="true">
+                                    Interference by powerful people </label>
                             </div>
                         </div>
                         <div class="col-md-9">
-                            <p class="powerful-people"><input type="text" class="form-control" placeholder="Who?"></p>
+                            <p class="powerful-people"><input type="text" class="form-control" ng-model="section8Ctrl.vif.mainReason.whoText" placeholder="Who?"></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-1">
                             <div class="radio other-label">
-                                <label><input type="radio" name="sect8-2">Other </label>
+                                <label><input type="radio" name="sect8-2" ng-model="section8Ctrl.vif.mainReason.other" ng-value="true">Other </label>
                             </div>
                         </div>
                         <div class="col-md-11">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" ng-model="section8Ctrl.vif.mainReason.otherText">
                         </div>
                     </div>
                 </div>
@@ -68,7 +69,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="radio" ng-repeat="option in section8Ctrl.sect3Options">
-                        <label><input type="radio" name="sect8-3">{{ option }}</label>
+                        <label><input type="radio" name="sect8-3" ng-model="section8Ctrl.vif.recommendation[option.value]" ng-value="true">{{ option.name }}</label>
                     </div>
                 </div>
             </div>
@@ -81,12 +82,12 @@
                 <div class="panel-body">
                     <div class="col-md-1">
                         <div class="radio">
-                            <label><input type="radio" name="sect8-4">No</label>
+                            <label><input type="radio" name="sect8-4" ng-model="section8Ctrl.vif.moreInvolved" ng-value="false">No</label>
                         </div>
                     </div>
                     <div class="col-md-11">
                         <div class="radio">
-                            <label><input type="radio" name="sect8-4">Yes - If so, make sure you use an Additional
+                            <label><input type="radio" name="sect8-4" ng-model="section8Ctrl.vif.moreInvolved" ng-value="true">Yes - If so, make sure you use an Additional
                                 Information Boxes
                                 Form and attach it to this form!</label>
                         </div>

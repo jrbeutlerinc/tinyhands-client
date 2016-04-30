@@ -1,10 +1,12 @@
 export default class LegalActionBuilder {
     constructor(vif = null) {
         if(vif === null) {
+            console.log("Clear all");
             this.clearAll();
             this._firText = '';
             this._dofeText = '';
         } else {
+            console.log("Set values");
             this.setValues(vif);
         }
     }
@@ -34,6 +36,7 @@ export default class LegalActionBuilder {
     }
 
     set no(value) {
+        this.clearAll();
         this._no = value;
     }
 
@@ -42,6 +45,7 @@ export default class LegalActionBuilder {
     }
 
     set fir(value) {
+        this.clearAll();
         this._fir = value;
     }
 
@@ -50,6 +54,25 @@ export default class LegalActionBuilder {
     }
 
     set dofe(value) {
+        this.clearAll();
         this._dofe = value;
+    }
+
+    get firText() {
+        return this._firText;
+    }
+
+    set firText(value) {
+        this.clearAll();
+        this._fir = value;
+    }
+
+    get dofeText() {
+        return this._dofeText;
+    }
+
+    set dofeText(value) {
+        this.clearAll();
+        this._dofeText = value;
     }
 }
