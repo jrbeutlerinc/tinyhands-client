@@ -53,11 +53,7 @@ export default class Section5Builder {
     }
 
     set knowDetails(value) {
-        if(value === 'yes') {
-            this._knowDetails = true;
-        } else {
-            this._knowDetails = false;
-        }
+        this._knowDetails = value;
     }
 
     get otherPersonOrPlaceQ1() {
@@ -65,9 +61,7 @@ export default class Section5Builder {
     }
 
     set otherPersonOrPlaceQ1(value) {
-        if(value) {
-            this._otherPersonOrPlaceQ1 = value;
-        }
+        this._otherPersonOrPlaceQ1 = value;
     }
 
     get otherPersonOrPlaceQ2() {
@@ -75,9 +69,7 @@ export default class Section5Builder {
     }
 
     set otherPersonOrPlaceQ2(value) {
-        if(value) {
-            this._otherPersonOrPlaceQ2 = value;
-        }
+        this._otherPersonOrPlaceQ2 = value;
     }
 
     get otherPersonOrPlaceQ3() {
@@ -85,9 +77,7 @@ export default class Section5Builder {
     }
 
     set otherPersonOrPlaceQ3(value) {
-        if(value) {
-            this._otherPersonOrPlaceQ3 = value;
-        }
+        this._otherPersonOrPlaceQ3 = value;
     }
 
     get otherPersonOrPlaceQ4() {
@@ -95,9 +85,7 @@ export default class Section5Builder {
     }
 
     set otherPersonOrPlaceQ4(value) {
-        if(value) {
-            this._otherPersonOrPlaceQ4 = value;
-        }
+        this._otherPersonOrPlaceQ4 = value;
     }
 
     get otherPersonOrPlaceQ5() {
@@ -105,9 +93,7 @@ export default class Section5Builder {
     }
 
     set otherPersonOrPlaceQ5(value) {
-        if(value) {
-            this._otherPersonOrPlaceQ5 = value;
-        }
+        this._otherPersonOrPlaceQ5 = value;
     }
 
     get sexIndustry() {
@@ -115,9 +101,7 @@ export default class Section5Builder {
     }
 
     set sexIndustry(value) {
-        if(value) {
-            this._sexIndustry = value;
-        }
+        this._sexIndustry = value;
     }
 
     get workSendingGirlsOverseas() {
@@ -125,8 +109,6 @@ export default class Section5Builder {
     }
 
     set workSendingGirlsOverseas(value) {
-        if(value) {
-            this._workSendingGirlsOverseas = value;
-        }
+        this._workSendingGirlsOverseas = value;
     }
 }

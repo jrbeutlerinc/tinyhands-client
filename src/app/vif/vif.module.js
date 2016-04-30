@@ -1,4 +1,4 @@
-import VIFRoutes from './vif.route'
+import VIFRoutes from './vif.route';
 import TinyHandsShared from '../shared/shared.module';
 
 import VifController from './form/vif.controller';
@@ -39,3 +39,4 @@ export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared']
   .controller('VifPeopleController', VifPeopleController) 
   .controller('VifLocationsController', VifLocationsController)   
   .controller('VifListController', VifListController)
+;
