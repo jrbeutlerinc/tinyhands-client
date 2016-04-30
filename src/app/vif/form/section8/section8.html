@@ -6,24 +6,30 @@
         <div class="panel-body">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><strong>8.1</strong> Has any legal action been taken against any of the traffickers?</h3>
+                    <h3 class="panel-title"><strong>8.1</strong> Has any legal action been taken against any of the
+                        traffickers?</h3>
                 </div>
                 <div class="panel-body">
                     <div class="col-md-1">
                         <div class="radio no-text-field">
-                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.no" ng-value="true">No</label>
+                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.no"
+                                          ng-value="true">No</label>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="radio">
-                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.fir" ng-value="true">FIR filed against </label>
-                            <input type="text" class="form-control fir-text-field" ng-model="section8Ctrl.vif.legalAction.firText">
+                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.fir"
+                                          ng-value="true">FIR filed against </label>
+                            <input type="text" class="form-control fir-text-field"
+                                   ng-model="section8Ctrl.vif.legalAction.firText">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="radio">
-                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.dofe" ng-value="true">DoFE complaint against </label>
-                            <input type="text" class="form-control dofe-text-field" ng-model="section8Ctrl.vif.legalAction.dofeText">
+                            <label><input type="radio" name="sect8-1" ng-model="section8Ctrl.vif.legalAction.dofe"
+                                          ng-value="true">DoFE complaint against </label>
+                            <input type="text" class="form-control dofe-text-field"
+                                   ng-model="section8Ctrl.vif.legalAction.dofeText">
                         </div>
                     </div>
                 </div>
@@ -34,27 +40,35 @@
                 </div>
                 <div class="panel-body panel-radio-only">
                     <div class="row">
-                        <div class="col-md-3" ng-repeat="option in section8Ctrl.sect2Options">
+                        <div class="col-md-4" ng-repeat="option in section8Ctrl.sect2Options">
                             <div class="radio options">
-                                <label><input type="radio" name="sect8-2" ng-change="section8Ctrl.getVif()" ng-model="section8Ctrl.vif.mainReason[option.value]" ng-value="true">{{ option.name }}</label>
+                                <label><input type="radio" name="sect8-2"
+                                              ng-model="section8Ctrl.vif.mainReason[option.value]"
+                                              ng-value="true">{{ option.name }}
+                                </label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="radio powerful-people-label">
-                                <label><input type="radio" name="sect8-2" ng-model="section8Ctrl.vif.mainReason.interferencePowerfulPeople" ng-value="true">
+                                <label><input type="radio" name="sect8-2"
+                                              ng-model="section8Ctrl.vif.mainReason.interferencePowerfulPeople"
+                                              ng-value="true">
                                     Interference by powerful people </label>
                             </div>
                         </div>
-                        <div class="col-md-9">
-                            <p class="powerful-people"><input type="text" class="form-control" ng-model="section8Ctrl.vif.mainReason.whoText" placeholder="Who?"></p>
+                        <div class="col-md-8">
+                            <p class="powerful-people"><input type="text" class="form-control"
+                                                              ng-model="section8Ctrl.vif.mainReason.whoText"
+                                                              placeholder="Who?"></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-1">
                             <div class="radio other-label">
-                                <label><input type="radio" name="sect8-2" ng-model="section8Ctrl.vif.mainReason.other" ng-value="true">Other </label>
+                                <label><input type="radio" name="sect8-2" ng-model="section8Ctrl.vif.mainReason.other"
+                                              ng-value="true">Other </label>
                             </div>
                         </div>
                         <div class="col-md-11">
@@ -65,35 +79,58 @@
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><strong>8.3</strong> What is your recommendation about where she should go?</h3>
+                    <h3 class="panel-title"><strong>8.3</strong> What is your recommendation about where she should go?
+                    </h3>
                 </div>
                 <div class="panel-body">
                     <div class="radio" ng-repeat="option in section8Ctrl.sect3Options">
-                        <label><input type="radio" name="sect8-3" ng-model="section8Ctrl.vif.recommendation[option.value]" ng-value="true">{{ option.name }}</label>
+                        <label><input type="radio" name="sect8-3"
+                                      ng-model="section8Ctrl.vif.recommendation[option.value]" ng-value="true">{{
+                            option.name }}</label>
                     </div>
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><strong>8.4</strong> Were there more people and places that you believe were involved
+                    <h3 class="panel-title"><strong>8.4</strong> Were there more people and places that you believe were
+                        involved
                         in trafficking in addition to those recorded in the Information Boxes on the previous page?
                     </h3>
                 </div>
                 <div class="panel-body">
                     <div class="col-md-1">
                         <div class="radio">
-                            <label><input type="radio" name="sect8-4" ng-model="section8Ctrl.vif.moreInvolved" ng-value="false">No</label>
+                            <label><input type="radio" name="sect8-4" ng-model="section8Ctrl.vif.moreInvolved"
+                                          ng-value="false">No</label>
                         </div>
                     </div>
                     <div class="col-md-11">
                         <div class="radio">
-                            <label><input type="radio" name="sect8-4" ng-model="section8Ctrl.vif.moreInvolved" ng-value="true">Yes - If so, make sure you use an Additional
+                            <label><input type="radio" name="sect8-4" ng-model="section8Ctrl.vif.moreInvolved"
+                                          ng-value="true">Yes - If so, make sure you use an Additional
                                 Information Boxes
                                 Form and attach it to this form!</label>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="radio">
+                    <label><input type="checkbox" ng-model="section8Ctrl.vif.hasSignature"> Signature is on the original
+                        form</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="radio">
+                    <label><input type="file" ng-model="section8Ctrl.vif.scannedForm"></label>
+                </div>
+            </div>
+            <label class="textareaContainer">
+                <textarea class="caseNotes" rows="5" cols="50"
+                                                       ng-model="section8Ctrl.vif.caseNotes"
+                                                       placeholder="Case Notes">
+                </textarea>
+            </label>
         </div>
     </div>
 </div>

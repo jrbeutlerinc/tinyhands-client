@@ -22,9 +22,5 @@ export default class VifSection8Controller {
       {name: "Tiny Hands needs to help her find another place to go", value: "anotherPlace"},
       {name: "Contact THN's Aftercare Coordinator", value: "contactAftercare"}
     ];
-
-    this.getVif = function() {
-      console.log(this.vif);
-    }
   }
 }

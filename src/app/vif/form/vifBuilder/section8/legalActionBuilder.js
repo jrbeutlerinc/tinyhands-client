@@ -1,12 +1,10 @@
 export default class LegalActionBuilder {
     constructor(vif = null) {
         if(vif === null) {
-            console.log("Clear all");
             this.clearAll();
             this._firText = '';
             this._dofeText = '';
         } else {
-            console.log("Set values");
             this.setValues(vif);
         }
     }
