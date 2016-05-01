@@ -1,10 +1,86 @@
-<div class="container">
-    <h2>Modal Example</h2>
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<div class="container" id="people">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>All VIFs</h2>
+        </div>
+        <div class="pull-right">
+            <button type="button" class="btn btn-primary open-modal">Export as CSV</button>
+            <button type="button" class="btn btn-success open-modal" data-toggle="modal" data-target="#newPersonBox">
+                Input a New VIF
+            </button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <button type="button" class="btn btn-danger btn-xs pull-left">X</button>
+                <h3 class="panel-title text-center header">Person Box</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>VIF #:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>BGN197A</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>Interviewer:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>Chloe Reyes</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong># of Victims:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong># of Traffickers:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>1</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>Interview Date:</strong></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="text-center"><strong>Time Entered Into System</strong></p>
+                    <p class="text-center">Jun 27, 2014 5:55:51 AM</p>
+                </div>
+                <div class="row">
+                    <p class="text-center"><strong>Time Last Edited</strong></p>
+                    <p class="text-center">Feb 1, 2016 6:34:50 PM</p>
+                </div>
+                <div class="row text-center">
+                    <button type="button" class="btn btn-primary">View</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default add-person-box">
+            <div class="panel-body add-person-body">
+                <h1 class="plus">+</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ########## MODAL SECTION ########## -->
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="newPersonBox" role="dialog">
         <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
