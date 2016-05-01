@@ -5,9 +5,6 @@
         </div>
         <div class="pull-right">
             <button type="button" class="btn btn-primary open-modal">Export as CSV</button>
-            <button type="button" class="btn btn-success open-modal" data-toggle="modal" data-target="#newPersonBox">
-                Input a New VIF
-            </button>
         </div>
     </div>
     <div class="col-md-4">
@@ -72,7 +69,7 @@
     <div class="col-md-4">
         <div class="panel panel-default add-person-box">
             <div class="panel-body add-person-body">
-                <h1 class="plus">+</h1>
+                <h1 class="plus" data-toggle="modal" data-target="#newPersonBox">+</h1>
             </div>
         </div>
     </div>
@@ -87,7 +84,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">New Person Box</h4>
                 </div>
                 <div class="modal-body">
                     <div class="panel panel-default">
@@ -97,17 +94,17 @@
                         <div class="panel-body">
                             <div class="col-md-4">
                                 <div class="radio" ng-repeat="option in peopleCtrl.sect1aList">
-                                    <label><input type="radio" name="sect1a">{{ option }}</label>
+                                    <label><input type="radio" name="sect1a">{{ option.name }}</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="radio" ng-repeat="option in peopleCtrl.sect1bList">
-                                    <label><input type="radio" name="sect1b">{{ option }}</label>
+                                    <label><input type="radio" name="sect1b">{{ option.name }}</label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="radio" ng-repeat="option in peopleCtrl.sect1cList">
-                                    <label><input type="radio" name="sect1c">{{ option }}</label>
+                                    <label><input type="radio" name="sect1c">{{ option.name }}</label>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +164,7 @@
                             <div class="row">
                                 <div class="col-md-4" ng-repeat="option in peopleCtrl.sect3List">
                                     <div class="radio radio-row">
-                                        <label><input type="radio" name="sect3">{{ option }}</label>
+                                        <label><input type="radio" name="sect3">{{ option.name }}</label>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +188,7 @@
                             <div class="row">
                                 <div class="col-md-3" ng-repeat="option in peopleCtrl.occupations">
                                     <div class="radio radio-row">
-                                        <label><input type="radio" name="occupation">{{ option }}</label>
+                                        <label><input type="radio" name="occupation">{{ option.name }}</label>
                                     </div>
                                 </div>
                             </div>
@@ -213,7 +210,7 @@
                             <div class="row">
                                 <div class="col-md-3" ng-repeat="option in peopleCtrl.party">
                                     <div class="radio radio-row">
-                                        <label><input type="radio" name="party">{{ option }}</label>
+                                        <label><input type="radio" name="party">{{ option.name }}</label>
                                     </div>
                                 </div>
                             </div>
@@ -311,10 +308,10 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
                 </div>
             </div>
-
         </div>
     </div>
 
