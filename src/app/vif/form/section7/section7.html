@@ -9,14 +9,9 @@
                     <h3 class="panel-title"><strong>7.1</strong> Did your guardian know you were travelling to India?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in section7Ctrl.sect1Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-1">No</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-1">Yes</label>
+                            <label><input type="radio" name="sect7-1" ng-model="section7Ctrl.vif.question1" ng-value="option.value">{{ option.name }}</label>
                         </div>
                     </div>
                 </div>
@@ -27,15 +22,10 @@
                         accept the broker's offer?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in section7Ctrl.sect2Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-2" ng-click="section7Ctrl.calculateAlarms(0, 0)">No</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-2" ng-click="section7Ctrl.calculateAlarms(0, 1)">Yes
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> 1
+                            <label><input type="radio" name="sect7-2" ng-model="section7Ctrl.vif.question2" ng-value="option.value" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                             </label>
                         </div>
                     </div>
@@ -47,15 +37,10 @@
                         they will try to send you overseas again?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in section7Ctrl.sect3Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-3" ng-click="section7Ctrl.calculateAlarms(1, 0)">No</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-3" ng-click="section7Ctrl.calculateAlarms(1, 3)">Yes
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> 3
+                            <label><input type="radio" name="sect7-3" ng-model="section7Ctrl.vif.question3" ng-value="option.value" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                             </label>
                         </div>
                     </div>
@@ -66,15 +51,10 @@
                     <h3 class="panel-title"><strong>7.4</strong> Do you feel safe at home with your guardian?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in section7Ctrl.sect4Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-4" ng-click="section7Ctrl.calculateAlarms(2, 0)">Yes</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-4" ng-click="section7Ctrl.calculateAlarms(2, 4)">No
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> 4
+                            <label><input type="radio" name="sect7-4" ng-model="section7Ctrl.vif.question4" ng-value="option.value" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                             </label>
                         </div>
                     </div>
@@ -85,15 +65,10 @@
                     <h3 class="panel-title"><strong>7.5</strong> Do you want to go home?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in section7Ctrl.sect5Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-5" ng-click="section7Ctrl.calculateAlarms(3, 0)">Yes</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-5" ng-click="section7Ctrl.calculateAlarms(3, 4)">No
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> 4
+                            <label><input type="radio" name="sect7-5" ng-model="section7Ctrl.vif.question5" ng-value="option.value" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                             </label>
                         </div>
                     </div>
@@ -110,22 +85,10 @@
                             <h4 class="panel-title">Sexual Abuse</h4>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-4">
+                            <div class="col-md-4" ng-repeat="option in section7Ctrl.sect6SexualAssault">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-1" ng-click="section7Ctrl.calculateAlarms(4, 0)">Never</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="radio">
-                                    <label><input type="radio" name="sect7-6-1" ng-click="section7Ctrl.calculateAlarms(4, 4)">Rarely / Minor
-                                        <span class="glyphicon glyphicon-exclamation-sign"></span> 4
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="radio">
-                                    <label><input type="radio" name="sect7-6-1" ng-click="section7Ctrl.calculateAlarms(4, 10)">Frequent / Severe
-                                        <span class="glyphicon glyphicon-exclamation-sign"></span> 10
+                                    <label><input type="radio" name="sect7-6-1" ng-model="section7Ctrl.vif.sexualAbuse[option.value]" ng-value="true" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                        <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                                     </label>
                                 </div>
                             </div>
@@ -136,20 +99,10 @@
                             <h4 class="panel-title">Physical Abuse</h4>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-4">
+                            <div class="col-md-4" ng-repeat="option in section7Ctrl.sect6PhysicalAbuse">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-2" ng-click="section7Ctrl.calculateAlarms(5, 0)">Never</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="radio">
-                                    <label><input type="radio" name="sect7-6-2" ng-click="section7Ctrl.calculateAlarms(5, 0)">Rarely / Minor</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="radio">
-                                    <label><input type="radio" name="sect7-6-2" ng-click="section7Ctrl.calculateAlarms(5, 6)">Frequent / Severe
-                                        <span class="glyphicon glyphicon-exclamation-sign"></span> 6
+                                    <label><input type="radio" name="sect7-6-2" ng-model="section7Ctrl.vif.physicalAbuse[option.value]" ng-value="true" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                        <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                                     </label>
                                 </div>
                             </div>
@@ -160,20 +113,10 @@
                             <h4 class="panel-title">Emotional Abuse</h4>
                         </div>
                         <div class="panel-body">
-                            <div class="col-md-4">
+                            <div class="col-md-4" ng-repeat="option in section7Ctrl.sect6EmotionalAbuse">
                                 <div class="radio">
-                                    <label><input type="radio" name="sect7-6-3" ng-click="section7Ctrl.calculateAlarms(6, 0)">Never</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="radio">
-                                    <label><input type="radio" name="sect7-6-3" ng-click="section7Ctrl.calculateAlarms(6, 0)">Rarely / Minor</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="radio">
-                                    <label><input type="radio" name="sect7-6-3" ng-click="section7Ctrl.calculateAlarms(6, 2)">Frequent / Severe
-                                        <span class="glyphicon glyphicon-exclamation-sign"></span> 2
+                                    <label><input type="radio" name="sect7-6-3" ng-model="section7Ctrl.vif.emotionalAbuse[option.value]" ng-value="true" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                        <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                                     </label>
                                 </div>
                             </div>
@@ -186,20 +129,10 @@
                     <h3 class="panel-title"><strong>7.7</strong> Does guardian drink alcohol?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-4">
+                    <div class="col-md-4" ng-repeat="option in section7Ctrl.sect7Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-7" ng-click="section7Ctrl.calculateAlarms(7, 0)">Never</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-7" ng-click="section7Ctrl.calculateAlarms(7, 0)">Occasionally</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-7" ng-click="section7Ctrl.calculateAlarms(7, 1)">All the time
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> 1
+                            <label><input type="radio" name="sect7-7" ng-model="section7Ctrl.vif.alcohol[option.value]" ng-value="true" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                             </label>
                         </div>
                     </div>
@@ -210,22 +143,10 @@
                     <h3 class="panel-title"><strong>7.8</strong> Does guardian use drugs?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-4">
+                    <div class="col-md-4" ng-repeat="option in section7Ctrl.sect8Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-8" ng-click="section7Ctrl.calculateAlarms(8, 0)">Never</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-8" ng-click="section7Ctrl.calculateAlarms(8, 2)">Occasionally
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> 2
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-8" ng-click="section7Ctrl.calculateAlarms(8, 6)">All the time
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> 6
+                            <label><input type="radio" name="sect7-8" ng-model="section7Ctrl.vif.drugs[option.value]" ng-value="true" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                             </label>
                         </div>
                     </div>
@@ -236,17 +157,12 @@
                     <h3 class="panel-title"><strong>7.9</strong> Economic Situation of Family</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="radio">
-                        <label><input type="radio" name="sect7-9" ng-click="section7Ctrl.calculateAlarms(9, 7)">Unable to meet basic needs
-                            <span class="glyphicon glyphicon-exclamation-sign"></span> 7
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect7-9" ng-click="section7Ctrl.calculateAlarms(9, 0)">Comfortably meet basic needs, and can afford to buy
-                            some non-essential goods/services</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="sect7-9" ng-click="section7Ctrl.calculateAlarms(9, 0)">Wealthy</label>
+                    <div class="col-md-4" ng-repeat="option in section7Ctrl.sect9Options">
+                        <div class="radio">
+                            <label><input type="radio" name="sect7-9" ng-model="section7Ctrl.vif.economic[option.value]" ng-value="true" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -255,15 +171,10 @@
                     <h3 class="panel-title"><strong>7.10</strong> Did she express any suicidal thoughts at any point?</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-6">
+                    <div class="col-md-6" ng-repeat="option in section7Ctrl.sect10Options">
                         <div class="radio">
-                            <label><input type="radio" name="sect7-10" ng-click="section7Ctrl.calculateAlarms(10, 0)">No</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio">
-                            <label><input type="radio" name="sect7-10" ng-click="section7Ctrl.calculateAlarms(10, 7)">Yes
-                                <span class="glyphicon glyphicon-exclamation-sign"></span> 7
+                            <label><input type="radio" name="sect7-10" ng-model="section7Ctrl.vif.question10" ng-value="option.value" ng-click="section7Ctrl.calculateAlarms(option.alarm[0], option.alarm[1])">{{ option.name }}
+                                <span ng-show="option.alarm[1]>0"><span class="glyphicon glyphicon-exclamation-sign"></span> {{ option.alarm[1] }} </span>
                             </label>
                         </div>
                     </div>

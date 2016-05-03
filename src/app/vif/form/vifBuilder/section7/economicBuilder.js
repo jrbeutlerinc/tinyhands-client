@@ -29,12 +29,12 @@ export default class EconomicBuilder {
     }
 
     get unable() {
-        return this._never;
+        return this._unable;
     }
 
     set unable(value) {
         this.clearAll();
-        this._never = value;
+        this._unable = value;
     }
 
     get onlyBasicNeeds() {

@@ -48,6 +48,7 @@ export default class Section7Builder {
         this.emotionalAbuse.build(vif);
         this.physicalAbuse.build(vif);
         this.sexualAbuse.build(vif);
+        this.buildFields(vif);
     }
 
     buildFields(vif) {
@@ -64,9 +65,7 @@ export default class Section7Builder {
     }
 
     set question1(value) {
-        if(value) {
-            this._question1 = value;
-        }
+        this._question1 = value;
     }
 
     get question2() {
@@ -74,9 +73,7 @@ export default class Section7Builder {
     }
 
     set question2(value) {
-        if(value) {
-            this._question2 = value;
-        }
+        this._question2 = value;
     }
 
     get question3() {
@@ -84,9 +81,7 @@ export default class Section7Builder {
     }
 
     set question3(value) {
-        if(value) {
-            this._question3 = value;
-        }
+        this._question3 = value;
     }
 
     get question4() {
@@ -94,9 +89,7 @@ export default class Section7Builder {
     }
 
     set question4(value) {
-        if(value) {
-            this._question4 = value;
-        }
+        this._question4 = value;
     }
 
     get question5() {
@@ -104,9 +97,7 @@ export default class Section7Builder {
     }
 
     set question5(value) {
-        if(value) {
-            this._question5 = value;
-        }
+        this._question5 = value;
     }
 
     get question10() {
@@ -114,8 +105,6 @@ export default class Section7Builder {
     }
 
     set question10(value) {
-        if(value) {
-            this._question10 = value;
-        }
+        this._question10 = value;
     }
 }
