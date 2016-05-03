@@ -23,4 +23,3 @@ angular.module('tinyhandsFrontend', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSan
   .config(routerConfig)
   .run(runBlock)
   .directive('navbar', NavbarDirective);
-

@@ -22,7 +22,7 @@ export default class Section1Builder {
         this.literacy = literacyBuilder || new IsLiterateBuilder(vif);
         if(vif === null) {
             this.setDefaultValues();
-        }else {
+        } else {
             this.setValues(vif);
         }
     }
@@ -52,7 +52,7 @@ export default class Section1Builder {
         this.numInFamily = vif.victim_num_in_family;
     }
     
-    build(vif) {
+    build(vif = {}) {
         this.caste.build(vif);
         this.occupation.build(vif);
         this.maritalStatus.build(vif);
@@ -62,6 +62,7 @@ export default class Section1Builder {
         this.educationLevel.build(vif);
         this.literacy.build(vif);
         this.buildFields(vif);
+        return vif;
     }
     
     buildFields(vif) {
