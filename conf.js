@@ -1,16 +1,13 @@
 
 // var paths = require('./.yo-rc.json')['generator-gulp-angular'].props.paths;
 
-// // An example configuration file.
-// exports.config = {
+// An example configuration file.
+//exports.config = {
 //   // The address of a running selenium server.
 //   //seleniumAddress: 'http://localhost:4444/wd/hub',
 //   //seleniumServerJar: deprecated, this should be set on node_modules/protractor/config.json
 
-//   // Capabilities to be passed to the webdriver instance.
-//   capabilities: {
-//     'browserName': 'chrome'
-//   },
+// Capabilities to be passed to the webdriver instance.
 
 //   baseUrl: 'http://localhost:3000',
 
@@ -23,7 +20,7 @@
 //     showColors: true,
 //     defaultTimeoutInterval: 30000
 //   }
-// };
+//};
 // conf.js
 exports.config = {
   framework: 'jasmine',
@@ -32,5 +29,10 @@ exports.config = {
   specs: [
     'spec.js',
     'e2e/border-station/borderStation.spec.js'
-  ]
+  ],
+  
+  capabilities: {
+    'browserName': 'firefox'
+  }
+  
 }
