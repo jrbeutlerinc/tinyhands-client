@@ -7,6 +7,7 @@ import Section5Builder from './section5/section5Builder';
 import Section6Builder from './section6/section6Builder';
 import Section7Builder from './section7/section7Builder';
 import Section8Builder from './section8/section8Builder';
+import PeopleBuilder from './people/peopleBuilder';
 
 export default class VifBuilder {
     constructor() {
@@ -42,5 +43,4 @@ export default class VifBuilder {
     clearVif() {
        this.setVif(null);
     }
-    
 }
