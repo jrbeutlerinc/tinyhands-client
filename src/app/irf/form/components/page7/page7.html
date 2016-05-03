@@ -1,67 +1,70 @@
-<div ng-app="irf.controller.js as irfCtrl" id="irf-page7">
-    <div class="row header">
-        <h1>Person Cards</h1>
-    </div>
-    <div class="row">
-        <div ng-repeat="i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]" class="col-md-4">
-            <div ng-if="i <= irfCtrl.numPersonBoxes" class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 ng-if="irfCtrl.interceptee.full_name == '' || irfCtrl.interceptee.full_name == nil" class="panel-title">
-                        <button ng-if="i != 1 && (irfCtrl.interceptee.full_name == '' || irfCtrl.interceptee.full_name == nil)" ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes - 1" type="button" class="btn btn-danger btn-xs pull-left">
-                            <strong>X</strong>
-                        </button>
-                    Person Box {{ i }}</h3>
-                    <h3 ng-if="irfCtrl.interceptee.full_name != ''" class="panel-title">
-                        <button ng-if="i != 1 && irfCtrl.interceptee.full_name != '' && irfCtrl.interceptee.full_name != nil" ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes - 1" type="button" class="btn btn-danger btn-xs pull-left">
-                            <strong>X</strong>
-                        </button>
-                    {{ irfCtrl.interceptee.full_name }}</h3>
-                </div>
-                <div class="panel-body">
-                    <div ng-show="irfCtrl.interceptee.photo == '' || irfCtrl.interceptee.photo == nil" class="panel panel-default photo">
-                        <div class="panel-body photo">
-                            <p class="photo-text">Click here to upload photo</p>
-                        </div>
-                    </div>
-                    <img ng-show="irfCtrl.interceptee.photo != '' && irfCtrl.interceptee.photo != nil" src="{{ irfCtrl.interceptee.photo }}" class="image">
-                    <div class="input-field">
-                        <input ng-model="irfCtrl.interceptee.full_name" type="text" name="fullname" class="form-control text-box" placeholder="Full name">
-                    </div>
-                    <div class="radio">
-                        <label><input ng-model="irfCtrl.interceptee.kind" type="radio" name="optradio" value="v">Victim</label> &nbsp;
-                        <label><input ng-model="irfCtrl.interceptee.kind" type="radio" name="optradio" value="t">Trafficker</label>
-                    </div>
-                    <div class="radio">
-                        <label><input ng-model="irfCtrl.interceptee.gender" type="radio" name="optradio" value="m">Male</label> &nbsp;
-                        <label><input ng-model="irfCtrl.interceptee.gender" type="radio" name="optradio" value="f">Female</label>
-                    </div>
-                    <div class="input-field">
-                        <input ng-model="irfCtrl.interceptee.age" type="number" name="age" class="form-control" placeholder="Age"><br>
-                    </div>
-                    <div class="input-field">
-                        <input ng-model="irfCtrl.interceptee.address1" type="number" name="address-1" class="form-control" placeholder="Address 1"><br>
-                    </div>
-                    <div class="input-field">
-                        <input ng-model="irfCtrl.interceptee.address2" type="number" name="address-2" class="form-control" placeholder="Address 2"><br>
-                    </div>
-                    <div class="input-field">
-                        <input ng-model="irfCtrl.interceptee.phone_contact" type="text" name="phone-contact" class="form-control" placeholder="Phone Contact"><br>
-                    </div>
-                    <div class="input-field">
-                        <input ng-model="irfCtrl.interceptee.relation_to" type="text" name="relation-to" class="form-control" placeholder="Relation to..."><br>
-                    </div>
-                </div>
-            </div>
-            <div ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes + 1" ng-if="i == irfCtrl.numPersonBoxes + 1 && irfCtrl.numPersonBoxes < 12" class="col-md-4 add-person-box">
-                <div class="panel panel-default">
-                    <div class="panel-body add-person-body">
-                        <h1 class="plus">+</h1>
-                    </div>
-                </div>
-            </div>
+<div id="irf-page7">
+  <div class="row header">
+    <h1>Person Cards</h1>
+  </div>
+  <div class="row">
+
+    <div ng-repeat="interceptee in irfCtrl.interceptees" class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <button ng-click="irfCtrl.interceptees.splice($index, 1)"
+              type="button" class="btn btn-danger btn-xs pull-left">
+              <strong>X</strong>
+            </button>
+            {{ interceptee.full_name ? interceptee.full_name : "Person Box" }}
+          </h3>
         </div>
+        <div class="panel-body" colspan="4">
+          <div ng-show="! interceptee.photo" class="panel panel-default photo">
+            <div class="panel-body photo">
+              <p class="photo-text">Click here to upload photo</p>
+            </div>
+          </div>
+          <img ng-if="interceptee.photo" class="image" src="{{ interceptee.photo }}">
+          <div class="input-field">
+            <input ng-model="interceptee.full_name" type="text" name="fullname" class="form-control text-box" placeholder="Full name">
+          </div>
+          <div class="radio">
+            <label><input ng-model="interceptee.kind" type="radio" name="radiokind{{$index}}" value="v">Victim</label> &nbsp;
+            <label><input ng-model="interceptee.kind" type="radio" name="radiokind{{$index}}" value="t">Trafficker</label> &nbsp;
+            <label><input ng-model="irfCtrl.taken_into_custody[$index]" type="checkbox" name="taken{{$index}}">Trafficker taken into custody</label> &nbsp;
+          </div>
+          <div class="radio">
+            <label><input ng-model="interceptee.gender" type="radio" name="radiogender{{$index}}" value="m">Male</label> &nbsp;
+            <label><input ng-model="interceptee.gender" type="radio" name="radiogender{{$index}}" value="f">Female</label>
+          </div>
+          <div class="input-field">
+            <input ng-model="interceptee.age" type="number" name="age" class="form-control" placeholder="Age"><br>
+          </div>
+          <div class="input-field">
+            <input ng-model="interceptee.address1" type="number" name="address-1" class="form-control" placeholder="Address 1"><br>
+          </div>
+          <div class="input-field">
+            <input ng-model="interceptee.address2" type="number" name="address-2" class="form-control" placeholder="Address 2"><br>
+          </div>
+          <div class="input-field">
+            <input ng-model="interceptee.phone_contact" type="text" name="phone-contact" class="form-control" placeholder="Phone Contact"><br>
+          </div>
+          <div class="input-field">
+            <input ng-model="interceptee.relation_to" type="text" name="relation-to" class="form-control" placeholder="Relation to..."><br>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row pull-right">
-        <button type="button" class="btn btn-primary btn-lg">Save</button>
+
+    <div class="col-md-4">
+      <div ng-click="irfCtrl.interceptees.push({})" class="col-md-4 add-person-box">
+        <div class="panel panel-default">
+          <div class="panel-body add-person-body">
+            <h1 class="plus">+</h1>
+          </div>
+        </div>
+      </div>
     </div>
+
+  </div>
+  <div class="row pull-right">
+    <button type="button" class="btn btn-primary btn-lg">Save</button>
+  </div>
 </div>

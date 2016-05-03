@@ -7,13 +7,13 @@ export default class IrfController {
     this.flags = 0;
     this.form = {};
     this.irfId = $stateParams.id;
-    this.numPersonBoxes = 1;
     this.sections = [];
     this.selectedSectionIndex = 0;
+    this.taken_into_custody = {};
 
     this.addSections();
     this.getIrf();
-    this.getInterceptee();
+    this.getInterceptees();
   }
 
   addSections() {
@@ -26,12 +26,16 @@ export default class IrfController {
   getIrf() {
     this.service.getIrf(this.irfId).then((response) => {
       this.form = response.data;
+      this.form.trafficker_taken_into_custody = "1,3,5";
+      angular.forEach(this.form.trafficker_taken_into_custody.split(","), (s) => {
+        this.taken_into_custody[s] = true;
+      });
     });
   }
 
-  getInterceptee() {
-    this.service.getInterceptee(this.irfId).then((response) => {
-      this.interceptee = response.data;
+  getInterceptees() {
+    this.service.getInterceptees(this.irfId).then((response) => {
+      this.interceptees = response.data.results;
     });
   }
 

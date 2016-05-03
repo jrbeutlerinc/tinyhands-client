@@ -11,7 +11,7 @@ export default class IrfService extends BaseService{
     return this.get(`api/irf/${id}/`);
   }
 
-  getInterceptee(id) {
-    return this.get(`api/interceptee/${id}/`);
+  getInterceptees(id) {
+    return this.get(`api/interceptee/?interception_record=${id}`);
   }
 }
