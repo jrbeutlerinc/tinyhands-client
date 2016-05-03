@@ -1,4 +1,4 @@
-export default class Section1Builder {
+export default class PeopleBuilder {
     constructor(vif = null) {
         if(vif === null) {
             this.setDefaultValues();
