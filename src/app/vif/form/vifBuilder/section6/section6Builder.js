@@ -22,11 +22,11 @@ export default class Section6Builder {
     }
 
     setDefaultValues() {
-        this.howCanWeServeBetter = null;
+        this._howCanWeServeBetter = null;
     }
 
     setValues(vif) {
-        this.howCanWeServeBetter = vif.how_can_we_serve_you_better;
+        this._howCanWeServeBetter = vif.how_can_we_serve_you_better;
     }
 
     build(vif) {
@@ -42,12 +42,12 @@ export default class Section6Builder {
     }
 
     get howCanWeServeBetter() {
-        return this.howCanWeServeBetter;
+        return this._howCanWeServeBetter;
     }
 
     set howCanWeServeBetter(value) {
         if(value) {
-            this.howCanWeServeBetter = value;
+            this._howCanWeServeBetter = value;
         }
     }
 }
