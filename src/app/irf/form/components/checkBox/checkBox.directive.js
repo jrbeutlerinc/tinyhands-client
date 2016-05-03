@@ -13,6 +13,7 @@ export default function CheckBoxDirective() {
       require: 'ngModel',
       restrict: 'E',
       scope: {
+        ngDisabled: '=',
         ngModel: '=',
         number: '='
       },

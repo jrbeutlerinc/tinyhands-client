@@ -4,18 +4,29 @@
       <h3>How did you make the interception?</h3>
     </div>
     <div class="panel-body">
-      <check-box number="'6.0'" ng-model="irfCtrl.form.contact_noticed">Contact</check-box>
-      <check-box number="6.1" ng-model="irfCtrl.form.which_contact_hotel_owner">Hotel Owner</check-box>
-      <check-box number="6.2" ng-model="irfCtrl.form.which_contact_rickshaw_driver">Rickshaw Driver</check-box>
-      <check-box number="6.3" ng-model="irfCtrl.form.which_contact_taxi_driver">Taxi Driver</check-box>
-      <check-box number="6.4" ng-model="irfCtrl.form.which_contact_bus_driver">Bus Driver</check-box>
-      <check-box number="6.5" ng-model="irfCtrl.form.which_contact_church_member">Church Member</check-box>
-      <check-box number="6.6" ng-model="irfCtrl.form.which_contact_other_ngo">Other NGO</check-box>
-      <check-box number="6.7" ng-model="irfCtrl.form.which_contact_police">Police</check-box>
-      <check-box number="6.8" ng-model="irfCtrl.form.which_contact_subcommittee_member">Subcommittee Member</check-box>
-      <check-box number="6.9" ng-model="irfCtrl.form.which_contact_other">Other</check-box>
+      <check-box number="'6.0'" ng-model="irfCtrl.form.contact_noticed"
+        ng-disabled="irfCtrl.isViewing">Contact</check-box>
+      <check-box number="6.1" ng-model="irfCtrl.form.which_contact_hotel_owner"
+        ng-disabled="irfCtrl.isViewing">Hotel Owner</check-box>
+      <check-box number="6.2" ng-model="irfCtrl.form.which_contact_rickshaw_driver"
+        ng-disabled="irfCtrl.isViewing">Rickshaw Driver</check-box>
+      <check-box number="6.3" ng-model="irfCtrl.form.which_contact_taxi_driver"
+        ng-disabled="irfCtrl.isViewing">Taxi Driver</check-box>
+      <check-box number="6.4" ng-model="irfCtrl.form.which_contact_bus_driver"
+        ng-disabled="irfCtrl.isViewing">Bus Driver</check-box>
+      <check-box number="6.5" ng-model="irfCtrl.form.which_contact_church_member"
+        ng-disabled="irfCtrl.isViewing">Church Member</check-box>
+      <check-box number="6.6" ng-model="irfCtrl.form.which_contact_other_ngo"
+        ng-disabled="irfCtrl.isViewing">Other NGO</check-box>
+      <check-box number="6.7" ng-model="irfCtrl.form.which_contact_police"
+        ng-disabled="irfCtrl.isViewing">Police</check-box>
+      <check-box number="6.8" ng-model="irfCtrl.form.which_contact_subcommittee_member"
+        ng-disabled="irfCtrl.isViewing">Subcommittee Member</check-box>
+      <check-box number="6.9" ng-model="irfCtrl.form.which_contact_other"
+        ng-disabled="irfCtrl.isViewing">Other</check-box>
       <div class="form-group col-md-offset-3 col-md-6" ng-if="irfCtrl.form.which_contact_other">
-        <input class="form-control" placeholder="Other" ng-model="irfCtrl.form.which_contact_other_value">
+        <input class="form-control" placeholder="Other" ng-model="irfCtrl.form.which_contact_other_value"
+          ng-disabled="irfCtrl.isViewing">
       </div>
     </div>
   </div>
@@ -24,10 +35,12 @@
       <h3>Did you pay for this information?</h3>
     </div>
     <div class="panel-body">
-      <check-box number="'6.10'" ng-model="irfCtrl.form.contact_paid">Yes</check-box>
+      <check-box number="'6.10'" ng-model="irfCtrl.form.contact_paid"
+        ng-disabled="irfCtrl.isViewing">Yes</check-box>
       <div class="form-inline">
         <label ng-if="irfCtrl.form.contact_paid">If so, How much?</label>
-        <input class="form-control" ng-model="irfCtrl.form.contact_paid_how_much" ng-if="irfCtrl.form.contact_paid" placeholder="Price">
+        <input class="form-control" ng-model="irfCtrl.form.contact_paid_how_much" ng-if="irfCtrl.form.contact_paid" placeholder="Price"
+          ng-disabled="irfCtrl.isViewing">
       </div>
     </div>
   </div>

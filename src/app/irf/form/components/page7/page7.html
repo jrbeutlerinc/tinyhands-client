@@ -7,7 +7,8 @@
             <div ng-if="i <= irfCtrl.numPersonBoxes" class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <button ng-if="i != 1" ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes - 1" type="button" class="btn btn-danger btn-xs pull-left">
+                        <button ng-if="i != 1" ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes - 1" type="button" class="btn btn-danger btn-xs pull-left"
+                            ng-disabled="irfCtrl.isViewing">
                             <strong>-</strong>
                         </button>
                     Person Box {{ i }}</h3>
@@ -18,7 +19,8 @@
                             <p>Full name</p>
                         </div>
                         <div class="col-md-7 input-field">
-                            <input type="text" name="fullname" class="text-box"><br>
+                            <input type="text" name="fullname" class="text-box"
+                                ng-disabled="irfCtrl.isViewing"><br>
                         </div>
                     </div>
                     <div class="row radio-top">
@@ -38,7 +40,8 @@
                             <p>Age</p>
                         </div>
                         <div class="col-md-7 input-field">
-                            <input type="text" name="age" class="text-box"><br>
+                            <input type="text" name="age" class="text-box"
+                                ng-disabled="irfCtrl.isViewing"><br>
                         </div>
                     </div>
                     <div class="row">
@@ -47,7 +50,8 @@
                         </div>
 
                         <div class="col-md-7 input-field">
-                            <input type="text" name="address-1" class="text-box"><br>
+                            <input type="text" name="address-1" class="text-box"
+                                ng-disabled="irfCtrl.isViewing"><br>
                         </div>
                     </div>
                     <div class="row">
@@ -56,7 +60,8 @@
                         </div>
 
                         <div class="col-md-7 input-field">
-                            <input type="text" name="address-2" class="text-box"><br>
+                            <input type="text" name="address-2" class="text-box"
+                                ng-disabled="irfCtrl.isViewing"><br>
                         </div>
                     </div>
                     <div class="row">
@@ -64,7 +69,8 @@
                             <p>Phone Contact</p>
                         </div>
                         <div class="col-md-7 input-field">
-                            <input type="text" name="phone-contact" class="text-box"><br>
+                            <input type="text" name="phone-contact" class="text-box"
+                                ng-disabled="irfCtrl.isViewing"><br>
                         </div>
                     </div>
                     <div class="row">
@@ -72,7 +78,8 @@
                             <p>Relation to...</p>
                         </div>
                         <div class="col-md-7 input-field">
-                            <input type="text" name="relation-to" class="text-box"><br>
+                            <input type="text" name="relation-to" class="text-box"
+                                ng-disabled="irfCtrl.isViewing"><br>
                         </div>
                     </div>
                     <div class="row">
@@ -80,7 +87,8 @@
                             <p>Photo Upload</p>
                         </div>
                         <div class="col-md-7 input-field">
-                            <input type="text" name="photo-upload" class="text-box"><br>
+                            <input type="text" name="photo-upload" class="text-box"
+                                ng-disabled="irfCtrl.isViewing"><br>
                         </div>
                     </div>
                 </div>
@@ -88,7 +96,9 @@
         </div>
     </div>
     <div class="row pull-right">
-        <button ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes + 1" ng-disabled="irfCtrl.numPersonBoxes == 12" type="button" class="btn btn-success btn-lg">Add Person Box</button>
-        <button type="button" class="btn btn-primary btn-lg">Save</button>
+        <button ng-click="irfCtrl.numPersonBoxes = irfCtrl.numPersonBoxes + 1" ng-disabled="irfCtrl.numPersonBoxes == 12" type="button" class="btn btn-success btn-lg"
+            ng-disabled="irfCtrl.isViewing">Add Person Box</button>
+        <button type="button" class="btn btn-primary btn-lg"
+            ng-disabled="irfCtrl.isViewing">Save</button>
     </div>
 </div>

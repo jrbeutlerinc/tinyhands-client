@@ -16,7 +16,7 @@
         <!--REGION: SECTION-->
         <div class="panel panel-default col-xs-12">
             <div class="panel-body" ng-repeat="section in irfCtrl.sections" ng-if="$index == irfCtrl.selectedSectionIndex">
-                <div ng-include="section"></div>
+                <div ng-include="section" ng-init="irfCtrl.disableInput()"></div>
             </div>
         </div>
         <!--ENDREGION: SECTION-->

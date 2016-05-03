@@ -85,7 +85,7 @@
                 <td>{{ form.date_time_of_interception | date:"medium" : irfListCtrl.timeZoneDifference }}</td>
                 <td class="hidden-xs">{{ form.date_time_entered_into_system | date:"medium" : irfListCtrl.timeZoneDifference }}</td>
                 <td class="hidden-xs">{{ form.date_time_last_updated | date:"medium" : irfListCtrl.timeZoneDifference }}</td>
-                <td ng-if="irfListCtrl.session.user.permission_irf_view == true"><a class="btn btn-sm btn-primary" ng-href="{{form.view_url}}">View</a></td>
+                <td ng-if="irfListCtrl.session.user.permission_irf_view == true"><a class="btn btn-sm btn-primary" ui-sref="irf({id:form.id, isViewing:true})">View</a></td>
                 <td ng-if="irfListCtrl.session.user.permission_irf_edit == true"><a class="btn btn-sm btn-primary" id="id_edit_irf_button" ui-sref="irf({id:form.id})">Edit</a></td>
                 <td ng-if="irfListCtrl.session.user.permission_irf_delete == true"><a class="btn btn-sm btn-danger" ng-click="irfListCtrl.deleteIrf(form.id)">
                     {{ irf.confirmedDelete ? "Confirm?" : "Delete" }}</a></td>
