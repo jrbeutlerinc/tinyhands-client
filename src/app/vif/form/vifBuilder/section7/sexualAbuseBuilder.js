@@ -19,7 +19,7 @@ export default class SexualAbuseBuilder {
         this._frequent = vif.home_had_sexual_abuse_frequently;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.home_had_sexual_abuse_never = this._never;
         vif.home_had_sexual_abuse_rarely = this._rarely;
         vif.home_had_sexual_abuse_frequently = this._frequent;

@@ -19,7 +19,7 @@ export default class EmotionalAbuseBuilder {
         this._frequent = vif.home_had_emotional_abuse_all_the_time;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.home_had_emotional_abuse_never = this._never;
         vif.home_had_emotional_abuse_occasionally = this._rarely;
         vif.home_had_emotional_abuse_all_the_time = this._frequent;

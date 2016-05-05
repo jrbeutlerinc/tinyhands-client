@@ -41,7 +41,7 @@ export default class Section7Builder {
         this._question10 = vif.victim_had_suicidal_thoughts;
     }
 
-    build(vif) {
+    build(vif = {}) {
         this.alcohol.build(vif);
         this.drugs.build(vif);
         this.economic.build(vif);
@@ -49,6 +49,7 @@ export default class Section7Builder {
         this.physicalAbuse.build(vif);
         this.sexualAbuse.build(vif);
         this.buildFields(vif);
+        return vif;
     }
 
     buildFields(vif) {

@@ -21,7 +21,7 @@ export default class EconomicBuilder {
         this._wealthy = vif.family_economic_situation_wealthy;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.family_economic_situation_no_basic_needs = this._unable;
         vif.family_economic_situation_difficult_basic_needs = this._onlyBasicNeeds;
         vif.family_economic_situation_comfortable_basic_needs = this._someNonEssential;

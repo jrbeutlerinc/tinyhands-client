@@ -19,7 +19,7 @@ export default class DrugsBuilder {
         this._allTheTime = vif.victim_guardian_uses_drugs_all_the_time;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.victim_guardian_uses_drugs_never = this._never;
         vif.victim_guardian_uses_drugs_occasionally = this._occasionally;
         vif.victim_guardian_uses_drugs_all_the_time = this._allTheTime;
