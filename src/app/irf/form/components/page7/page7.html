@@ -12,7 +12,7 @@
               type="button" class="btn btn-danger btn-xs pull-left">
               <strong>X</strong>
             </button>
-            {{ interceptee.full_name ? interceptee.full_name : "Person Box" }}
+            {{ interceptee.person.full_name ? interceptee.person.full_name : "Person Box" }}
           </h3>
         </div>
         <div class="panel-body" colspan="4">
@@ -23,7 +23,7 @@
           </div>
           <img ng-show="interceptee.photo" class="image" src="{{ interceptee.photo }}">
           <div class="input-field">
-            <input ng-model="interceptee.full_name" type="text" name="fullname" class="form-control text-box" placeholder="Full name">
+            <input ng-model="interceptee.person.full_name" type="text" name="fullname" class="form-control text-box" placeholder="Full name">
           </div>
           <div class="radio">
             <label><input ng-model="interceptee.kind" type="radio" name="radiokind{{$index}}" value="v">Victim</label> &nbsp;
@@ -31,20 +31,20 @@
             <label><input ng-model="irfCtrl.taken_into_custody[$index]" type="checkbox" name="taken{{$index}}">Trafficker taken into custody</label> &nbsp;
           </div>
           <div class="radio">
-            <label><input ng-model="interceptee.gender" type="radio" name="radiogender{{$index}}" value="m">Male</label> &nbsp;
-            <label><input ng-model="interceptee.gender" type="radio" name="radiogender{{$index}}" value="f">Female</label>
+            <label><input ng-model="interceptee.person.gender" type="radio" name="radiogender{{$index}}" value="m">Male</label> &nbsp;
+            <label><input ng-model="interceptee.person.gender" type="radio" name="radiogender{{$index}}" value="f">Female</label>
           </div>
           <div class="input-field">
-            <input ng-model="interceptee.age" type="number" name="age" class="form-control" placeholder="Age"><br>
+            <input ng-model="interceptee.person.age" type="number" name="age" class="form-control" placeholder="Age"><br>
           </div>
           <div class="input-field">
-            <input ng-model="interceptee.address1" type="number" name="address-1" class="form-control" placeholder="Address 1"><br>
+            <input ng-model="interceptee.person.address1" type="number" name="address-1" class="form-control" placeholder="Address 1"><br>
           </div>
           <div class="input-field">
-            <input ng-model="interceptee.address2" type="number" name="address-2" class="form-control" placeholder="Address 2"><br>
+            <input ng-model="interceptee.person.address2" type="number" name="address-2" class="form-control" placeholder="Address 2"><br>
           </div>
           <div class="input-field">
-            <input ng-model="interceptee.phone_contact" type="text" name="phone-contact" class="form-control" placeholder="Phone Contact"><br>
+            <input ng-model="interceptee.person.phone_contact" type="text" name="phone-contact" class="form-control" placeholder="Phone Contact"><br>
           </div>
           <div class="input-field">
             <input ng-model="interceptee.relation_to" type="text" name="relation-to" class="form-control" placeholder="Relation to..."><br>
