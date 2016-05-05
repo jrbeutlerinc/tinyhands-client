@@ -21,14 +21,14 @@
               <p class="photo-text">Click here to upload photo</p>
             </div>
           </div>
-          <img ng-if="interceptee.photo" class="image" src="{{ interceptee.photo }}">
+          <img ng-show="interceptee.photo" class="image" src="{{ interceptee.photo }}">
           <div class="input-field">
             <input ng-model="interceptee.full_name" type="text" name="fullname" class="form-control text-box" placeholder="Full name">
           </div>
           <div class="radio">
             <label><input ng-model="interceptee.kind" type="radio" name="radiokind{{$index}}" value="v">Victim</label> &nbsp;
             <label><input ng-model="interceptee.kind" type="radio" name="radiokind{{$index}}" value="t">Trafficker</label> &nbsp;
-            <label><input ng-model="irfCtrl.taken_into_custody[$index]" type="checkbox" name="taken{{$index}}">Trafficker taken into custody</label> &nbsp;
+            <!-- <label><input ng-model="irfCtrl.taken_into_custody[$index]" type="checkbox" name="taken{{$index}}">Trafficker taken into custody</label> &nbsp; -->
           </div>
           <div class="radio">
             <label><input ng-model="interceptee.gender" type="radio" name="radiogender{{$index}}" value="m">Male</label> &nbsp;
