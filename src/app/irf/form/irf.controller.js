@@ -38,7 +38,7 @@ export default class IrfController {
     this.service.getIrf(this.irfId).then((response) => {
       this.form = response.data;
       this.page9.how_sure_was_trafficking = this.page9.how_sure_was_trafficking_options[this.form.how_sure_was_trafficking - 1];
-      this.form.trafficker_taken_into_custody = "1,3,5";
+      // this.form.trafficker_taken_into_custody = "1,3,5"; // for testing
       angular.forEach(this.form.trafficker_taken_into_custody.split(","), (s) => {
         this.taken_into_custody[s] = true;
       });
