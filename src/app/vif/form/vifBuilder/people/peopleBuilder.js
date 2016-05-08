@@ -1,3 +1,10 @@
+import InterviewerBelieveBuilder from './interviewerBelieveBuilder';
+import OccupationBuilder from './occupationBuilder';
+import PhysicalDescriptionBuilder from './physicalDescriptionBuilder';
+import PoliticalPartyBuilder from './politicalPartyBuilder';
+import VictimBelieveBuilder from './victimBelieveBuilder';
+import WhoIsThisBuilder from './whoIsThisBuilder';
+
 export default class PeopleBuilder {
     constructor(vif = null, interviewerBelieveBuilder = null, occupationBuilder = null, physicalDescriptionBuilder = null,
                 politicalPartyBuilder = null, victimBelieveBuilder = null, whoIsThisBuilder = null) {
@@ -16,7 +23,8 @@ export default class PeopleBuilder {
     }
 
     setDefaultValues() {
-        this.people = {};
+        this.people = [];
+        this.persons = {};
         this.name = '';
         this._gender = null;
         this.address1 = null; //FK
@@ -29,15 +37,15 @@ export default class PeopleBuilder {
     }
 
     setValues(vif) {
-        this.name = vif.victim_name;
-        this._gender = vif.victim_gender;
-        this.address1 = vif.victim_address1;
-        this.address2 = vif.victim_address2;
-        this.ward = vif.victim_address_ward;
-        this.phone = vif.victim_phone;
-        this.age = vif.victim_age;
-        this.height = vif.victim_height;
-        this.weight = vif.victim_weight;
+        this.name = vif.persons.victim_name;
+        this._gender = vif.persons.victim_gender;
+        this.address1 = vif.persons.victim_address1;
+        this.address2 = vif.persons.victim_address2;
+        this.ward = vif.persons.victim_address_ward;
+        this.phone = vif.persons.victim_phone;
+        this.age = vif.persons.victim_age;
+        this.height = vif.persons.victim_height;
+        this.weight = vif.persons.victim_weight;
     }
 
     build(vif = {}) {
@@ -54,11 +62,18 @@ export default class PeopleBuilder {
     buildFields(vif) {
         vif.persons.name = this.name;
         vif.persons.gender = this._gender;
-        vif.persons.address1 = this.
+        vif.persons.address1 = this.address1;
+        vif.persons.address2 = this.address2;
+        vif.persons.ward = this.ward;
+        vif.persons.phone = this.phone;
+        vif.persons.age = this.age;
+        vif.persons.height = this.height;
+        vif.persons.weight = this.weight;
     }
 
     addPersonBox() {
-
+        this.people.push(this.persons);
+        this.persons = {};
     }
 
     get isMale() {

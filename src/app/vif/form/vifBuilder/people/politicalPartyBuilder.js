@@ -110,7 +110,7 @@ export default class PoliticalPartyBuilder {
 
     set nepalJanadikarikForum(value) {
         this.clearAll();
-        this._maoist = _nepalJanadikarikForum;
+        this._nepalJanadikarikForum = value;
     }
 
     get loktantrakParty() {

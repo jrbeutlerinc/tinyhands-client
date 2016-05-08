@@ -8,8 +8,8 @@ export default class WhoIsThisBuilder {
     }
 
     clearAll() {
-        clearRelation();
-        clearPerson();
+        this.clearRelation();
+        this.clearPerson();
     }
 
     clearRelation() {

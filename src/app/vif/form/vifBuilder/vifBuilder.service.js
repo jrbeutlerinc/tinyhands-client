@@ -25,6 +25,7 @@ export default class VifBuilder {
         this.section6.build(vif);
         this.section7.build(vif);
         this.section8.build(vif);
+        this.people.build(vif);
         return vif;
     }
     
@@ -38,6 +39,7 @@ export default class VifBuilder {
         this.section6 = new Section6Builder(vif);
         this.section7 = new Section7Builder(vif);
         this.section8 = new Section8Builder(vif);
+        this.people = new PeopleBuilder(vif);
     }
     
     clearVif() {

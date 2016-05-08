@@ -7,7 +7,7 @@ export default class Section3Builder {
         this.brokerRelation = brokerRelationBuilder || new BrokerRelationBuilder(vif);
         this.expense = expenseBuilder || new ExpenseBuilder(vif);
         this.meetBroker = meetBrokerBuilder || new MeetBrokerBuilder(vif);
-        if(vif == null) {
+        if(vif === null) {
             this.setDefaultValues();
         } else {
             this.setValues(vif);
