@@ -24,33 +24,64 @@ export default class WhoIsThisBuilder {
     }
 
     setValues(vif) {
-        this._magar = vif.victim_caste_magar;
         this._boss = vif.persons.who_is_this_relationship_boss_of;
+        this._coworker = vif.persons.who_is_this_relationship_coworker_of;
+        this._relative = vif.persons.who_is_this_relationship_own_relative_of;
+        this._trafficker = vif.persons.who_is_this_role_india_trafficker;
+        this._contactOfHusband = vif.persons.who_is_this_role_contact_of_husband;
     }
 
     build(vif = {}) {
-        vif.victim_caste_magar = this._magar;
-        vif.victim_caste_brahmin = this._brahmin;
-        vif.victim_caste_tamang = this._tamang;
-        vif.victim_caste_jaisi = this._jaisi;
-        vif.victim_caste_chhetr = this._chhetri;
-        vif.victim_caste_mongolian = this._mongolian;
-        vif.victim_caste_thakuri = this._thakuri;
-        vif.victim_caste_newar = this._newar;
-        vif.victim_caste_muslim = this._muslim;
-        vif.victim_caste_madeshiTerai = this._madeshiTerai;
-        vif.victim_caste_dalit = this._dalitUnderPriviledged;
-        vif.victim_caste_other = this._other;
-        vif.victim_caste_other_value = this._otherText;
+        vif.persons.who_is_this_relationship_boss_of = this._boss;
+        vif.persons.who_is_this_relationship_coworker_of = this._coworker;
+        vif.persons.who_is_this_relationship_own_relative_of = this._relative;
+        vif.persons.who_is_this_role_india_trafficker = this._trafficker;
+        vif.persons.who_is_this_role_contact_of_husband = this._contactOfHusband;
         return vif;
     }
 
-    get magar() {
-        return this._magar;
+    get boss() {
+        return this._boss;
     }
 
-    set magar(value) {
+    set boss(value) {
         this.clearAll();
-        this._magar = value;
+        this._boss = value;
+    }
+
+    get coworker() {
+        return this._coworker;
+    }
+
+    set coworker(value) {
+        this.clearAll();
+        this._coworker = value;
+    }
+
+    get relative() {
+        return this._relative;
+    }
+
+    set relative(value) {
+        this.clearAll();
+        this._relative = value;
+    }
+
+    get trafficker() {
+        return this._trafficker;
+    }
+
+    set trafficker(value) {
+        this.clearAll();
+        this._trafficker = value;
+    }
+
+    get contactOfHusband() {
+        return this._contactOfHusband;
+    }
+
+    set contactOfHusband(value) {
+        this.clearAll();
+        this._contactOfHusband = value;
     }
 }
