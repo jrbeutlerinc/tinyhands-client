@@ -14,9 +14,19 @@
             
             <label>Location</label>
             <input type="text" ng-model="infoCtrl.vif.location" class="form-control" placeholder="Location">
-            
+
             <label>Interviewer</label>
-            <input type="text" ng-model="infoCtrl.vif.interviewer" class="form-control" placeholder="Interviewer">
+            <ol class="nya-bs-select form-control" ng-model="model" data-live-search="true" data-size="5" title="Choose an interviewer">
+                <li nya-bs-option="option in infoCtrl.options">
+                    <a>
+                        {{ option.name }}
+                        <span class="glyphicon glyphicon-ok check-mark"></span>
+                    </a>
+                </li>
+            </ol>
+
+            <!--<label>Interviewer</label>-->
+            <!--<input type="text" ng-model="infoCtrl.vif.interviewer" class="form-control" placeholder="Interviewer">-->
             
             <label># of Victims</label>
             <input type="number" min="0" ng-model="infoCtrl.vif.numberOfVictims" class="form-control" placeholder="# of Victims">
