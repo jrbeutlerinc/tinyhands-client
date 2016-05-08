@@ -4,10 +4,11 @@
         <h2>Victim Interview Form (VIF)</h2>
         <h4>Version 3.0 Tiny Hands Nepal</h4>
     </div>
-    <form>
+    <form name="form">
         <div class="form-group text-left">
-            <label>VIF Number</label>
-            <input type="text" ng-model="infoCtrl.vif.vifNumber" class="form-control" placeholder="VIF Number">
+            <label>VIF Number</label><span ng-show="form.VifNumber.$error.pattern"> Not a valid VIF Number!</span>
+            <input type="text" ng-model="infoCtrl.vif.vifNumber" class="form-control" placeholder="VIF Number" name="VifNumber" id="VifNumber" ng-pattern="/^\d+$/" required>
+
             
             <label>Date/Time</label>
             <input type="date" ng-model="infoCtrl.vif.date" class="form-control">
@@ -16,7 +17,7 @@
             <input type="text" ng-model="infoCtrl.vif.location" class="form-control" placeholder="Location">
 
             <label>Interviewer</label>
-            <ol class="nya-bs-select form-control" ng-model="model" data-live-search="true" data-size="5" title="Choose an interviewer">
+            <ol class="nya-bs-select form-control" ng-model="infoCtrl.vif.Interviewer" data-live-search="true" data-size="5" title="Choose an interviewer">
                 <li nya-bs-option="option in infoCtrl.options">
                     <a>
                         {{ option.name }}
