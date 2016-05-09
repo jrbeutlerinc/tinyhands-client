@@ -1,3 +1,329 @@
-<div>
-    <p>People list</p>
+<div class="container" id="people">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>All VIFs</h2>
+        </div>
+        <div class="pull-right">
+            <button type="button" class="btn btn-primary open-modal">Export as CSV</button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <button type="button" class="btn btn-danger btn-xs pull-left">X</button>
+                <h3 class="panel-title text-center header">Person Box</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>VIF #:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>BGN197A</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>Name:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>Layla Harris</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>Address 1:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>Bihar</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>Address 2:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>-</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>Ward #:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>11</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 modal-field">
+                        <p class="pull-right"><strong>Phone #:</strong></p>
+                    </div>
+                    <div class="col-md-7 modal-field">
+                        <p>3764917096273</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="text-center"><strong>Time Entered Into System</strong></p>
+                    <p class="text-center">Jun 27, 2014 5:55:51 AM</p>
+                </div>
+                <div class="row">
+                    <p class="text-center"><strong>Time Last Edited</strong></p>
+                    <p class="text-center">Feb 1, 2016 6:34:50 PM</p>
+                </div>
+                <div class="row text-center">
+                    <button type="button" class="btn btn-primary">View</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default add-person-box">
+            <div class="panel-body add-person-body">
+                <h1 class="plus" data-toggle="modal" data-target="#newPersonBox">+</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ########## MODAL SECTION ########## -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="newPersonBox" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">New Person Box</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Who is this?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-4">
+                                <div class="radio" ng-repeat="option in peopleCtrl.sect1aList">
+                                    <label><input type="radio" name="sect1a">{{ option.name }}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio" ng-repeat="option in peopleCtrl.sect1bList">
+                                    <label><input type="radio" name="sect1b">{{ option.name }}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="radio" ng-repeat="option in peopleCtrl.sect1cList">
+                                    <label><input type="radio" name="sect1c">{{ option.name }}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Name</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row name-section">
+                                <div class="col-md-6" ng-repeat="option in ['Male', 'Female']">
+                                    <div class="radio">
+                                        <label><input type="radio" name="sect2">{{ option }}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row name-section">
+                                <div class="col-md-12">
+                                    <type
+                                    ="text" class="form-control" placeholder="Full Name">
+                                </div>
+                            </div>
+                            <div class="row name-section">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Address 1">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Address 2">
+                                </div>
+                            </div>
+                            <div class="row name-section">
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" placeholder="Ward #">
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="Phone #">
+                                </div>
+                            </div>
+                            <div class="row name-section">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Age">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Height (ft)">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Weight (kg)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Physical Description</h3>
+                        </div>
+                        <div class="panel-body panel-radio-only">
+                            <div class="row">
+                                <div class="col-md-4" ng-repeat="option in peopleCtrl.sect3List">
+                                    <div class="radio radio-row">
+                                        <label><input type="radio" name="sect3">{{ option.name }}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Appearance Other</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">What is this person's occupation?</h3>
+                        </div>
+                        <div class="panel-body panel-radio-only">
+                            <div class="row">
+                                <div class="col-md-3" ng-repeat="option in peopleCtrl.occupations">
+                                    <div class="radio radio-row">
+                                        <label><input type="radio" name="occupation">{{ option.name }}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="radio radio-row">
+                                        <label><input type="radio" name="occupation">Other</label>
+                                        <input type="text" class="form-control other-text-box">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Member of a political Party?</h3>
+                        </div>
+                        <div class="panel-body panel-radio-only">
+                            <div class="row">
+                                <div class="col-md-3" ng-repeat="option in peopleCtrl.party">
+                                    <div class="radio radio-row">
+                                        <label><input type="radio" name="party">{{ option.name }}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="radio radio-row">
+                                        <label><input type="radio" name="party">Other</label>
+                                        <input type="text" class="form-control other-text-box">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Where does he spend most of his time? How can we get ahold of or
+                                find him?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Which do you believe about him?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <p class="text-center"><strong>Interviewer</strong></p>
+                                </div>
+                                <div class="col-md-offset-8 col-md-2">
+                                    <p class="text-center"><strong>Victim</strong></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="center-radio"><input type="radio" name="interviewer"></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-center">Definitely trafficked many girls</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="center-radio"><input type="radio" name="victim"></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="center-radio"><input type="radio" name="interviewer"></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-center">Has trafficked some girls</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="center-radio"><input type="radio" name="victim"></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="center-radio"><input type="radio" name="interviewer"></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-center">Suspect he's a trafficker</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="center-radio"><input type="radio" name="victim"></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="center-radio"><input type="radio" name="interviewer"></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-center">Don't believe he's a trafficker</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="center-radio"><input type="radio" name="victim"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Is this person associated with any of the places below?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-6" ng-repeat="option in ['No', 'Yes']">
+                                <div class="radio">
+                                    <label><input type="radio" name="places">{{ option }}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
