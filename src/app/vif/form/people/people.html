@@ -7,7 +7,8 @@
             <button type="button" class="btn btn-primary open-modal">Export as CSV</button>
         </div>
     </div>
-    <div class="col-md-4">
+    <!--{{ peopleCtrl.vif.persons }}-->
+    <div class="col-md-4" ng-repeat="person in peopleCtrl.vif.people">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <button type="button" class="btn btn-danger btn-xs pull-left">X</button>
@@ -16,18 +17,10 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-5 modal-field">
-                        <p class="pull-right"><strong>VIF #:</strong></p>
-                    </div>
-                    <div class="col-md-7 modal-field">
-                        <p>BGN197A</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-5 modal-field">
                         <p class="pull-right"><strong>Name:</strong></p>
                     </div>
                     <div class="col-md-7 modal-field">
-                        <p>Layla Harris</p>
+                        <p>{{ peopleCtrl.vif.persons.name }}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -35,7 +28,7 @@
                         <p class="pull-right"><strong>Address 1:</strong></p>
                     </div>
                     <div class="col-md-7 modal-field">
-                        <p>Bihar</p>
+                        <p>{{ peopleCtrl.vif.persons.address1 }}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -43,7 +36,7 @@
                         <p class="pull-right"><strong>Address 2:</strong></p>
                     </div>
                     <div class="col-md-7 modal-field">
-                        <p>-</p>
+                        <p>{{ peopleCtrl.vif.persons.address2 }}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -51,7 +44,7 @@
                         <p class="pull-right"><strong>Ward #:</strong></p>
                     </div>
                     <div class="col-md-7 modal-field">
-                        <p>11</p>
+                        <p>{{ peopleCtrl.vif.persons.ward }}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -59,16 +52,8 @@
                         <p class="pull-right"><strong>Phone #:</strong></p>
                     </div>
                     <div class="col-md-7 modal-field">
-                        <p>3764917096273</p>
+                        <p>{{ peopleCtrl.vif.persons.phone }}</p>
                     </div>
-                </div>
-                <div class="row">
-                    <p class="text-center"><strong>Time Entered Into System</strong></p>
-                    <p class="text-center">Jun 27, 2014 5:55:51 AM</p>
-                </div>
-                <div class="row">
-                    <p class="text-center"><strong>Time Last Edited</strong></p>
-                    <p class="text-center">Feb 1, 2016 6:34:50 PM</p>
                 </div>
                 <div class="row text-center">
                     <button type="button" class="btn btn-primary">View</button>

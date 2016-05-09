@@ -23,7 +23,7 @@ export default class PeopleBuilder {
     }
 
     setDefaultValues() {
-        this.people = [];
+        this.people = [1];
         this.persons = {};
         this.name = '';
         this._gender = null;
