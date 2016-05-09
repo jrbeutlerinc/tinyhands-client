@@ -23,7 +23,7 @@ export default class PeopleBuilder {
     }
 
     setDefaultValues() {
-        this.people = [1];
+        this.people = [];
         this.persons = {};
         this.name = '';
         this._gender = null;
@@ -37,15 +37,15 @@ export default class PeopleBuilder {
     }
 
     setValues(vif) {
-        this.name = vif.persons.victim_name;
-        this._gender = vif.persons.victim_gender;
-        this.address1 = vif.persons.victim_address1;
-        this.address2 = vif.persons.victim_address2;
-        this.ward = vif.persons.victim_address_ward;
-        this.phone = vif.persons.victim_phone;
-        this.age = vif.persons.victim_age;
-        this.height = vif.persons.victim_height;
-        this.weight = vif.persons.victim_weight;
+        this.name = vif.persons.name;
+        this._gender = vif.persons.gender;
+        this.address1 = vif.persons.address_district;
+        this.address2 = vif.persons.address_vdc;
+        this.ward = vif.persons.address_ward;
+        this.phone = vif.persons.phone;
+        this.age = vif.persons.age;
+        this.height = vif.persons.height;
+        this.weight = vif.persons.weight;
     }
 
     build(vif = {}) {
@@ -62,9 +62,9 @@ export default class PeopleBuilder {
     buildFields(vif) {
         vif.persons.name = this.name;
         vif.persons.gender = this._gender;
-        vif.persons.address1 = this.address1;
-        vif.persons.address2 = this.address2;
-        vif.persons.ward = this.ward;
+        vif.persons.address_district = this.address1;
+        vif.persons.address_vdc = this.address2;
+        vif.persons.address_ward = this.ward;
         vif.persons.phone = this.phone;
         vif.persons.age = this.age;
         vif.persons.height = this.height;
