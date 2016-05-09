@@ -1,5 +1,16 @@
+import InterviewerAgreeBuilder from './interviewerAgreeBuilder';
+import KindOfPlaceBuilder from './kindOfPlaceBuilder';
+import VictimAgreeBuilder from './victimAgreeBuilder';
+import WhichPlaceBuilder from './whichPlaceBuilder';
+
 export default class LocationBuilder {
-    constructor(vif = null) {
+    constructor(vif = null, interviewerAgreeBuilder = null, kindOfPlaceBuilder = null, victimAgreeBuilder = null,
+                whichPlaceBuilder = null) {
+
+        this.interviewerAgree = interviewerAgreeBuilder || new InterviewerAgreeBuilder(vif);
+        this.kindOfPlace = kindOfPlaceBuilder || new KindOfPlaceBuilder(vif);
+        this.victimAgree = victimAgreeBuilder || new VictimAgreeBuilder(vif);
+        this.whichPlace = whichPlaceBuilder || new WhichPlaceBuilder(vif);
         if(vif === null) {
             this.setDefaultValues();
         } else {

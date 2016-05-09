@@ -8,6 +8,7 @@ import Section6Builder from './section6/section6Builder';
 import Section7Builder from './section7/section7Builder';
 import Section8Builder from './section8/section8Builder';
 import PeopleBuilder from './people/peopleBuilder';
+import LocationBuilder from './locations/locationBuilder';
 
 export default class VifBuilder {
     constructor() {
@@ -26,6 +27,7 @@ export default class VifBuilder {
         this.section7.build(vif);
         this.section8.build(vif);
         this.people.build(vif);
+        this.locations.build(vif);
         return vif;
     }
     
@@ -40,6 +42,7 @@ export default class VifBuilder {
         this.section7 = new Section7Builder(vif);
         this.section8 = new Section8Builder(vif);
         this.people = new PeopleBuilder(vif);
+        this.locations = new LocationBuilder(vif);
     }
     
     clearVif() {
