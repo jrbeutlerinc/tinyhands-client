@@ -86,6 +86,7 @@ describe('MigrationPlansBuilder', () => {
             expect(builder.jobBrothel).toEqual(vif.migration_plans_job_brothel);
             expect(builder.jobHousehold).toEqual(vif.migration_plans_job_household);
             expect(builder.jobOther).toEqual(vif.migration_plans_job_other);
+            expect(builder.other).toEqual(vif.migration_plans_other);
         });
 
         it('should set text fields to match vif', () => {
@@ -142,6 +143,7 @@ describe('MigrationPlansBuilder', () => {
             expect(builder.jobBrothel).toEqual(builder.jobBrothel);
             expect(builder.jobHousehold).toEqual(builder.jobHousehold);
             expect(builder.jobOther).toEqual(builder.jobOther);
+            expect(builder.other).toEqual(builder.other);
             expect(builtVif.migration_plans_other_value).toEqual(builder.otherText);
             expect(builtVif.migration_plans_job_other_value).toEqual(builder.jobOtherText);
         });

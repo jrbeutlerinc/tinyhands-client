@@ -42,9 +42,10 @@ export default class BrokerRelationBuilder {
         this._recentlyMet = vif.brokers_relation_to_victim_recently_met;
         this._contractor = vif.brokers_relation_to_victim_contractor;
         this._other = vif.brokers_relation_to_victim_other;
+        this._otherText  = vif.brokers_relation_to_victim_other_value;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.brokers_relation_to_victim_own_dad = this._dad;
         vif.brokers_relation_to_victim_own_mom = this._mom;
         vif.brokers_relation_to_victim_own_uncle = this._uncle;
@@ -61,6 +62,7 @@ export default class BrokerRelationBuilder {
         vif.brokers_relation_to_victim_contractor = this._contractor;
         vif.brokers_relation_to_victim_other = this._other;
         vif.brokers_relation_to_victim_other_value = this._otherText;
+        return vif;
     }
 
     get dad() {
@@ -109,12 +111,12 @@ export default class BrokerRelationBuilder {
     }
 
     get sister() {
-        return this._sis;
+        return this._sister;
     }
 
     set sister(value) {
         this.clearAll();
-        this._sis = value;
+        this._sister = value;
     }
 
     get otherRelative() {
