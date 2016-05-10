@@ -18,13 +18,16 @@ export default class EventsBuilder {
         this._forcedToTakeDrugs = false;
     }
 
-    setValues(vif) {
+    setValues(vif = {}) {
         this._sexualHarassment = vif.abuse_happened_sexual_harassment;
         this._sexualAbuse = vif.abuse_happened_sexual_abuse;
         this._physicalAbuse = vif.abuse_happened_physical_abuse;
         this._threats = vif.abuse_happened_sexual_threats;
         this._deniedProperFood = vif.abuse_happened_denied_proper_food;
         this._forcedToTakeDrugs = vif.abuse_happened_forced_to_take_drugs;
+        this._byWhomText = vif.abuse_happened_by_whom;
+        this._explainText = vif.abuse_happened_explanation;
+        return vif;
     }
 
     build(vif) {
@@ -43,6 +46,7 @@ export default class EventsBuilder {
     }
 
     set sexualHarassment(value) {
+        this.clearAll();
         this._sexualHarassment = value;
     }
 
@@ -51,6 +55,7 @@ export default class EventsBuilder {
     }
 
     set sexualAbuse(value) {
+        this.clearAll();
         this._sexualAbuse = value;
     }
 
@@ -59,6 +64,7 @@ export default class EventsBuilder {
     }
 
     set physicalAbuse(value) {
+        this.clearAll();
         this._physicalAbuse = value;
     }
 
@@ -67,6 +73,7 @@ export default class EventsBuilder {
     }
 
     set threats(value) {
+        this.clearAll();
         this._threats = value;
     }
 
@@ -75,6 +82,7 @@ export default class EventsBuilder {
     }
 
     set deniedProperFood(value) {
+        this.clearAll();
         this._deniedProperFood = value;
     }
 
@@ -83,6 +91,25 @@ export default class EventsBuilder {
     }
 
     set forcedToTakeDrugs(value) {
+        this.clearAll();
         this._forcedToTakeDrugs = value;
+    }
+
+    get byWhomText() {
+        return this._byWhomText;
+    }
+
+    set byWhomText(value) {
+        this.clearAll();
+        this._byWhomText = value;
+    }
+
+    get explainText() {
+        return this._explainText;
+    }
+
+    set explainText(value) {
+        this.clearAll();
+        this._explainText = value;
     }
 }

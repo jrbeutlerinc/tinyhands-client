@@ -30,7 +30,7 @@ describe('MigrationPlansBuilder', () => {
             expect(builder.other).toEqual(false);
         });
 
-        it('should set otherText to empty string', () => {
+        it('should set text fields to empty string', () => {
             expect(builder.otherText).toEqual('');
             expect(builder.jobOtherText).toEqual('');
         });
@@ -88,7 +88,7 @@ describe('MigrationPlansBuilder', () => {
             expect(builder.jobOther).toEqual(vif.migration_plans_job_other);
         });
 
-        it('should set other text to match vif', () => {
+        it('should set text fields to match vif', () => {
             expect(builder.otherText).toEqual(vif.migration_plans_other_value);
             expect(builder.jobOtherText).toEqual(vif.migration_plans_job_other_value);
         });
