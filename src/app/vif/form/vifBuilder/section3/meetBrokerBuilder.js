@@ -13,7 +13,7 @@ export default class MeetBrokerBuilder {
         this._work = false;
         this._school = false;
         this._advertisement = false;
-        this._appraoched = false;
+        this._approached = false;
         this._friends = false;
         this._family = false;
         this._wedding = false;
@@ -21,6 +21,7 @@ export default class MeetBrokerBuilder {
         this._hospital = false;
         this._myself = false;
         this._mobile = false;
+        this._other = false;
     }
 
     setValues(vif) {
@@ -28,7 +29,7 @@ export default class MeetBrokerBuilder {
         this._work = vif.victim_how_met_broker_at_work;
         this._school = vif.victim_how_met_broker_at_school;
         this._advertisement = vif.victim_how_met_broker_job_advertisement;
-        this._appraoched = vif.victim_how_met_broker_he_approached_me;
+        this._approached = vif.victim_how_met_broker_he_approached_me;
         this._friends = vif.victim_how_met_broker_through_friends;
         this._family = vif.victim_how_met_broker_through_family;
         this._wedding = vif.victim_how_met_broker_at_wedding;
@@ -37,14 +38,15 @@ export default class MeetBrokerBuilder {
         this._myself = vif.victim_how_met_broker_went_myself;
         this._mobile = vif.victim_how_met_broker_called_my_mobile;
         this._other = vif.victim_how_met_broker_other;
+        this._otherText = vif.victim_how_met_broker_other_value;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.victim_how_met_broker_from_community = this._community;
         vif.victim_how_met_broker_at_work = this._work;
         vif.victim_how_met_broker_at_school = this._school;
         vif.victim_how_met_broker_job_advertisement = this._advertisement;
-        vif.victim_how_met_broker_he_approached_me = this._appraoched;
+        vif.victim_how_met_broker_he_approached_me = this._approached;
         vif.victim_how_met_broker_through_friends = this._friends;
         vif.victim_how_met_broker_through_family = this._family;
         vif.victim_how_met_broker_at_wedding = this._wedding;
@@ -54,6 +56,7 @@ export default class MeetBrokerBuilder {
         vif.victim_how_met_broker_called_my_mobile = this._mobile;
         vif.victim_how_met_broker_other = this._other;
         vif.victim_how_met_broker_other_value = this._otherText;
+        return vif;
     }
 
     get community() {
@@ -162,6 +165,15 @@ export default class MeetBrokerBuilder {
     set mobile(value) {
         this.clearAll();
         this._mobile = value;
+    }
+
+    get other() {
+        return this._other;
+    }
+
+    set other(value) {
+        this.clearAll();
+        this._other = value;
     }
 
     get otherText() {
