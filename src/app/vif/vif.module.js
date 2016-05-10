@@ -7,6 +7,7 @@ import VifListService from './list/vifList.service';
 
 import VifController from './form/vif.controller';
 import VifInfoController from './form/info/info.controller';
+import VifInfoService from './form/info/info.service';
 import VifSection1Controller from './form/section1/section1.controller';
 import VifSection2Controller from './form/section2/section2.controller';
 import VifSection3Controller from './form/section3/section3.controller';
@@ -38,4 +39,5 @@ export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared']
 
     .service('VifBuilder', VifBuilder)
     .service('VifListService', VifListService)
-    .service('VifService', VifService);
+    .service('VifService', VifService)
+    .service('VifInfoService',VifInfoService);
