@@ -33,8 +33,10 @@ export default class Section5Builder {
         this._workSendingGirlsOverseas = vif.victim_place_worked_involved_sending_girls_overseas;
     }
 
-    build(vif) {
+    build(vif = {}) {
         this.arrangeSomeone.build(vif);
+        this.buildFields(vif);
+        return vif;
     }
 
     buildFields(vif) {
