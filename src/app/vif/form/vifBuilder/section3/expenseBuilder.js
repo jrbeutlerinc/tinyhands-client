@@ -20,14 +20,16 @@ export default class ExpenseBuilder {
         this._allBroker = vif.victim_how_expense_was_paid_broker_paid_all;
         this._sumToBroker = vif.victim_how_expense_was_paid_gave_money_to_broker;
         this._payBrokerBack = vif.victim_how_expense_was_paid_broker_gave_loan;
+        this._amountText = vif.victim_how_expense_was_paid_amount;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.victim_how_expense_was_paid_paid_myself = this._allMyself;
         vif.victim_how_expense_was_paid_broker_paid_all = this._allBroker;
         vif.victim_how_expense_was_paid_gave_money_to_broker = this._sumToBroker;
         vif.victim_how_expense_was_paid_broker_gave_loan = this._payBrokerBack;
         vif.victim_how_expense_was_paid_amount = this._amountText;
+        return vif;
     }
 
     get allMyself() {
