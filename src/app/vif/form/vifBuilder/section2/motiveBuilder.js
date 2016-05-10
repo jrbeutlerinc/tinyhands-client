@@ -35,7 +35,7 @@ export default class MotiveBuilder {
         this._otherText = vif.primary_motivation_other_value;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.primary_motivation_support_myself = this._supportMyself;
         vif.primary_motivation_support_family = this._supportFamily;
         vif.primary_motivation_personal_debt = this._personalDebt;
@@ -47,6 +47,7 @@ export default class MotiveBuilder {
         vif.primary_motivation_didnt_know = this._didntKnow;
         vif.primary_motivation_other = this._other;
         vif.primary_motivation_other_value = this._otherText;
+        return vif;
     }
     
     get supportMyself() {
