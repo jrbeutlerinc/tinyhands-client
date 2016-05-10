@@ -21,11 +21,13 @@ export default class HidePresenceBuilder {
             this._yes = false;
             this._no = true;
         }
+        this._explainText = vif.was_hidden_explanation;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.was_hidden = this._yes;
         vif.was_hidden_explanation = this._explainText;
+        return vif;
     }
 
     get yes() {
@@ -44,5 +46,13 @@ export default class HidePresenceBuilder {
     set no(value) {
         this.clearAll();
         this._no = value;
+    }
+
+    get explainText() {
+        return this._explainText;
+    }
+
+    set explainText(value) {
+        this._explainText = value;
     }
 }
