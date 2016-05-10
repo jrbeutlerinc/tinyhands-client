@@ -1,21 +1,17 @@
-import HidePresenceBuilder from './hidePresenceBuilder';
+import MeetAgainInIndiaBuilder from './meetAgainInIndiaBuilder';
 
-describe('HidePresenceBuilder', () => {
+describe('MeetAgainInIndiaBuilder', () => {
 
     let builder;
 
     describe('when constructed with no vif', () => {
         beforeEach(() => {
-            builder = new HidePresenceBuilder();
+            builder = new MeetAgainInIndiaBuilder();
         })
 
         it('should set all options to false', () => {
             expect(builder.yes).toEqual(false);
             expect(builder.no).toEqual(false);
-        });
-
-        it('should set explain text to empty string', () => {
-            expect(builder.explainText).toEqual('');
         });
     });
 
@@ -25,31 +21,25 @@ describe('HidePresenceBuilder', () => {
 
         beforeEach(() => {
             vif = {
-                was_hidden: true,
-                was_hidden_explanation: "Foo"
+                planning_to_meet_companion_later: true
            }
 
-           builder = new HidePresenceBuilder(vif);
+           builder = new MeetAgainInIndiaBuilder(vif);
         });
 
-        it('should set expense option values to match vif', () => {
-            expect(builder.yes).toEqual(vif.was_hidden);
-            expect(builder.no).toEqual(!vif.was_hidden);
-        });
-
-        it('should set explain text to match vif', () => {
-            expect(builder.explainText).toEqual(vif.was_hidden_explanation);
+        it('should set option values to match vif', () => {
+            expect(builder.yes).toEqual(vif.planning_to_meet_companion_later);
+            expect(builder.no).toEqual(!vif.planning_to_meet_companion_later);
         });
     });
 
     describe('when building vif', () => {
         beforeEach(() => {
             let vif = {
-                was_hidden: true,
-                was_hidden_explanation: "Foo"
+                planning_to_meet_companion_later: true
            }
 
-           builder = new HidePresenceBuilder(vif);
+           builder = new MeetAgainInIndiaBuilder(vif);
         });
 
         it('should set correct values on built vif', () => {
@@ -63,11 +53,10 @@ describe('HidePresenceBuilder', () => {
 
         beforeEach(() => {
             let vif = {
-                was_hidden: true,
-                was_hidden_explanation: "Foo"
+                planning_to_meet_companion_later: true
            }
 
-           builder = new HidePresenceBuilder(vif);
+           builder = new MeetAgainInIndiaBuilder(vif);
         });
 
         describe('yes is set to true', () => {

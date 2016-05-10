@@ -2,7 +2,6 @@ export default class MeetAgainInIndiaBuilder {
     constructor(vif = null) {
         if(vif === null) {
             this.clearAll();
-            this._whereText = '';
         } else {
             this.setValues(vif);
         }
