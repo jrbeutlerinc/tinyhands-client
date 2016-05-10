@@ -53,7 +53,7 @@ export default class MigrationPlansBuilder {
         this._jobOtherText = vif.migration_plans_job_other_value;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.migration_plans_education = this._education;
         vif.migration_plans_travel_tour = this._travelTour;
         vif.migration_plans_shopping = this._shopping;
@@ -74,6 +74,7 @@ export default class MigrationPlansBuilder {
         vif.migration_plans_other = this._other;
         vif.migration_plans_other_value = this._otherText;
         vif.migration_plans_job_other_value = this._jobOtherText;
+        return vif;
     }
     
     get education() {
@@ -85,13 +86,13 @@ export default class MigrationPlansBuilder {
         this._education = value;
     }
 
-    get traveTour() {
-        return this._traveTour;
+    get travelTour() {
+        return this._travelTour;
     }
     
-    set traveTour(value) {
+    set travelTour(value) {
         this.clearAll();
-        this._traveTour = value;
+        this._travelTour = value;
     }
     
     get shopping() {
