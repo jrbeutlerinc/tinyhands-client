@@ -21,11 +21,13 @@ export default class FreeToGoOutBuilder {
             this._yes = false;
             this._no = true;
         }
+        this._explainText = vif.victim_was_free_to_go_out_explanation;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.victim_was_free_to_go_out = this._yes;
         vif.victim_was_free_to_go_out_explanation = this._explainText;
+        return vif;
     }
 
     get yes() {
@@ -44,5 +46,13 @@ export default class FreeToGoOutBuilder {
     set no(value) {
         this.clearAll();
         this._no = value;
+    }
+
+    get explainText() {
+        return this._explainText;
+    }
+
+    set explainText(value) {
+        this._explainText = value;
     }
 }

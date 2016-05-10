@@ -53,7 +53,7 @@ describe('EventsBuilder', () => {
             expect(builder.forcedToTakeDrugs).toEqual(vif.abuse_happened_forced_to_take_drugs);
         });
 
-        it('should set amount text to match vif', () => {
+        it('should set text fields to match vif', () => {
             expect(builder.byWhomText).toEqual(vif.abuse_happened_by_whom);
             expect(builder.explainText).toEqual(vif.abuse_happened_explanation);
         });
