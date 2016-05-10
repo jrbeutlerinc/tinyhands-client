@@ -21,11 +21,12 @@ export default class ArrangeSomeoneBuilder {
         this._meetingCompanion = vif.meeting_at_border_meeting_companion;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.meeting_at_border_yes = this._yes;
         vif.meeting_at_border_no = this._no;
         vif.meeting_at_border_meeting_broker = this._meetingBroker;
         vif.meeting_at_border_meeting_companion = this._meetingCompanion;
+        return vif;
     }
 
     get yes() {
