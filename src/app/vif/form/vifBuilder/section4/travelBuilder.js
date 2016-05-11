@@ -26,9 +26,10 @@ export default class TravelBuilder {
         this._microbus = vif.victim_primary_means_of_travel_microbus;
         this._plane = vif.victim_primary_means_of_travel_plane;
         this._other = vif.victim_primary_means_of_travel_other;
+        this._otherText = vif.victim_primary_means_of_travel_other_value;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.victim_primary_means_of_travel_tourist_bus = this._touristBus;
         vif.victim_primary_means_of_travel_motorbike = this._motorbike;
         vif.victim_primary_means_of_travel_private_car = this._privateCar;
@@ -37,6 +38,7 @@ export default class TravelBuilder {
         vif.victim_primary_means_of_travel_plane = this._plane;
         vif.victim_primary_means_of_travel_other = this._other;
         vif.victim_primary_means_of_travel_other_value = this._otherText;
+        return vif;
     }
 
     get touristBus() {

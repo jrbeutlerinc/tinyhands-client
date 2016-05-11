@@ -22,8 +22,9 @@ export default class MeetAgainInIndiaBuilder {
         }
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.planning_to_meet_companion_later = this._yes;
+        return vif;
     }
 
     get yes() {

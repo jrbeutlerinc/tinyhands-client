@@ -30,7 +30,7 @@ export default class EventsBuilder {
         return vif;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.abuse_happened_sexual_harassment = this._sexualHarassment;
         vif.abuse_happened_sexual_abuse = this._sexualAbuse;
         vif.abuse_happened_physical_abuse = this._physicalAbuse;
@@ -39,6 +39,7 @@ export default class EventsBuilder {
         vif.abuse_happened_forced_to_take_drugs = this._forcedToTakeDrugs;
         vif.abuse_happened_by_whom = this._byWhomText;
         vif.abuse_happened_explanation = this._explainText;
+        return vif;
     }
 
     get sexualHarassment() {

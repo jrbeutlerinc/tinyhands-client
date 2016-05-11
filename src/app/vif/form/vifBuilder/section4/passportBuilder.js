@@ -23,12 +23,13 @@ export default class PassportBuilder {
         this._fake = vif.passport_made_passport_was_fake;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.passport_made_no_passport_made = this._noPassport;
         vif.passport_made_real_passport_made = this._realPassport;
         vif.passport_made_passport_included_false_name = this._falseName;
         vif.passport_made_passport_included_other_false_info = this._falseInfo;
         vif.passport_made_passport_was_fake = this._fake;
+        return vif;
     }
 
     get noPassport() {

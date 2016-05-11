@@ -21,11 +21,12 @@ export default class MoneyChangeHandsBuilder {
         this._gaveMoneyToBroker = vif.money_changed_hands_broker_companion_companion_gave_money;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.money_changed_hands_broker_companion_no = this._no;
         vif.money_changed_hands_broker_companion_dont_know = this._doNotKnow;
         vif.money_changed_hands_broker_companion_broker_gave_money = this._gaveMoneyToCompanion;
         vif.money_changed_hands_broker_companion_companion_gave_money = this._gaveMoneyToBroker;
+        return vif;
     }
 
     get no() {
