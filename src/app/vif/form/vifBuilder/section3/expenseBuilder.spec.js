@@ -131,5 +131,14 @@ describe('ExpenseBuilder', () => {
                 expect(builder.payBrokerBack).toEqual(true);
             });
         });
+
+        describe('amountText is set',() => {
+            it('should change text', () => {
+                let text = "Foo";
+                builder.amountText = text;
+
+                expect(builder.amountText).toEqual(text);
+            });
+        });
     });
 });

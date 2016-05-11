@@ -180,5 +180,23 @@ describe('EventsBuilder', () => {
                 expect(builder.forcedToTakeDrugs).toEqual(true);
             });
         });
+
+        describe('byWhomText is set',() => {
+            it('should change text', () => {
+                let text = "Foo";
+                builder.byWhomText = text;
+
+                expect(builder.byWhomText).toEqual(text);
+            });
+        });
+
+        describe('explainText is set',() => {
+            it('should change text', () => {
+                let text = "Foo";
+                builder.explainText = text;
+
+                expect(builder.explainText).toEqual(text);
+            });
+        });
     });
 });

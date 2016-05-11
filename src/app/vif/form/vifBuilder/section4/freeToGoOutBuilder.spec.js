@@ -88,5 +88,14 @@ describe('FreeToGoOutBuilder', () => {
                 expect(builder.no).toEqual(true);
             });
         });
+
+        describe('explainText is set',() => {
+            it('should change text', () => {
+                let text = "Foo";
+                builder.explainText = text;
+
+                expect(builder.explainText).toEqual(text);
+            });
+        });
     });
 });

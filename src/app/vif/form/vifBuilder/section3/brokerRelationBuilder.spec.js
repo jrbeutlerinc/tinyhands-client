@@ -485,7 +485,7 @@ describe('BrokerRelationBuilder', () => {
             });
         });
 
-        describe('when otherText is set',() => {
+        describe('otherText is set',() => {
             it('should change text', () => {
                 let text = "Foo";
                 builder.otherText = text;
