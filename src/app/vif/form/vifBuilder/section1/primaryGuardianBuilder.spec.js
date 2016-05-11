@@ -10,7 +10,7 @@ describe('PrimaryGuardianBuilder', () => {
             builder = new PrimaryGuardianBuilder();
         });
         
-        it('should set guardian options to false', () => {
+        it('should set options to false', () => {
             expect(builder.parents).toEqual(false);
             expect(builder.husband).toEqual(false);
             expect(builder.otherRelative).toEqual(false);
@@ -52,7 +52,7 @@ describe('PrimaryGuardianBuilder', () => {
             builder = new PrimaryGuardianBuilder(vif); 
         });
         
-        it('should set guardian options to match vif', () => {
+        it('should set options to match vif', () => {
             expect(builder.parents).toEqual(vif.victim_primary_guardian_own_parents);
             expect(builder.husband).toEqual(vif.victim_primary_guardian_husband);
             expect(builder.otherRelative).toEqual(vif.victim_primary_guardian_other_relative);

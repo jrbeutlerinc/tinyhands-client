@@ -32,7 +32,7 @@ describe('HidePresenceBuilder', () => {
            builder = new HidePresenceBuilder(vif);
         });
 
-        it('should set expense option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.yes).toEqual(vif.was_hidden);
             expect(builder.no).toEqual(!vif.was_hidden);
         });

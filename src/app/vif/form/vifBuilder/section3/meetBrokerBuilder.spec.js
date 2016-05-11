@@ -56,7 +56,7 @@ describe('MeetBrokerBuilder', () => {
            builder = new MeetBrokerBuilder(vif);
         })
 
-        it('should set migration option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.community).toEqual(vif.victim_how_met_broker_from_community);
             expect(builder.work).toEqual(vif.victim_how_met_broker_at_work);
             expect(builder.school).toEqual(vif.victim_how_met_broker_at_school);

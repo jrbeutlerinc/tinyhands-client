@@ -33,7 +33,7 @@ describe('MoneyChangeHandsBuilder', () => {
            builder = new MoneyChangeHandsBuilder(vif);
         });
 
-        it('should set expense option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.no).toEqual(vif.money_changed_hands_broker_companion_no);
             expect(builder.doNotKnow).toEqual(vif.money_changed_hands_broker_companion_dont_know);
             expect(builder.gaveMoneyToCompanion).toEqual(vif.money_changed_hands_broker_companion_broker_gave_money);

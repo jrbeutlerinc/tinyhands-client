@@ -5,7 +5,7 @@ describe('MaritalStatusBuilder', () => {
     
     describe('when no vif in constructor', () => {
         
-        it('should set all marital status options to false', () => {
+        it('should set all options to false', () => {
             builder = new MaritalStatusBuilder();
             
             expect(builder.single).toEqual(false);
@@ -18,7 +18,7 @@ describe('MaritalStatusBuilder', () => {
     });
     
     describe('when vif passed in constructor', () => {
-        it('should set marital status options to match vif', () => {
+        it('should set options to match vif', () => {
             vif = {
                victim_marital_status_single: true,
                victim_marital_status_married: true, 

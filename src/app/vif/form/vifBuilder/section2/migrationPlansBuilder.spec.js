@@ -68,7 +68,7 @@ describe('MigrationPlansBuilder', () => {
            builder = new MigrationPlansBuilder(vif);
         })
 
-        it('should set migration option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.education).toEqual(vif.migration_plans_education);
             expect(builder.travelTour).toEqual(vif.migration_plans_travel_tour);
             expect(builder.shopping).toEqual(vif.migration_plans_shopping);

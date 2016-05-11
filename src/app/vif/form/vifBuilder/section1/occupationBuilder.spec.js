@@ -9,7 +9,7 @@ describe('OccupationBuilder', () => {
             builder = new OccupationBuilder(); 
         });
         
-        it('should set all occupation options to false', () => {
+        it('should set all options to false', () => {
             expect(builder.unemployed).toEqual(false);
             expect(builder.animalHusbandry).toEqual(false);
             expect(builder.farmer).toEqual(false);
@@ -53,7 +53,7 @@ describe('OccupationBuilder', () => {
            builder = new OccupationBuilder(vif);
         });
         
-        it('should set occupation options to match vif', () => {
+        it('should set options to match vif', () => {
             expect(builder.unemployed).toEqual(vif.victim_occupation_wage_laborer);
             expect(builder.animalHusbandry).toEqual(vif.victim_occupation_animal_husbandry);
             expect(builder.farmer).toEqual(vif.victim_occupation_farmer);

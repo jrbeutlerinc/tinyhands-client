@@ -38,7 +38,7 @@ describe('ExpenseBuilder', () => {
            builder = new ExpenseBuilder(vif);
         });
 
-        it('should set expense option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.allMyself).toEqual(vif.victim_how_expense_was_paid_paid_myself);
             expect(builder.allBroker).toEqual(vif.victim_how_expense_was_paid_broker_paid_all);
             expect(builder.sumToBroker).toEqual(vif.victim_how_expense_was_paid_gave_money_to_broker);

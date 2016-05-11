@@ -33,7 +33,7 @@ describe('FreeToGoOutBuilder', () => {
            builder = new FreeToGoOutBuilder(vif);
         });
 
-        it('should set expense option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.yes).toEqual(vif.victim_was_free_to_go_out);
             expect(builder.no).toEqual(!vif.victim_was_free_to_go_out);
         });

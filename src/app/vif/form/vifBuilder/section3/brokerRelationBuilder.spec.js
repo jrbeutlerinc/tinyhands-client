@@ -60,7 +60,7 @@ describe('BrokerRelationBuilder', () => {
            builder = new BrokerRelationBuilder(vif);
         })
 
-        it('should set migration option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.dad).toEqual(vif.brokers_relation_to_victim_own_dad);
             expect(builder.mom).toEqual(vif.brokers_relation_to_victim_own_mom);
             expect(builder.uncle).toEqual(vif.brokers_relation_to_victim_own_uncle);

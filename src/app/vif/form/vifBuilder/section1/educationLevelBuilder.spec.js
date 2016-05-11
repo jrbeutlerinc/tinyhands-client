@@ -16,7 +16,7 @@ describe('EducationLevelBuilder', () => {
    
     describe('when no vif in constructor', () => {
         
-        it('should set all education options to false', () => {
+        it('should set all options to false', () => {
             builder = new EducationLevelBuilder();
             
             expect(builder.none).toEqual(false);
@@ -33,7 +33,7 @@ describe('EducationLevelBuilder', () => {
 
     describe('when vif passed in constructor', () => {
         
-        it('should set education levels to match vif', () => {
+        it('should set to match vif', () => {
             builder = new EducationLevelBuilder(vif);
             
             expect(builder.none).toEqual(true);
@@ -74,7 +74,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.none is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.none = true;
                 
                 expect(builder.none).toEqual(true);
@@ -90,7 +90,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.informal is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.informal = true;
                 
                 expect(builder.none).toEqual(false);
@@ -106,7 +106,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.primary is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.primary = true;
                 
                 expect(builder.none).toEqual(false);
@@ -122,7 +122,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.grade4to8 is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.grade4to8 = true;
                 
                 expect(builder.none).toEqual(false);
@@ -138,7 +138,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.grade9to10 is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.grade9to10 = true;
                 
                 expect(builder.none).toEqual(false);
@@ -154,7 +154,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.slc is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.slc = true;
                 
                 expect(builder.none).toEqual(false);
@@ -170,7 +170,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.grade11to12 is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.grade11to12 = true;
                 
                 expect(builder.none).toEqual(false);
@@ -186,7 +186,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.bachelors is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.bachelors = true;
                 
                 expect(builder.none).toEqual(false);
@@ -202,7 +202,7 @@ describe('EducationLevelBuilder', () => {
         });
         
         describe('builder.masters is set to true', () => {
-            it('should set other education levels to false', () => {
+            it('should set other values to false', () => {
                 builder.masters = true;
                 
                 expect(builder.none).toEqual(false);
@@ -216,7 +216,5 @@ describe('EducationLevelBuilder', () => {
                 expect(builder.masters).toEqual(true);
             });
         });
-        
     });
-    
 });

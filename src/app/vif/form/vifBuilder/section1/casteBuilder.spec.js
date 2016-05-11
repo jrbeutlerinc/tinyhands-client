@@ -54,7 +54,7 @@ describe('CasteBuilder', () => {
            builder = new CasteBuilder(vif); 
         });
         
-        it('should set caste option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.magar).toEqual(vif.victim_caste_magar);
             expect(builder.brahmin).toEqual(vif.victim_caste_brahmin);
             expect(builder.tamang).toEqual(vif.victim_caste_tamang);

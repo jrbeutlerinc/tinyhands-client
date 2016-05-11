@@ -44,7 +44,7 @@ describe('EventsBuilder', () => {
            builder = new EventsBuilder(vif);
         });
 
-        it('should set expense option values to match vif', () => {
+        it('should set option values to match vif', () => {
             expect(builder.sexualHarassment).toEqual(vif.abuse_happened_sexual_harassment);
             expect(builder.sexualAbuse).toEqual(vif.abuse_happened_sexual_abuse);
             expect(builder.physicalAbuse).toEqual(vif.abuse_happened_physical_abuse);
