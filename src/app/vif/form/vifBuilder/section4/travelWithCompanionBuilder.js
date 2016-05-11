@@ -19,10 +19,11 @@ export default class TravelWithCompanionBuilder {
         this._brokerTookMeToBorder = vif.traveled_with_broker_companion_broker_took_me_to_border;
     }
 
-    build(vif) {
+    build(vif = {}) {
         vif.traveled_with_broker_companion_yes = this._yes;
         vif.traveled_with_broker_companion_no = this._no;
         vif.traveled_with_broker_companion_broker_took_me_to_border = this._brokerTookMeToBorder;
+        return vif;
     }
 
     get yes() {

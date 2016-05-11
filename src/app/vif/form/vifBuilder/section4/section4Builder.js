@@ -36,7 +36,6 @@ export default class Section4Builder {
         this.howManyOthers = null;
         this.ageOfYoungest = null;
         this._passportPermitWithBroker = null;
-        this.brokerMeetCompanionLocation = null;
         this._companionWithVictim = null;
     }
 
