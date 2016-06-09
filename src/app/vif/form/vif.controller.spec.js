@@ -2,9 +2,9 @@ import VifController from './vif.controller';
 
 describe('VifController', () => {
    
-    let controller, mockState, mockVifBuilder;
+    let controller, mockState, mockStateParams, mockVifService, mockVifBuilder;
    
-    beforeEach(() => {
+    beforeEach(inject(($q) => {
         mockState = {
             go: function (state) {},
             current: {
@@ -14,8 +14,32 @@ describe('VifController', () => {
             }
         };
         spyOn(mockState, 'go');
-        mockVifBuilder = jasmine.createSpyObj('VifBuilder', ['build']);
-        controller = new VifController(mockState, mockVifBuilder);
+        mockStateParams = {id: 'create'};
+        mockVifService = jasmine.createSpyObj('VifService', ['get', 'create', 'update', 'delete']);
+        mockVifService.get.and.callFake((id) => {
+            return $q.when({id: id});
+        })
+        mockVifBuilder = jasmine.createSpyObj('VifBuilder', ['build']);        
+        controller = new VifController(mockState, mockStateParams, mockVifService, mockVifBuilder);
+    }));
+    
+    describe('constructor', () => {
+       describe('when $stateParams.id equals "create"', () => {
+           it('should not get VIF', () => {
+               expect(mockVifService.get).not.toHaveBeenCalled();
+           });
+       }); 
+       
+       describe('when $stateParams.id is a VIF id', () => {
+           it('should get VIF with id', () => {
+               let id = 1
+               mockStateParams.id = id;
+               
+               controller = new VifController(mockState, mockStateParams, mockVifService, mockVifBuilder);
+               
+               expect(mockVifService.get).toHaveBeenCalledWith(id);               
+           });
+       });
     });
    
     describe('goToSection', () => {
@@ -66,7 +90,7 @@ describe('VifController', () => {
                     }
                 };
                 spyOn(mockState, 'go');
-                controller = new VifController(mockState, mockVifBuilder);
+                controller = new VifController(mockState, mockStateParams, mockVifService, mockVifBuilder);
             })
                       
             it('should increase sectionIndex by 1', () => {
@@ -94,7 +118,7 @@ describe('VifController', () => {
                     }
                 };
                 spyOn(mockState, 'go');
-                controller = new VifController(mockState, mockVifBuilder);
+                controller = new VifController(mockState, mockStateParams, mockVifService, mockVifBuilder);
             })
                       
             it('should not increase sectionIndex by 1', () => {
@@ -125,7 +149,7 @@ describe('VifController', () => {
                     }
                 };
                 spyOn(mockState, 'go');
-                controller = new VifController(mockState, mockVifBuilder);
+                controller = new VifController(mockState, mockStateParams, mockVifService, mockVifBuilder);
             })
                       
             it('should descrease sectionIndex by 1', () => {
@@ -153,7 +177,7 @@ describe('VifController', () => {
                     }
                 };
                 spyOn(mockState, 'go');
-                controller = new VifController(mockState, mockVifBuilder);
+                controller = new VifController(mockState, mockStateParams, mockVifService, mockVifBuilder);
             })
                       
             it('should not increase sectionIndex by 1', () => {

@@ -3,9 +3,9 @@ export default class VIFController {
 		'ngInject';
         this.$state = $state;
         this.VifBuilder = VifBuilder;
-        this.vifService = VifService;
-        if($stateParams.id != "create") {
-            this.vifService.get($stateParams.id).then((response) => {
+        this.VifService = VifService;
+        if($stateParams.id !== "create") {
+            this.VifService.get($stateParams.id).then((response) => {
                 let vif = response.data;
             });
         }
