@@ -1,8 +1,14 @@
 export default class VIFController {
-	constructor($state, VifBuilder) {
+	constructor($state, $stateParams, VifService, VifBuilder) {
 		'ngInject';
         this.$state = $state;
         this.VifBuilder = VifBuilder;
+        this.vifService = VifService;
+        if($stateParams.id != "create") {
+            this.vifService.get($stateParams.id).then((response) => {
+                let vif = response.data;
+            });
+        }
         this.sections = [
             {name: 'Info', state: 'vif.info'},
             {name: '1', state: 'vif.section1'},

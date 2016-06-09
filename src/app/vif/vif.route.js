@@ -12,7 +12,7 @@ function VIFRoutes($stateProvider) {
     })
     .state('vif', {
       abstract: true,
-      url: '/vif',
+      url: '/vif/{id:create|[0-9]+}',
       templateUrl: 'app/vif/form/vif.html',
       controller: 'VifController',
       controllerAs: 'vifCtrl',
@@ -21,7 +21,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.info', {
-      url: '/create/info',
+      url: '/info',
       templateUrl: 'app/vif/form/info/info.html',
       controller: 'VifInfoController',
       controllerAs: 'infoCtrl',
@@ -31,7 +31,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.section1', {
-      url: '/create/1',
+      url: '/1',
       templateUrl: 'app/vif/form/section1/section1.html',
       controller: 'VifSection1Controller',
       controllerAs: 'section1Ctrl',
@@ -41,7 +41,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.section2', {
-      url: '/create/2',
+      url: '/2',
       templateUrl: 'app/vif/form/section2/section2.html',
       controller: 'VifSection2Controller',
       controllerAs: 'section2Ctrl',
@@ -51,7 +51,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.section3', {
-      url: '/create/3',
+      url: '/3',
       templateUrl: 'app/vif/form/section3/section3.html',
       controller: 'VifSection3Controller',
       controllerAs: 'section3Ctrl',
@@ -61,7 +61,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.section4', {
-      url: '/create/4',
+      url: '/4',
       templateUrl: 'app/vif/form/section4/section4.html',
       controller: 'VifSection4Controller',
       controllerAs: 'section4Ctrl',
@@ -71,7 +71,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.section5', {
-      url: '/create/5',
+      url: '/5',
       templateUrl: 'app/vif/form/section5/section5.html',
       controller: 'VifSection5Controller',
       controllerAs: 'section5Ctrl',
@@ -81,7 +81,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.section6', {
-      url: '/create/6',
+      url: '/6',
       templateUrl: 'app/vif/form/section6/section6.html',
       controller: 'VifSection6Controller',
       controllerAs: 'section6Ctrl',
@@ -91,7 +91,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.section7', {
-      url: '/create/7',
+      url: '/7',
       templateUrl: 'app/vif/form/section7/section7.html',
       controller: 'VifSection7Controller',
       controllerAs: 'section7Ctrl',
@@ -101,7 +101,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.section8', {
-      url: '/create/8',
+      url: '/8',
       templateUrl: 'app/vif/form/section8/section8.html',
       controller: 'VifSection8Controller',
       controllerAs: 'section8Ctrl',
@@ -111,7 +111,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.people', {
-      url: '/create/people',
+      url: '/people',
       templateUrl: 'app/vif/form/people/people.html',
       controller: 'VifPeopleController',
       controllerAs: 'peopleCtrl',
@@ -121,7 +121,7 @@ function VIFRoutes($stateProvider) {
       }
     })
     .state('vif.locations', {
-      url: '/create/locations',
+      url: '/locations',
       templateUrl: 'app/vif/form/locations/locations.html',
       controller: 'VifLocationsController',
       controllerAs: 'locationsCtrl',
