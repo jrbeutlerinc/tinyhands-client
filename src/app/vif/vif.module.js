@@ -11,6 +11,8 @@ import VifService from './form/vif.service';
 
 import FormSectionDirective from './form/components/form-section/form-section.directive';
 import FormQuestionDirective from './form/components/form-question/form-question.directive';
+import TextboxQuestionDirective from './form/components/question-types/textbox-question/textbox-question.directive';
+import RadioQuestionDirective from './form/components/question-types/radio-question/radio-question.directive';
 
 export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared'])
     .config(VIFRoutes)
@@ -25,4 +27,6 @@ export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared']
     .service('VifService', VifService)
 
     .directive('formsection', FormSectionDirective)
-    .directive('formquestion', FormQuestionDirective);
+    .directive('formquestion', FormQuestionDirective)
+    .directive('textboxQuestion', TextboxQuestionDirective)
+    .directive('radioQuestion', RadioQuestionDirective);
