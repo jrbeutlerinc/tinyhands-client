@@ -1,5 +1,7 @@
 <div>
-    <div ui-view></div>
+    <div ng-repeat="section in vifCtrl.sections">
+      <formsection ng-model="vifCtrl.sections[$index]" ng-show="vifCtrl.sectionIndex == $index"></formsection>
+    </div>
 
     <div class="row bottom-nav">
         <nav class="text-center">
@@ -10,7 +12,7 @@
                     </a>
                 </li>
                 <li ng-repeat="section in vifCtrl.sections" ng-class="{active: vifCtrl.sectionIndex == $index}">
-                    <a ng-click="vifCtrl.goToSection($index)">{{section.name}}</a>
+                    <a ng-click="vifCtrl.goToSection($index)">{{$index}}</a>
                 </li>
                 <li ng-class="{disabled: vifCtrl.sectionIndex == vifCtrl.sections.length-1}">
                     <a ng-click="vifCtrl.nextSection()" aria-label="Next">
@@ -18,6 +20,6 @@
                     </a>
                 </li>
             </ul>
-        </nav>	
+        </nav>
     </div>
 </div>

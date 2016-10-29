@@ -75,6 +75,15 @@ export default class BudgetService {
     }
 
     /**
+     * Function to get the budget form data.
+     *
+     * @param {number} id The id of a budget form's border station to retrieve.
+     * @returns Promise that provides the status and data of the request.
+     */
+    getPreviousBudgetForm(borderStationId) {
+        return this.service.get(`api/budget/most_recent_form/${borderStationId}/`);
+    }
+    /**
      * Function to get other items for a form section within a budget form.
      *
      * @param {number} budgetId The id for the budget you are looking for.

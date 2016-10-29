@@ -9,17 +9,17 @@ function VIFRoutes($stateProvider, RequireLogin) {
       resolve: {
         requireLogin: RequireLogin
       }
-    });
-    /*.state('vif', {
-      abstract: true,
-      url: '/vif',
+    })
+    .state('create-vif', {
+      url: '/vif/create',
       templateUrl: 'app/vif/form/vif.html',
       controller: 'VifController',
       controllerAs: 'vifCtrl',
-      data: {
-        requireLogin: true
+      resolve: {
+          requireLogin: RequireLogin
       }
-    })
+    });
+    /*
     .state('vif.info', {
       url: '/create/info',
       templateUrl: 'app/vif/form/info/info.html',
