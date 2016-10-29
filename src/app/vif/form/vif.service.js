@@ -19,7 +19,7 @@ export default class VifService {
         			"questions": [{
         				"label": "Victim's Name",
         				"type": "textbox",
-        				"answer": ""
+        				"answer": "fooBar"
         			}, {
         				"label": "Victim's Gender",
         				"type": "radio",
