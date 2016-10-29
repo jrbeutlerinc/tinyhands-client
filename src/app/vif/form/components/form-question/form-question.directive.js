@@ -11,7 +11,7 @@ export default function CsvExportDirective() {
         require: ['ngModel'],
         bindToController: true,
         scope: {
-            section: '=ngModel',
+            question: '=ngModel',
         }
     };
 

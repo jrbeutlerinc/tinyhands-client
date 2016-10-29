@@ -1,1 +1,12 @@
-<h1>question</h1>
+<span ng-switch="fqCtrl.question.type">
+  <p ng-switch-when="radio">radio</p>
+  <p ng-switch-when="address">address</p>
+  <p ng-switch-when="radiolocation">radiolocation</p>
+  <p ng-switch-when="integer">integer</p>
+  <p ng-switch-when="float">float</p>
+  <p ng-switch-when="timespan">timespan</p>
+  <p ng-switch-when="text">text</p>
+  <p ng-switch-when="textbox">textbox</p>
+  <p ng-switch-when="file">file</p>
+  <p ng-switch-default>default case</p>
+</span>
