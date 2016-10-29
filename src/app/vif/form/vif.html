@@ -1,23 +1,37 @@
-<div class="row bottom-nav">
-  <nav class="text-center">
-    <ul class="pagination">
-      <li ng-class="{disabled: vifCtrl.sectionIndex == 0}">
-        <a ng-click="vifCtrl.prevSection()" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li ng-repeat="section in vifCtrl.sections" ng-class="{active: vifCtrl.sectionIndex == $index}">
-        <a ng-click="vifCtrl.goToSection($index)">{{$index}}</a>
-      </li>
-      <li ng-class="{disabled: vifCtrl.sectionIndex == vifCtrl.sections.length-1}">
-        <a ng-click="vifCtrl.nextSection()" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+<div class="row container">
+  <div class="col-lg-3">
+      <h3>VIF Form</h3>
+  </div>
+
+  <div class="col-lg-6">
+    <nav class="text-center">
+      <ul class="pagination">
+        <li ng-class="{disabled: vifCtrl.sectionIndex == 0}">
+          <a ng-click="vifCtrl.prevSection()" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li ng-repeat="section in vifCtrl.sections" ng-class="{active: vifCtrl.sectionIndex == $index}">
+          <a ng-click="vifCtrl.goToSection($index)">{{$index}}</a>
+        </li>
+        <li ng-class="{disabled: vifCtrl.sectionIndex == vifCtrl.sections.length-1}">
+          <a ng-click="vifCtrl.nextSection()" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="col-lg-3">
+    <button class="btn btn-success" ng-disabled="vifCtrl.vifForm.$invalid" ng-click="vifCtrl.saveVif()">Create VIF</button>
+  </div>
+
 </div>
 
-<div ng-repeat="section in vifCtrl.sections">
-  <formsection ng-model="vifCtrl.sections[$index]" ng-show="vifCtrl.sectionIndex == $index"></formsection>
-</div>
+
+<form name="vifCtrl.form" layout="column">
+  <div ng-repeat="section in vifCtrl.sections">
+      <formsection ng-model="vifCtrl.sections[$index]" form="vifCtrl.form" ng-show="vifCtrl.sectionIndex == $index"></formsection>
+  </div>
+</form>

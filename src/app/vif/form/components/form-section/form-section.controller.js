@@ -1,5 +1,5 @@
 export default class FormSectionController {
-    constructor($scope) {
+    constructor() {
         'ngInject';
 
         this.label = this.section.label;

@@ -12,6 +12,10 @@ export default class VIFController {
         this.sectionIndex = 0;
     }
 
+    saveVif() {
+        console.log("VIF Saved");
+    }
+
     goToSection(index) {
         if(this.validIndex(index)) {
             this.sectionIndex = index;
