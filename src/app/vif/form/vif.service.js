@@ -36,7 +36,7 @@ export default class VifService {
         				"type": "address",
         				"answer": {
         					"address1": 333,
-        					"address2": 1231
+        					"address2": 8405
         				}
         			}, {
         				"label": "Victim's Ward #",
@@ -164,7 +164,7 @@ export default class VifService {
         				"type": "address",
         				"answer": {
         					"address1": 333,
-        					"address2": 1231
+        					"address2": 8405
         				}
         			}, {
         				"label": "Guardian's Ward #",

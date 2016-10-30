@@ -23,9 +23,13 @@ class Address2Service {
     getFuzzyAddress2s(val, address1="") {
         var url = 'api/address2/fuzzy/?address2=' + val;
         if (address1 !== "") {
-            url += '&' + address1;
+            url += '&address1=' + address1;
         }
         return this.service.get(url);
+    }
+
+    getAddress2(id) {
+        return this.service.get(`api/address2/${id}/`);
     }
 }
 

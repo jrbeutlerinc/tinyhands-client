@@ -11,6 +11,7 @@ class Address1Service {
     listAddress1s() {
         return this.service.get('api/address1/');
     }
+
     searchAddresses(queryParams) {
         return this.listAddresses(queryParams);
     }
@@ -25,6 +26,10 @@ class Address1Service {
 
     getFuzzyAddress1s(val) {
         return this.service.get('api/address1/fuzzy/?address1=' + val);
+    }
+
+    getAddress1(id) {
+        return this.service.get(`api/address1/${id}/`);
     }
 }
 

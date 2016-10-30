@@ -5,7 +5,7 @@
   <div class="panel-body">
     <span ng-switch="fqCtrl.question.type">
       <radio-question ng-model="fqCtrl.question" ng-switch-when="radio"></radio-question>
-      <address-question ng-switch-when="address">address</address-question>
+      <address-question ng-model="fqCtrl.question" ng-switch-when="address">address</address-question>
       <p ng-switch-when="radiolocation">radiolocation</p>
       <number-question ng-model="fqCtrl.question" integer-only="true" ng-switch-when="integer"></number-question>
       <number-question ng-model="fqCtrl.question" integer-only="false" ng-switch-when="float"></number-question>

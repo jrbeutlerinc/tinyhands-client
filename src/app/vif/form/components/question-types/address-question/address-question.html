@@ -1,16 +1,17 @@
-<h1>Address</h1>
 <div class="row">
   <div class="col-lg-6">
     <div class="form-group">
         <label for="addressName">Address 1</label>
         <i ng-show="loadingAddress1" class="glyphicon glyphicon-refresh"></i>
         <input id="address1" type="text"
-                ng-model="addressCtrl.answer.address1"
+                ng-model="addressCtrl.address1"
+                typeahead-on-select="addressCtrl.onAddress1Change()"
+                ng-change="addressCtrl.onAddress1Change()"
                 placeholder="Address 1"
                 uib-typeahead="address1 as address1.name for address1 in addressCtrl.getFuzzyAddress1s($viewValue)"
                 uib-typeahead-loading="loadingAddress1"
                 uib-typeahead-no-results="noResults"
-                class="form-control">
+                class="form-control" autocomplete="off">
         <div ng-show="noResults">
           <i class="glyphicon glyphicon-remove"></i> No Results Found
         </div>
@@ -21,12 +22,15 @@
         <label for="addressName">Address 2</label>
         <i ng-show="loadingAddress2" class="glyphicon glyphicon-refresh"></i>
         <input id="address2" type="text"
-                ng-model="addressCtrl.answer.address2"
+                ng-disabled="!addressCtrl.question.answer.address1"
+                ng-model="addressCtrl.address2"
+                typeahead-on-select="addressCtrl.onAddress2Change()"
+                ng-change="addressCtrl.onAddress2Change()"
                 placeholder="Address 2"
                 uib-typeahead="address2 as address2.name for address2 in addressCtrl.getFuzzyAddress2s($viewValue)"
                 uib-typeahead-loading="loadingAddress2"
                 uib-typeahead-no-results="noResults"
-                class="form-control">
+                class="form-control" autocomplete="off">
         <div ng-show="noResults">
           <i class="glyphicon glyphicon-remove"></i> No Results Found
         </div>
