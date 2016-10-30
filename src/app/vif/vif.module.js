@@ -20,7 +20,7 @@ import RadioQuestionDirective from './form/components/question-types/radio-quest
 import AddressQuestionDirective from './form/components/question-types/address-question/address-question.directive';
 import NumberQuestionDirective from './form/components/question-types/number-question/number-question.directive';
 
-export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared'])
+export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared', 'ui.bootstrap.showErrors'])
     .config(VIFRoutes)
 
     .controller('VifController', VifController)
