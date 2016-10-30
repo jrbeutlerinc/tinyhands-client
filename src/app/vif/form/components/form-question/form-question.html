@@ -1,12 +1,19 @@
-<span ng-switch="fqCtrl.question.type">
-  <radio-question ng-model="fqCtrl.question" ng-switch-when="radio"></radio-question>
-  <p ng-switch-when="address">address</p>
-  <p ng-switch-when="radiolocation">radiolocation</p>
-  <p ng-switch-when="integer">integer</p>
-  <p ng-switch-when="float">float</p>
-  <p ng-switch-when="timespan">timespan</p>
-  <p ng-switch-when="text">text</p>
-  <textbox-question ng-model="fqCtrl.question" ng-switch-when="textbox"/>
-  <p ng-switch-when="file">file</p>
-  <p ng-switch-default>default case</p>
-</span>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    {{fqCtrl.question.label}}
+  </div>
+  <div class="panel-body">
+    <span ng-switch="fqCtrl.question.type">
+      <radio-question ng-model="fqCtrl.question" ng-switch-when="radio"></radio-question>
+      <p ng-switch-when="address">address</p>
+      <p ng-switch-when="radiolocation">radiolocation</p>
+      <p ng-switch-when="integer">integer</p>
+      <p ng-switch-when="float">float</p>
+      <p ng-switch-when="timespan">timespan</p>
+      <p ng-switch-when="text">text</p>
+      <textbox-question ng-model="fqCtrl.question" ng-switch-when="textbox"/>
+      <p ng-switch-when="file">file</p>
+      <p ng-switch-default>default case</p>
+    </span>
+  </div>
+</div>
