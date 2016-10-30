@@ -13,6 +13,7 @@ import FormSectionDirective from './form/components/form-section/form-section.di
 import FormQuestionDirective from './form/components/form-question/form-question.directive';
 import TextboxQuestionDirective from './form/components/question-types/textbox-question/textbox-question.directive';
 import RadioQuestionDirective from './form/components/question-types/radio-question/radio-question.directive';
+import NumberQuestionDirective from './form/components/question-types/number-question/number-question.directive';
 
 export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared'])
     .config(VIFRoutes)
@@ -29,4 +30,5 @@ export default angular.module('tinyhands.VIF', ['ui.router', 'tinyhands.Shared']
     .directive('formsection', FormSectionDirective)
     .directive('formquestion', FormQuestionDirective)
     .directive('textboxQuestion', TextboxQuestionDirective)
-    .directive('radioQuestion', RadioQuestionDirective);
+    .directive('radioQuestion', RadioQuestionDirective)
+    .directive('numberQuestion', NumberQuestionDirective);
