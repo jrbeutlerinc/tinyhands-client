@@ -356,27 +356,19 @@ export default class BudgetController {
 
     getBudgetForm() {
         if (this.utils.validId(this.budgetId)) {
-            this.actuallyGetBudgetForm();
-        } else {
-            this.service.getPreviousBudgetForm(this.form.border_station).then((response) => {
-                this.budgetId = response.data.budget_form.id;
-                this.actuallyGetBudgetForm().then(() => {
-                    this.form.month_year = window.moment().format();
-                });
+            this.service.getBudgetForm(this.budgetId).then((response) => {
+                this.form = response.data;
+                this.form.totals = {
+                    borderMonitoringStation: {},
+                    other: {},
+                    safeHouse: {}
+                };
+                this.getAllData();
             });
-        }
-    }
-
-    actuallyGetBudgetForm() {
-        return this.service.getBudgetForm(this.budgetId).then((response) => {
-            this.form = response.data;
-            this.form.totals = {
-                borderMonitoringStation: {},
-                other: {},
-                safeHouse: {}
-            };
+        } else {
+            this.form.month_year = window.moment().format();
             this.getAllData();
-        });
+        }
     }
 
     getOtherData() {
