@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-6">
-    <div class="form-group">
+    <div class="form-group" ng-class="{'has-success': addressCtrl.address1.id, 'has-error': !addressCtrl.address1.id && !addressCtrl.address1 == ''}">
         <label for="addressName">Address 1</label>
         <i ng-show="loadingAddress1" class="glyphicon glyphicon-refresh"></i>
         <input id="address1" type="text"
@@ -18,8 +18,7 @@
     </div>
   </div>
   <div class="col-lg-6">
-    <div class="form-group">
-        <label for="addressName">Address 2</label>
+    <div class="form-group" ng-class="{'has-success': addressCtrl.address2.id, 'has-error': !addressCtrl.address2.id && !addressCtrl.address2 == ''}">
         <i ng-show="loadingAddress2" class="glyphicon glyphicon-refresh"></i>
         <input id="address2" type="text"
                 ng-disabled="!addressCtrl.question.answer.address1"
