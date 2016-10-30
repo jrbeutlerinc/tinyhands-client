@@ -20,8 +20,12 @@ class Address2Service {
         return this.service.put('api/address2/' + address.id + '/', address);
     }
 
-    getFuzzyAddress2s(val) {
-        return this.service.get('api/address2/fuzzy/?address2=' + val);
+    getFuzzyAddress2s(val, address1="") {
+        var url = 'api/address2/fuzzy/?address2=' + val;
+        if (address1 !== "") {
+            url += '&' + address1;
+        }
+        return this.service.get(url);
     }
 }
 

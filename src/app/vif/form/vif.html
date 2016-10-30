@@ -24,7 +24,7 @@
   </div>
 
   <div class="col-lg-3">
-    <button class="btn btn-success" ng-disabled="vifCtrl.vifForm.$invalid" ng-click="vifCtrl.saveVif()">Create VIF</button>
+    <button class="btn btn-success" ng-disabled="vifCtrl.vifForm.$invalid || !vifCtrl.vifForm.$dirty" ng-click="vifCtrl.saveVif()">Create VIF</button>
   </div>
 
 </div>
