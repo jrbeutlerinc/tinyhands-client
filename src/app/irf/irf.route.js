@@ -12,6 +12,10 @@ function IRFRoutes($stateProvider, RequireLogin) {
       resolve: {
         requireLogin: RequireLogin
       }
+    })
+    .state('irfForm', {
+        url: '/irf/test',
+        component: 'irfForm'
     });
 }
 
