@@ -9,7 +9,7 @@ class QuestionController {
 export default {
     templateUrl: questionTemplate,
     bindings: {
-        text: '@'
+        question: '<'
     },
     controller: QuestionController
 };

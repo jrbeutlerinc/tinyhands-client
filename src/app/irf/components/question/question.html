@@ -1,1 +1,7 @@
-<h1>I am a question</h1>
+<div>
+    <h1>{{$ctrl.question.layout}}</h1>
+    <div ng-switch="$ctrl.question.answer_type">
+        <radio-question ng-switch-when="choice" question="$ctrl.question"></radio-question>
+        <p ng-switch-default>Uh oh, I should not be seen!</p>
+    </div>
+</div>

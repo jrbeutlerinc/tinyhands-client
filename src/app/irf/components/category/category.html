@@ -1,0 +1,4 @@
+<h3>{{$ctrl.category.name}}</h3>
+<div ng-style="$ctrl.gridStyle">
+    <question question="question" ng-repeat="question in $ctrl.questions" ng-style="question.style"></question>
+</div>

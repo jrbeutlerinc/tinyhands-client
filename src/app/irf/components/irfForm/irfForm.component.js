@@ -1,8 +1,13 @@
 import formTemplate from './irfForm.html';
 
 class FormController {
-    constructor() {
+    constructor(IrfService) {
+        'ngInject';
+        this.irfService = IrfService;
 
+        this.irfService.getForm().then((data) => {
+            this.form = data;
+        });
     }
 }
 
