@@ -5,6 +5,8 @@ import IRFRoutes from './irf.route';
 
 import IrfFormComponent from './components/irfForm/irfForm.component';
 import CategoryComponent from './components/category/category.component';
+import CheckboxComponent from './components/question/checkbox/checkbox.component';
+import PromptComponent from './components/prompt/prompt.component';
 import QuestionComponent from './components/question/question.component';
 import RadioQuestionComponent from './components/question/radio/radio.component';
 
@@ -17,6 +19,8 @@ export default angular.module('tinyhands.IRF', [uiRouter, sharedModule])
     .config(IRFRoutes)
     .component('irfForm', IrfFormComponent)
     .component('category', CategoryComponent)
+    .component('checkbox', CheckboxComponent)
+    .component('prompt', PromptComponent)
     .component('question', QuestionComponent)
     .component('radioQuestion', RadioQuestionComponent)
     .controller('IrfListController', IrfListController)

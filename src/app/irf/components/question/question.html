@@ -2,6 +2,7 @@
     <h1>{{$ctrl.question.layout}}</h1>
     <div ng-switch="$ctrl.question.answer_type">
         <radio-question ng-switch-when="choice" question="$ctrl.question"></radio-question>
+        <checkbox ng-switch-when="checkbox" question="$ctrl.question"></checkbox>
         <p ng-switch-default>Uh oh, I should not be seen!</p>
     </div>
 </div>
