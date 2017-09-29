@@ -1,4 +1,4 @@
-import uiRouter from 'angular-ui-router';
+
 import sharedModule from '../shared/shared.module';
 
 import borderStationRouteConfig from './borderStation.route';
@@ -11,7 +11,7 @@ import PersonDirective from './person/person.directive';
 
 import BorderStationService from './borderStation.service';
 
-export default angular.module('tinyhands.BorderStation', [uiRouter, sharedModule])
+export default angular.module('tinyhands.BorderStation', [sharedModule])
     .config(borderStationRouteConfig)
 
     .controller('BorderStationController', BorderStationController)

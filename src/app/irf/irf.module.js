@@ -1,4 +1,4 @@
-import uiRouter from 'angular-ui-router';
+
 import sharedModule from '../shared/shared.module';
 
 import IRFRoutes from './irf.route';
@@ -15,7 +15,7 @@ import IrfListController from './list/irfList.controller';
 import IrfListService from './list/irfList.service';
 import IrfService from './irf.service';
 
-export default angular.module('tinyhands.IRF', [uiRouter, sharedModule])
+export default angular.module('tinyhands.IRF', [sharedModule])
     .config(IRFRoutes)
     .component('irfForm', IrfFormComponent)
     .component('category', CategoryComponent)

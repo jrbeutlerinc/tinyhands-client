@@ -5,6 +5,7 @@ import 'moment-timezone';
 import ngFileSaver from 'angular-file-saver';
 import toastr from 'toastr';
 import 'angular-ui-validate';
+import uiRouter from '@uirouter/angularjs';
 
 import config from './shared.config';
 
@@ -21,7 +22,7 @@ import ConfirmButton from './directives/confirmButton/confirmButton.directive';
 import Spinner from './directives/spinner/spinner.directive';
 import SpinnerOverlay from './directives/spinnerOverlay/spinnerOverlay.directive';
 
-export default angular.module('tinyhands.Shared', [ngFileSaver, 'floatThead', 'ui.validate'])
+export default angular.module('tinyhands.Shared', [ngFileSaver, 'floatThead', 'ui.validate', uiRouter])
     .filter('capitalize', function () {
         return function (input) {
             return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';

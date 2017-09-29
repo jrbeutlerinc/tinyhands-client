@@ -1,4 +1,4 @@
-import uiRouter from 'angular-ui-router';
+
 import sharedModule from '../shared/shared.module';
 
 import loginRouteConfig from './login.route';
@@ -6,7 +6,7 @@ import loginRouteConfig from './login.route';
 import LoginController from './login.controller';
 import PasswordResetController from './password-reset/password-reset.controller';
 
-export default angular.module('tinyhands.Login', [uiRouter, sharedModule])
+export default angular.module('tinyhands.Login', [sharedModule])
     .config(loginRouteConfig)
 
     .controller('LoginController', LoginController)

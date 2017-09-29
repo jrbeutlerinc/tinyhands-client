@@ -5,7 +5,7 @@ import ngCsv from 'ng-csv';
 import ngSanitize from 'angular-sanitize';
 import ngTouch from 'angular-touch';
 import uiBootstrap from 'angular-ui-bootstrap';
-import uiRouter from 'angular-ui-router';
+
 import 'toastr/toastr.less';
 
 import sharedModule from './shared/shared.module';
@@ -32,7 +32,7 @@ import CsvExportDirective from './components/csv-export/csv-export.directive';
 import AutocompleteAddress1Directive from './components/auto-complete/address1/autocomplete-address1.directive';
 import AutocompleteAddress2Directive from './components/auto-complete/address2/autocomplete-address2.directive';
 
-angular.module('tinyhandsFrontend', [ngAnimate, ngCookies, ngCsv, ngSanitize, ngTouch, uiBootstrap, uiRouter,
+angular.module('tinyhandsFrontend', [ngAnimate, ngCookies, ngCsv, ngSanitize, ngTouch, uiBootstrap,
     sharedModule,
     accountModule,
     addressesModule,
