@@ -1,6 +1,6 @@
 <h3>{{$ctrl.category.name}}</h3>
 <div ng-style="$ctrl.gridStyle">
-    <div ng-repeat="question in $ctrl.questions" ng-style="question.style" ng-switch="question.type">
+    <div ng-repeat="question in $ctrl.questions" ng-style="$ctrl.getQuestionStyle(question)" ng-switch="question.type">
         <question ng-switch-when="question" question="question"></question>
         <prompt ng-switch-when="prompt" prompt="question"></prompt>
     </div>

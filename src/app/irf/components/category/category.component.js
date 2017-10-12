@@ -8,24 +8,28 @@ class CategoryController {
     }
 
     get questions() {
-        return this.gridLayout.items;
+        return this._items;
     }
 
     constructor() {
-        this.numOfRows = 0;
-        this.numOfColumns = 0;
+        this._items = [];
         this.gridLayout = new GridLayoutHelper(x => x.layout);
     }
 
     $onInit() {
-        this.sortQuestionsIntoColumns();
+        this.setupGrid();
     }
 
-    sortQuestionsIntoColumns() {
+    setupGrid() {
         let questions = this.category.questions.map(x => {x.type = "question"; return x;});
         let prompts = this.category.prompts.map(x => {x.type = "prompt"; return x;});
         let questionsAndPrompts = questions.concat(prompts);
-        this.gridLayout.setItems(questionsAndPrompts);
+        this.gridLayout.setupLookupTree(questionsAndPrompts, this.category.category_id);
+        this._items = questionsAndPrompts;
+    }
+
+    getQuestionStyle(question) {
+        return this.gridLayout.getStyle(question);
     }
 }
 
