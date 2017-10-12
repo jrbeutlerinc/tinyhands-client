@@ -1,7 +1,7 @@
 <div>
-    <p>Which choice do you want?</p>
-    <label ng-repeat-start="answer in $ctrl.question.answers">
-        <input type="radio" name="{{$ctrl.question.question_id}}" ng-value="answer.answer_text"/>
-        {{answer.answer_text}}
+    <p>{{$ctrl.displayText}}</p>
+    <label ng-repeat-start="option in $ctrl.options">
+        <input type="radio" name="{{$ctrl.name}}" ng-value="option.value"/>
+        {{option.text}}
     </label><br ng-repeat-end/>
 </div>

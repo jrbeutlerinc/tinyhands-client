@@ -84,6 +84,30 @@ export default class IrfService {
                         "answer_type": "checkbox",
                         "layout": "1.3.1.1"
                     },
+                    {
+                        "question_id": 12,
+                        "display_text": "Which color is best?",
+                        "answer_type": "choice",
+                        "layout": "1.3.1.2",
+                        "options": [
+                            {1: "Red"},
+                            {2: "Yellow"},
+                            {3: "Blue"},
+                            {4: "Green"},
+                        ]
+                    },
+                    {
+                        "question_id": 13,
+                        "display_text": "Which color is worst?",
+                        "answer_type": "choice",
+                        "layout": "1.3.1.3",
+                        "options": [
+                            {1: "Red"},
+                            {2: "Yellow"},
+                            {3: "Blue"},
+                            {4: "Green"},
+                        ]
+                    },
 
                 ],
                 "prompts": [{
