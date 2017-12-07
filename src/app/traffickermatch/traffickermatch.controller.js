@@ -1,5 +1,5 @@
 class TraffickerMatchController {
-    constructor(StickyHeader, traffickerMatchService, $uibModal, SpinnerOverlayService) {
+    constructor(StickyHeader, traffickerMatchService, SessionService, $uibModal, SpinnerOverlayService) {
         'ngInject';
 
         this.sticky = StickyHeader;
@@ -12,11 +12,26 @@ class TraffickerMatchController {
     }
 
     showPictureInModal(photoUrl) {
+        console.log("Photo URL", photoUrl);
         this.$uibModal.open({
             animation: true,
             template: `<div class="text-center"><img ng-src="${photoUrl}"/></div>`,
             size: 'sm',
         });
+    }
+
+    sendMatchAlert(candidate) {
+        this.data = {"candidate": candidate};
+        console.log("Data:",this.data);
+        this.traffickerMatchService.sendMatchAlert(this.data)
+            .then(
+                (promise) => {
+                    this.toastr.success(promise.data.message);
+                },
+                (error) => {
+                    this.toastr.error(error.data.message);
+                }
+            );
     }
 
     matchSearch() {

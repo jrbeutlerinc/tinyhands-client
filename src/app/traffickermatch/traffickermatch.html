@@ -23,14 +23,15 @@
 		<table class="table table-striped">
 			<thead class="sticky-table-header">
 				<tr>
-					<th width="20%" title="Name">नाम</th>
-					<th width="11%" title="Gender">लिङ्ग</th>
-					<th width="8%" title="Age">उमेर</th>
-					<th width="16%" title="Address 1">ठेगाना १ </th>
-					<th width="16%" title="Address 2">ठेगाना २</th>
-					<th width="16%" title="Phone">फोन</th>
-					<th width="13%" title="Form">फारम</th>
-					<th width="13%" title="Photo">फोटो</th>
+					<th width="18%" title="Name">नाम</th>
+					<th width="9%" title="Gender">लिङ्ग</th>
+					<th width="6%" title="Age">उमेर</th>
+					<th width="13%" title="Address 1">ठेगाना १ </th>
+					<th width="13%" title="Address 2">ठेगाना २</th>
+					<th width="13%" title="Phone">फोन</th>
+					<th width="10%" title="Form">फारम</th>
+					<th width="8%" title="Photo">फोटो</th>
+					<th width="8%" title="Match">माच</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -44,6 +45,14 @@
 					<td>{{ candidate.form_number }}</td>
 					<td>
 						<button class="btn btn-primary" ng-click="vm.showPictureInModal(candidate.form_photo)" ng-if="candidate.form_photo">View</button>
+					</td>
+					<td>
+						<confirm-button
+							btn-class="btn btn-primary btn-success"
+							text="Match"
+							confirm-text="Are you sure?"
+							on-confirm="vm.sendMatchAlert(candidate)"/>
+						</button>
 					</td>
 				</tr>
 				<tr ng-show="vm.matchCandidates.length == 0">
