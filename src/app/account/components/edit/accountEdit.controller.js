@@ -19,6 +19,10 @@ export default class AccountEditController {
         this.saveButtonClicked = false;
 
         this.getPermissions();
+
+        this.selectedOptions = [];
+        this.options = [ {id: 1, label: "David"}, {id: 2, label: "Jhon"}, {id: 3, label: "Danny"}];
+        this.settings = {enableSearch: true}
     }
 
     get title() {

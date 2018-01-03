@@ -248,5 +248,10 @@
         <button class="clear btn {{accountEditCtrl.saveButtonStyle}} btn-lg pull-right" ng-click="accountEditCtrl.updateOrCreate()">
           {{accountEditCtrl.saveButtonText}}
         </button>
+
+
+    </div>
+    <div class="row">
+        <div ng-dropdown-multiselect="" options="accountEditCtrl.options" selected-model="accountEditCtrl.selectedOptions" extra-settings="accountEditCtrl.settings"></div>
     </div>
 </div>
