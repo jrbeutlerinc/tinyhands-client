@@ -251,7 +251,58 @@
 
 
     </div>
+    
+    
     <div class="row">
-        <div ng-dropdown-multiselect="" options="accountEditCtrl.options" selected-model="accountEditCtrl.selectedOptions" extra-settings="accountEditCtrl.settings"></div>
+     <table>
+     	<thead>
+     	<tr>
+     		<th width="10%"></th>
+     		<th ng-repeat="permd in accountEditCtrl.permd" width="15%">
+     			{{ permd.permissionName }}
+     		</th>
+     	</tr>
+     	</thead>
+     	<tbody>
+     	<tr>
+			<td>
+				<label>Global</label>
+			</td>
+			<td ng-repeat="permd in accountEditCtrl.permd">
+				<div ng-dropdown-multiselect="" options="permd.globalDropDown.options" 
+       				selected-model="permd.globalDropDown.selectedOptions" 
+       				extra-settings="permd.globalDropDown.settings" 
+       				translation-texts="permd.globalDropDown.customText" 
+       				events="permd.globalDropDown.eventListener">
+       			</div>
+       		</td>
+       	</tr>
+		<tr>
+			<td>
+				<label>Country</label>
+			</td>
+			<td ng-repeat="permd in accountEditCtrl.permd">
+				<div ng-dropdown-multiselect="" options="permd.countryDropDown.options" 
+       				selected-model="permd.countryDropDown.selectedOptions" 
+       				extra-settings="permd.countryDropDown.settings" 
+       				translation-texts="permd.countryDropDown.customText" 
+       				events="permd.countryDropDown.eventListener">
+       			</div>
+       		</td>
+        </tr>
+        <tr>
+        		<td>
+				<label>Station</label>
+			</td>
+			<td ng-repeat="permd in accountEditCtrl.permd">
+				<div ng-dropdown-multiselect="" options="permd.stationDropDown.options" 
+       				selected-model="permd.stationDropDown.selectedOptions" 
+       				extra-settings="permd.stationDropDown.settings" 
+       				translation-texts="permd.stationDropDown.customText" 
+       				events="permd.stationDropDown.eventListener">
+       			</div>
+       		</td>
+        </tr>
+        </tbody>
     </div>
 </div>
